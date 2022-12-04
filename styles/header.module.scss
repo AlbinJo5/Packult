@@ -1,0 +1,77 @@
+@import "./theme.scss";
+@import "./utils.scss";
+
+.nav {
+    @include flexItemsCenter;
+    @include spaceBetween;
+    @include paddingLR(5vw);
+    background-color: $dark;
+    height: 3.5vw;
+    color: $light;
+    font-weight: 500;
+    position: fixed;
+    width: 100%;
+
+    img {
+        width: 8vw;
+        height: max-content;
+    }
+
+    ul {
+        width: 50vw;
+        @include flexContentSpaceEvenly;
+        padding: 5vw;
+
+
+        li {
+            // background-color: aqua;
+            list-style: none;
+
+            a {
+                font-size: 1vw;
+                text-decoration: none;
+                color: $light;
+                width: max-content;
+                height: max-content;
+
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .contact {
+            @include buttonCustom(none, 20px, $primary, $dark);
+            @include paddingTBRL(0.2vw, 0.2vw, .8vw, .8vw);
+            @include buttonHoverCustom(solid 1px $primary, 20px, $dark, $primary);
+            font-size: 1vw;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .nav {
+        @include paddingLR(2vw);
+        height: 5vw;
+
+        img {
+            width: 15vw;
+        }
+
+        ul {
+            width: 60%;
+
+            li {
+                a {
+                    font-size: 1.5vw;
+                }
+            }
+
+            .contact {
+                @include paddingTBRL(0.5vw, 0.5vw, 1.5vw, 1.5vw);
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
