@@ -31,6 +31,12 @@
     justify-content: space-evenly;
 }
 
+// set display to flex and justify content flex-end
+@mixin flexContentEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+
 // align items center
 @mixin alignItemsCenter {
     align-items: center;

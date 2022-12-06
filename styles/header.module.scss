@@ -12,6 +12,14 @@
     position: fixed;
     width: 100%;
 
+    .mlogo {
+        display: none;
+    }
+
+    .mlinks {
+        display: none;
+    }
+
     img {
         width: 8vw;
         height: max-content;
@@ -48,30 +56,26 @@
             font-size: 1vw;
         }
     }
+
+
 }
 
-@media (max-width: $mobile) {
-    .nav {
-        @include paddingLR(2vw);
-        height: 5vw;
-
-        img {
-            width: 15vw;
-        }
-
-        ul {
-            width: 60%;
-
-            li {
-                a {
-                    font-size: 1.5vw;
-                }
-            }
-
-            .contact {
-                @include paddingTBRL(0.5vw, 0.5vw, 1.5vw, 1.5vw);
-                font-size: 1.5vw;
-            }
-        }
+@media screen and (max-width: $mobile) {
+    .logo {
+        display: none;
     }
+
+    .mlogo {
+        display: block;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .mlinks {
+        display: block;
+    }
+
+
 }
