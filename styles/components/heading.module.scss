@@ -1,0 +1,15 @@
+@import "../theme.scss";
+
+.heading {
+    display: flex;
+
+    h1 {
+        font-size: 2.5vw;
+        font-weight: 600;
+        color: $primary;
+    }
+
+    hr {
+        border: 1px solid rgb(126, 126, 126);
+    }
+}

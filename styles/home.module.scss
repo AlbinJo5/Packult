@@ -1,4 +1,103 @@
-.home{
-    background: rgb(157, 255, 77);
-    min-height: 100vh;
+@import "./theme.scss";
+
+.langingPage {
+    background: $dark;
+    min-height: 100vw;
+}
+
+.intro {
+    position: relative;
+    min-height: 60vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .bgRectangle {
+        position: absolute;
+        top: 7vw;
+        left: 20vw;
+        z-index: -1;
+        width: 50vw;
+        height: 30vw;
+        background: $primary;
+        background: linear-gradient(216.05deg, #00BDF8 0%, #87BE42 61.29%, #C2D950 100%);
+        filter: blur(1vw);
+    }
+
+    .bgOval {
+        position: absolute;
+        bottom: -5vw;
+        right: -10vw;
+        z-index: -1;
+        width: 20vw;
+        height: 35vw;
+        background: #C2D950;
+        filter: blur(10vw);
+        border-radius: 50%;
+
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3vw 0vw;
+
+
+
+        .brand {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1vw;
+
+            img {
+                width: 35vw;
+                height: max-content;
+            }
+
+            .brandCard {
+                padding: 2vw;
+                position: absolute;
+                border-radius: 1vw;
+                top: 15vw;
+                width: 25vw;
+                font-size: 1.2vw;
+                background: $dark;
+                color: $light;
+
+                h3 {
+                    color: $primary;
+                    cursor: pointer;
+
+                    img {
+                        width: 1vw;
+                        height: max-content;
+                    }
+
+                    &:hover {
+                        color: $light;
+
+                        img {
+                            transform: rotate(-135deg);
+                            transition: all 0.5s ease-in-out;
+                        }
+                    }
+                }
+
+            }
+
+
+            &:nth-child(2) {
+                margin-top: 15vw;
+
+            }
+        }
+
+        .packaging {
+            position: relative;
+
+
+        }
+    }
 }

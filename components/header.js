@@ -1,18 +1,21 @@
 import Image from "next/image"
 import Link from "next/link"
-import styles from "../styles/header.module.scss"
+import { ROUTES } from "../common/routes"
+import styles from "../styles/components/header.module.scss"
 
 export default function Header() {
   return (
     <nav className={styles.nav}>
+      <Link href={ROUTES.HOME} id="header_logo"  >
 
-      <div className={styles.logo} >
-        <Image src="/assets/logos/logo.svg" alt="Packult" width={100} height={30} />
-      </div>
-      <div className={styles.mlogo}>
-        <Image src="/assets/logos/mobileLogo.svg" alt="Packult" width={100} height={30} />
+        <div className={styles.logo} >
+          <Image src="/assets/logos/logo.svg" alt="Packult" width={100} height={30} />
+        </div>
+        <div className={styles.mlogo}>
+          <Image src="/assets/logos/mobileLogo.svg" alt="Packult" width={100} height={30} />
 
-      </div>
+        </div>
+      </Link>
 
 
       <ul className={styles.links} >

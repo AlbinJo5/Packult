@@ -1,0 +1,28 @@
+.brandowners {
+    padding: 5vw 10vw;
+    padding-bottom: 0vw;
+
+    h1 {
+        font-size: 3.5vw;
+        font-weight: 700;
+        margin-bottom: 2vw;
+    }
+
+    p {
+        width: 60vw;
+        font-size: 1.5vw;
+        line-height: 2.1vw;
+    }
+
+    .brandowners__content {
+        margin-top: 8vw;
+
+        // &:nth-child(2n + 1) {
+        //     float: left;
+        // }
+
+        // &:nth-child(2n + 2) {
+        //     float: right;
+        // }
+    }
+}

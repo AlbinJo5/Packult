@@ -1,0 +1,84 @@
+@import "../theme.scss";
+
+.contact {
+    background-color: #F8FFD7;
+    padding: 3vw;
+    margin: 0vw 10vw;
+    margin-bottom: 5vw;
+    border-radius: 2vw;
+    // give a bottom shadow
+    box-shadow: 0 0 1vw 0 rgba(0, 0, 0, 0), 0 1vw 1vw 0 rgba(0, 0, 0, 0.19);
+
+    h1 {
+        font-size: 4.5vw;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: .8vw;
+    }
+
+    .formContainer {
+        display: flex;
+
+        h4 {
+            font-size: 2vw;
+            font-weight: 500;
+            margin: 0;
+            margin-bottom: 2vw;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                width: 40vw;
+                height: 3vw;
+                border: none;
+                border-radius: .5vw;
+                background-color: $light;
+                margin-bottom: 1vw;
+                font-size: 1.5vw;
+                font-weight: 400;
+                color: #A9A9A9;
+                padding: .5vw 1vw;
+                outline: solid .15vw $primary;
+                transition: all .3s ease-in-out;
+
+
+                &:focus {
+                    outline: none;
+                    transition: all .3s ease-in-out;
+                }
+            }
+
+            button {
+                width: 42vw;
+                height: 4vw;
+                border: none;
+                border-radius: .5vw;
+                background-color: $primary;
+                margin-bottom: 1vw;
+                font-size: 1.5vw;
+                font-weight: 500;
+                color: $light;
+
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $light;
+                    transition: all .3s ease-in-out;
+                    color: $primary;
+                    outline: solid .15vw $primary;
+
+                }
+            }
+        }
+
+        img {
+            width: max-content;
+            height: 20vw;
+            margin-left: 5vw;
+        }
+    }
+}

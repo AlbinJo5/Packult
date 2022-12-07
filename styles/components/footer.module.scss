@@ -1,5 +1,5 @@
-@import "./theme.scss";
-@import "./utils.scss";
+@import "../theme.scss";
+@import "../utils.scss";
 
 .footer {
     background-color: $dark;
@@ -95,6 +95,11 @@
                 align-items: center;
                 grid-auto-flow: column;
                 grid-column-gap: 1vw;
+
+                img {
+                    width: 1.5vw;
+                    height: max-content;
+                }
             }
         }
     }

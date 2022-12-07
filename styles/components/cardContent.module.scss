@@ -1,0 +1,70 @@
+@import "../theme.scss";
+
+.cardContent {
+    display: flex;
+    margin: 10vw 2vw;
+    gap: 4vw;
+    margin-bottom: 0vw;
+    .content {
+
+        // width: 40vw;
+        .heading {
+            display: flex;
+            gap: 2vw;
+            h1 {
+                font-size: 8vw;
+                font-weight: 500;
+                margin: 0;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: .05vw;
+                color: $dark;
+            }
+            
+            h2 {
+                letter-spacing: .5vw;
+                font-size: 4vw;
+                font-weight: 500;
+                margin: 0;
+                width: 3vw;
+                color: $primary;
+            }
+
+        }
+
+        p {
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            line-height: 2.1vw;
+            width: 100%;
+            color: $dark;
+
+        }
+
+        a {
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            line-height: 2.1vw;
+            width: 100%;
+            color: $dark;
+            text-decoration: none;
+            font-weight: 1000;
+            text-decoration: underline;
+
+            display: flex;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                color: $primary;
+                transition: all .3s ease-in-out;
+
+            }
+        }
+    }
+
+    .image {
+        img {
+            width: 30vw;
+            height: max-content;
+        }
+    }
+}
