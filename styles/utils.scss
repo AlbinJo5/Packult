@@ -1,5 +1,11 @@
 @import "./theme.scss";
 
+// WEBSITE PAGE PADDING
+
+@mixin pagePadding() {
+    padding: 0 10vw;
+}
+
 // DISPLAY ALIGNMENTS UTILITIES
 // set display to flex and align items cennter
 @mixin flexItemsCenter {

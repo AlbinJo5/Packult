@@ -4,7 +4,7 @@ import { data } from "../../data/packaging-converters.js";
 import CardContent from "../../components/cardContent";
 import WorkNumbers from "../../components/workNumbers";
 import Contact from "../../components/contact";
-export default function PackagingConverters() {
+export default function index() {
     return (
         <Layout>
             <div className={styles.brandowners} >

@@ -1,0 +1,87 @@
+@import "../theme.scss";
+@import "../utils.scss";
+
+.Layout1 {
+    padding: 0 10vw;
+
+    h1 {
+        color: $primary;
+        margin: 0;
+        font-size: 5vw;
+    }
+
+    .Top {
+        display: flex;
+
+        p {
+            margin: 0;
+            font-size: 2vw;
+        }
+
+        img {
+            width: max-content;
+            height: 30vw;
+        }
+    }
+
+    .Bottom {
+        p {
+            font-size: 2vw;
+        }
+    }
+}
+
+.Layout2 {
+    padding: 0 10vw;
+
+    h1 {
+        color: $primary;
+        margin: 0;
+        font-size: 5vw;
+    }
+
+    img {
+        margin-top: 2vw;
+        width: 100%;
+        height: max-content;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+}
+
+.Layout3 {
+    padding: 0 10vw;
+
+    h1 {
+        color: $primary;
+        margin: 0;
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+}
+
+.Layout4 {
+    padding: 0 10vw;
+
+    h1 {
+        color: $primary;
+        margin: 0;
+        font-size: 5vw;
+    }
+
+    img {
+        width: 100%;
+        height: max-content;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+}

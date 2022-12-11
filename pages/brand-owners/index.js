@@ -4,7 +4,7 @@ import { data } from "../../data/brand-owners.js";
 import CardContent from "../../components/cardContent";
 import WorkNumbers from "../../components/workNumbers";
 import Contact from "../../components/contact";
-export default function BrandOwners() {
+export default function index() {
     return (
         <Layout>
             <div className={styles.brandowners} >
