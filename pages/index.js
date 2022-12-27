@@ -1,12 +1,13 @@
+/* eslint-disable react/no-unescaped-entities */
 import Layout from '../components/layout'
 import styles from "../styles/home.module.scss"
 import Image from 'next/image'
 import Heading from '../components/heading'
 import Link from 'next/link'
 import { ROUTES } from '../common/routes'
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
-
+import Carousel from 'nuka-carousel'
+import WorkNumbers from '../components/workNumbers'
+import Contact from '../components/contact'
 export default function Home() {
   return (
     <Layout >
@@ -59,45 +60,173 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      {/* <div className={styles.gallery} >
+      <div className={styles.gallery} >
         <Heading heading="Gallery" line={true} />
         <div className={styles.content} >
           <h3>Some more of our work, social posts many more things...</h3>
-          <Carousel showThumbs={false} showStatus={false} >
-            <div>
-              <Image src="/assets/images/home/gallery (1).png" alt="gallery1" height={1000} width={1000} />
-              <Image src="/assets/images/home/gallery (2).png" alt="gallery2" height={1000} width={1000} />
-              <Image src="/assets/images/home/gallery (3).png" alt="gallery2" height={1000} width={1000} />
-
+          <Carousel
+            withoutControls={false}
+            cellAlign="center"
+          >
+            <div className={styles.carousel} >
+              <Image src="/assets/images/home/gallery (1).png" alt='gallery1' width={1000} height={1000} />
+              <Image src="/assets/images/home/gallery (2).png" alt='gallery2' width={1000} height={1000} />
+              <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
             </div>
-            <div>
-              <Image src="/assets/images/home/gallery (1).png" alt="gallery1" height={1000} width={1000} />
-              <Image src="/assets/images/home/gallery (2).png" alt="gallery2" height={1000} width={1000} />
-              <Image src="/assets/images/home/gallery (3).png" alt="gallery2" height={1000} width={1000} />
-            </div>
-            <div>
-              <Image src="/assets/images/home/gallery (1).png" alt="gallery1" height={1000} width={1000} />
-              <Image src="/assets/images/home/gallery (2).png" alt="gallery2" height={1000} width={1000} />
-              <Image src="/assets/images/home/gallery (3).png" alt="gallery2" height={1000} width={1000} />
+            <div className={styles.carousel}>
+              <Image src="/assets/images/home/gallery (2).png" alt='gallery1' width={1000} height={1000} />
+              <Image src="/assets/images/home/gallery (1).png" alt='gallery2' width={1000} height={1000} />
+              <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
             </div>
           </Carousel>
-        </div>
-      </div> */}
-      <div className={styles.services} >
-        <Heading heading="Services" line={true} />
-        <div className={styles.content} >
-          <div>
-            <h2>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
-            <ul>
-              <li>Graphic Design</li>
-              <li>Structural Engineering</li>
-            </ul>
+          <div className={styles.all_services_button} >
+            <hr></hr>
+            <Link href={"/"}>View all Images</Link>
+            <hr></hr>
           </div>
-          <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
         </div>
       </div>
+      <div className={styles.services} >
+        <Heading heading="Services" line={true} />
+        <div className={styles.component} >
+          <div className={styles.content} >
+            <div>
+              <h2>Packaging Innovation<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
+              <ul>
+                <li> <Link href={"/"}> Graphic Design</Link></li>
+                <li><Link href={"/"}>Structural Engineering</Link></li>
+              </ul>
+            </div>
+            <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+          </div>
+          <hr />
+        </div>
+        <div className={styles.component} >
+          <div className={styles.content} >
+            <div>
+              <h2>Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
+              <ul>
+                <li><Link href={"/"}>Graphic Design</Link></li>
+                <li><Link href={"/"}>Structural Engineering</Link></li>
+              </ul>
+            </div>
+            <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+          </div>
+          <hr />
+        </div>
+        <div className={styles.component} >
+          <div className={styles.content} >
+            <div>
+              <h2>Value Improvement<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
+              <ul>
+                <li><Link href={"/"}>Graphic Design</Link></li>
+                <li><Link href={"/"}>Structural Engineering</Link></li>
+              </ul>
+            </div>
+            <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+          </div>
+          <div className={styles.all_services}>
+            <Link href={"/"}>
+              <h2>Operational Excellence<span className={styles.arrow} >
+                <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
+              </span>
+              </h2>
+            </Link>
+            <Link href={"/"}>
+              <h2>Sourcing Excellence<span className={styles.arrow} >
+                <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
+              </span>
+              </h2>
+            </Link>
+            <Link href={"/"}>
+              <h2>Resourcing<span className={styles.arrow} >
+                <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
+              </span>
+              </h2>
+            </Link>
+            <Link href={"/"}>
+              <h2>Application & Business Dev.<span className={styles.arrow} >
+                <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
+              </span>
+              </h2>
+            </Link>
 
+          </div>
+          <div className={styles.all_services_button} >
+            <hr></hr>
+            <Link href={"/"}>View all Services</Link>
+            <hr></hr>
+          </div>
+        </div>
+
+      </div>
+      <div className={styles.customers} >
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <h2>Here's what our customers experinced after implementing Prospectss Tools</h2>
+            <hr></hr>
+            <Image src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
+            <p>Packult helped our business to generate more sales and saved money on product packaging</p>
+            <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
+          </div>
+          <hr></hr>
+          <div className={styles.right}>
+            <h1>Trusted by over 233784+ Customers</h1>
+          </div>
+        </div>
+        <div className={styles.gallery} >
+          <div className={styles.content} >
+            {/* <Carousel
+              withoutControls={false}
+              cellAlign="center"
+            >
+              <div className={styles.carousel} >
+                <Image src="/assets/images/home/gallery (1).png" alt='gallery1' width={1000} height={1000} />
+                <Image src="/assets/images/home/gallery (2).png" alt='gallery2' width={1000} height={1000} />
+                <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+              </div>
+              <div className={styles.carousel}>
+                <Image src="/assets/images/home/gallery (2).png" alt='gallery1' width={1000} height={1000} />
+                <Image src="/assets/images/home/gallery (1).png" alt='gallery2' width={1000} height={1000} />
+                <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+              </div>
+            </Carousel> */}
+          </div>
+        </div>
+      </div>
+      <div className={styles.map}>
+        <Image src={'/assets/images/home/map.png'} alt="map" width={1000} height={1000} />
+      </div>
+      <WorkNumbers />
+      <div className={styles.mobile_app}>
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <h2>Download our Mobile App</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni.</p>
+            <div className={styles.qr_codes}>
+              <div>
+                <Image src={'/assets/images/home/customer-qr-code.png'} alt="cutomer-qr-code" width={1000} height={1000} />
+                <h5>Customer App</h5>
+              </div>
+              <div>
+                <Image src={'/assets/images/home/vendor-qr-code.png'} alt="vendor-qr-code" width={1000} height={1000} />
+                <h5>Vendor App</h5>
+              </div>
+            </div>
+          </div>
+          <div className={styles.right}>
+            <Image src={'/assets/images/home/mobile-app.png'} alt="mobile-app" width={1000} height={1000} />
+            <div className={styles.apple_play_store}>
+              <Image src={'/assets/images/home/App Store.png'} alt="app-store" width={1000} height={1000} />
+              <Image src={'/assets/images/home/Google Play.png'} alt="play-store" width={1000} height={1000} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <Contact />
     </Layout>
   )
 }

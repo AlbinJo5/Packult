@@ -8,6 +8,7 @@ export default function MetaHead({ pageMeta }) {
     description: 'Packult is a web app that helps you organize your packing list for your next trip.',
     type: 'website',
     url: process.env.NEXT_PUBLIC_SERVER_URL,
+    
     ...pageMeta
   }
   return (

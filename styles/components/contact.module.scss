@@ -6,14 +6,13 @@
     margin: 0vw 10vw;
     margin-bottom: 5vw;
     border-radius: 2vw;
-    // give a bottom shadow
     box-shadow: 0 0 1vw 0 rgba(0, 0, 0, 0), 0 1vw 1vw 0 rgba(0, 0, 0, 0.19);
 
     h1 {
-        font-size: 4.5vw;
-        font-weight: 500;
+        font-size: 4vw;
+        font-family: 'Visby Bold';
         margin: 0;
-        letter-spacing: .8vw;
+        letter-spacing: .4vw;
     }
 
     .formContainer {
@@ -21,6 +20,7 @@
 
         h4 {
             font-size: 2vw;
+            font-family: 'Visby Regular';
             font-weight: 500;
             margin: 0;
             margin-bottom: 2vw;
@@ -30,6 +30,7 @@
             display: flex;
             flex-direction: column;
 
+
             input {
                 width: 40vw;
                 height: 3vw;
@@ -38,6 +39,7 @@
                 background-color: $light;
                 margin-bottom: 1vw;
                 font-size: 1.5vw;
+                font-family: 'Visby Regular';
                 font-weight: 400;
                 color: #A9A9A9;
                 padding: .5vw 1vw;
@@ -58,8 +60,9 @@
                 border-radius: .5vw;
                 background-color: $primary;
                 margin-bottom: 1vw;
-                font-size: 1.5vw;
-                font-weight: 500;
+                font-size: 2vw;
+                font-family: 'Visby Bold';
+                letter-spacing: .2vw;
                 color: $light;
 
                 transition: all .3s ease-in-out;

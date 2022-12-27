@@ -16,7 +16,6 @@ export default function CardContent({ data }) {
                 {
                     links?.map((link, index) => (
                         <Link href={link.link} key={index} >{link.text}</Link>
-
                     ))
                 }
             </div>

@@ -175,10 +175,325 @@
     padding: 0 10vw;
 
     .content {
-        img {
-            width: 20vw;
-            height: max-content;
-            margin: 0;
+        h3 {
+            font-size: 2vw;
+            font-weight: 500;
+            font-family: 'Visby Regular';
+            margin-bottom: 2vw;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                width: max-content;
+                height: 28vw;
+            }
+        }
+
+        .all_services_button {
+            display: flex;
+            margin: 5vw 0;
+
+
+            hr {
+                width: 30%;
+                height: 0.1vw;
+                background-color: rgba(0, 0, 0, 0.400);
+                border: none;
+                align-self: center
+            }
+
+            a {
+                background-color: $primary;
+                color: $light;
+                font-size: 2.5vw;
+                font-family: 'Visby Bold';
+                padding: 1vw 2vw;
+                border-radius: 2.5vw;
+                // drop shadow
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+            }
+        }
+    }
+}
+
+.services {
+    padding: 0 10vw;
+    margin-top: 5vw;
+
+    .component {
+        &:nth-child(odd) {
+            .content {
+                flex-direction: row-reverse;
+
+                h2 {
+                    color: $primary;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 5vw;
+            margin-bottom: 4vw;
+            margin-top: 2vw;
+
+            p {
+                font-size: 1.5vw;
+                font-family: 'Visby Regular';
+                line-height: 2.5vw;
+            }
+
+            h2 {
+                font-size: 2.5vw;
+                font-family: 'Visby Bold';
+
+                img {
+                    margin: 0 1vw;
+                    width: 1.5vw;
+                    height: max-content;
+                }
+            }
+
+            img {
+                width: 30vw;
+                height: max-content;
+                margin: 0;
+            }
+
+            ul {
+                cursor: pointer;
+
+                li {
+                    font-size: 1.5vw;
+                    color: $dark;
+                    font-family: 'Visby Bold';
+                    text-decoration: underline;
+                    line-height: 3vw;
+                }
+
+            }
+
+            .all_services {
+                background-color: #87BE42;
+            }
+        }
+
+        .all_services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2vw;
+
+            margin: 5vw 0;
+
+            a {
+                display: flex;
+                justify-content: center;
+                border-radius: 1vw;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+                h2 {
+                    font-size: 1.5vw;
+                    font-family: 'Visby Bold';
+
+                    img {
+                        margin: 0 1vw;
+                        width: 2vw;
+                        height: max-content;
+                    }
+                }
+            }
+        }
+
+        .all_services_button {
+            display: flex;
+            margin: 5vw 0;
+
+
+            hr {
+                width: 30%;
+                height: 0.1vw;
+                background-color: rgba(0, 0, 0, 0.400);
+                border: none;
+                align-self: center
+            }
+
+            a {
+                background-color: $primary;
+                color: $light;
+                font-size: 2.5vw;
+                font-family: 'Visby Bold';
+                padding: 1vw 2vw;
+                border-radius: 2.5vw;
+                // drop shadow
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+            }
+        }
+    }
+}
+
+.customers {
+    background-color: $dark;
+    color: $light;
+    padding: 0 10vw;
+
+    .content {
+        display: flex;
+        gap: 5vw;
+
+        hr {
+            width: .1vw;
+            height: 30vw;
+            background-color: rgba(255, 255, 255, 0.400);
+            border: none;
+            align-self: center
+        }
+
+        .left {
+            width: 50%;
+
+            h2 {
+                font-size: 2vw;
+                font-family: 'Visby Regular';
+                margin-bottom: 3vw;
+                width: 30vw;
+                line-height: 3vw;
+            }
+
+            hr {
+                width: 100%;
+                height: 0.1vw;
+                background-color: rgba(255, 255, 255, 0.400);
+                border: none;
+                align-self: center
+            }
+
+            p {
+                font-size: 1.1vw;
+                font-family: 'Visby Thin';
+                line-height: 2.5vw;
+                letter-spacing: .2vw;
+
+            }
+
+            h4 {
+                font-size: 1vw;
+                font-family: 'Visby Thin';
+                line-height: 2.5vw;
+                letter-spacing: .2vw;
+
+                span {
+                    font-size: 1.5vw;
+                    font-family: 'Visby Bold';
+                    margin-right: 2vw;
+                }
+            }
+
+            img {
+                width: 15vw;
+                height: max-content;
+            }
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            h1 {
+                font-size: 3vw;
+                font-family: 'Visby Medium';
+                letter-spacing: .2vw;
+            }
+        }
+    }
+}
+
+.map {
+    padding: 5vw 10vw;
+
+    img {
+        width: 100%;
+        height: max-content;
+    }
+}
+
+.mobile_app {
+    background-color: #EFFEA6;
+    padding: 0 2vw;
+    margin: 0 10vw;
+    margin-bottom: 5vw;
+    border-radius: 1vw;
+
+    .content {
+        display: flex;
+        padding: 2vw 0;
+
+        .left {
+            width: 50%;
+
+            h2 {
+                font-size: 2.5vw;
+                font-family: 'Visby Bold';
+                letter-spacing: .2vw;
+                margin: 0;
+
+            }
+
+            p {
+                font-size: 1.5vw;
+                font-family: 'Visby Regular';
+                letter-spacing: .2vw;
+            }
+
+            .qr_codes {
+                display: flex;
+                gap: 2vw;
+                margin-top: 2vw;
+
+
+                img {
+                    width: 12vw;
+                    height: max-content;
+                }
+
+                h5 {
+                    font-size: 1vw;
+                    font-family: 'Visby Regular';
+                    letter-spacing: .2vw;
+                    margin: 0;
+                    justify-content: center;
+                    display: flex;
+                }
+            }
+        }
+
+        .right {
+            width: 50%;
+
+            img {
+                width: max-content;
+                height: 27vw;
+            }
+
+            .apple_play_store {
+                display: flex;
+                gap: 2vw;
+                justify-content: center;
+
+                img {
+                    width: 8vw;
+                    cursor: pointer;
+                    height: max-content;
+                }
+            }
         }
     }
 }

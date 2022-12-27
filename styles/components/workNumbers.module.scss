@@ -3,31 +3,32 @@
 .workNumbers {
     color: $light;
     text-align: center;
-    padding: 0vw 10vw;
+    margin: 0 10vw;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
+    grid-gap: 2vw;
 
     .content {
         display: flex;
         text-align: left;
         align-items: center;
-        gap: 1vw;
 
         h1 {
             font-size: 10vw;
+            font-family: 'Visby Bold';
             font-weight: 500;
             -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: .05vw;
+            -webkit-text-stroke: .1vw;
             color: $dark;
 
         }
 
         h2 {
-            font-size: 1vw;
+            font-size: 1.5vw;
             font-weight: 500;
+            font-family: 'Visby Regular';
             color: $dark;
-            width: 2vw;
         }
     }
 }
