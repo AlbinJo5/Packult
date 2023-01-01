@@ -64,21 +64,15 @@ export default function Home() {
         <Heading heading="Gallery" line={true} />
         <div className={styles.content} >
           <h3>Some more of our work, social posts many more things...</h3>
-          <Carousel
-            withoutControls={false}
-            cellAlign="center"
-          >
-            <div className={styles.carousel} >
-              <Image src="/assets/images/home/gallery (1).png" alt='gallery1' width={1000} height={1000} />
-              <Image src="/assets/images/home/gallery (2).png" alt='gallery2' width={1000} height={1000} />
-              <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
-            </div>
-            <div className={styles.carousel}>
-              <Image src="/assets/images/home/gallery (2).png" alt='gallery1' width={1000} height={1000} />
-              <Image src="/assets/images/home/gallery (1).png" alt='gallery2' width={1000} height={1000} />
-              <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
-            </div>
-          </Carousel>
+
+          <div className={styles.scroll}>
+            <Image src="/assets/images/home/gallery (1).png" alt='gallery1' width={1000} height={1000} />
+            <Image src="/assets/images/home/gallery (2).png" alt='gallery2' width={1000} height={1000} />
+            <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+            <Image src="/assets/images/home/gallery (2).png" alt='gallery1' width={1000} height={1000} />
+            <Image src="/assets/images/home/gallery (1).png" alt='gallery2' width={1000} height={1000} />
+            <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+          </div>
           <div className={styles.all_services_button} >
             <hr></hr>
             <Link href={"/"}>View all Images</Link>
@@ -177,23 +171,46 @@ export default function Home() {
             <h1>Trusted by over 233784+ Customers</h1>
           </div>
         </div>
-        <div className={styles.gallery} >
-          <div className={styles.content} >
-            {/* <Carousel
-              withoutControls={false}
-              cellAlign="center"
-            >
-              <div className={styles.carousel} >
-                <Image src="/assets/images/home/gallery (1).png" alt='gallery1' width={1000} height={1000} />
-                <Image src="/assets/images/home/gallery (2).png" alt='gallery2' width={1000} height={1000} />
-                <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+
+      </div>
+      <div className={styles.cutomers_gallery} >
+        <Carousel
+        >
+          <div className={styles.carousel} >
+            <Image src="/assets/images/home/customers (1).png" alt='customers1' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (2).png" alt='customers2' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (3).png" alt='customers3' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (4).png" alt='customers4' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (5).png" alt='customers5' width={1000} height={1000} />
+          </div>
+
+        </Carousel>
+      </div>
+      <div className={styles.awards}>
+        <div className={styles.bg_plane}>
+        </div>
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <div className={styles.scrollable}>
+              <div className={styles.award_box}>
+                <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
               </div>
-              <div className={styles.carousel}>
-                <Image src="/assets/images/home/gallery (2).png" alt='gallery1' width={1000} height={1000} />
-                <Image src="/assets/images/home/gallery (1).png" alt='gallery2' width={1000} height={1000} />
-                <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+              <div className={styles.award_box}>
+                <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
               </div>
-            </Carousel> */}
+              <div className={styles.award_box}>
+                <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
+              </div>
+
+            </div>
+          </div>
+          <div className={styles.right}>
+            <h2>Our Awards</h2>
+            <h3>Our Well Deserved Awards</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam est ullam recusandae dolores nam dolore a nemo architecto fuga illum.</p>
           </div>
         </div>
       </div>
