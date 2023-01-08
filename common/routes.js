@@ -4,4 +4,5 @@ export const ROUTES = {
     PACKAGING_CONVERTERS: "/packaging-converters",
     CONATCT_US: "/contact-us",
     ABOUT: "/about",
+    SERVICES: "/services",
 }

@@ -26,7 +26,7 @@ export default function Header() {
 
       <ul className={styles.links} >
         <li><Link href="#">SCOPE</Link></li>
-        <li><Link href="#">SERVICES</Link></li>
+        <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li>
         <li><Link href="#">OUR WORK</Link></li>
         <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
         <li><Link className={currentRoute === ROUTES.CONATCT_US ? styles.selected_contact : styles.contact} href={ROUTES.CONATCT_US} >CONTACT</Link></li>

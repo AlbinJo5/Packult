@@ -18,6 +18,7 @@
             gap: 2vw;
 
             h1 {
+                font-family: "Visby bold";
                 font-size: 8vw;
                 font-weight: 500;
                 margin: 0;
@@ -27,6 +28,7 @@
             }
 
             h2 {
+                font-family: "Visby bold";
                 letter-spacing: .5vw;
                 font-size: 4vw;
                 font-weight: 500;
@@ -38,8 +40,10 @@
         }
 
         p {
+            font-family: "Visby regular";
             margin-top: 1vw;
             font-size: 1.5vw;
+            letter-spacing: .1vw;
             line-height: 2.1vw;
             width: 100%;
             color: $dark;
@@ -55,7 +59,7 @@
             text-decoration: none;
             font-weight: 1000;
             text-decoration: underline;
-
+            font-family: "Visby medium";
             display: flex;
             transition: all .3s ease-in-out;
 
