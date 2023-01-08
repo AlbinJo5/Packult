@@ -2,8 +2,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { ROUTES } from "../common/routes"
 import styles from "../styles/components/header.module.scss"
+import { useRouter } from 'next/router'
 
 export default function Header() {
+
+  // get the current route
+  const router = useRouter()
+  const currentRoute = router.pathname
+
   return (
     <nav className={styles.nav}>
       <Link href={ROUTES.HOME} id="header_logo"  >
@@ -22,8 +28,8 @@ export default function Header() {
         <li><Link href="#">SCOPE</Link></li>
         <li><Link href="#">SERVICES</Link></li>
         <li><Link href="#">OUR WORK</Link></li>
-        <li><Link href={ROUTES.ABOUT}>ABOUT</Link></li>
-        <li><Link href={ROUTES.CONATCT_US} className={styles.contact}>CONTACT</Link></li>
+        <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
+        <li><Link className={currentRoute === ROUTES.CONATCT_US ? styles.selected_contact : styles.contact} href={ROUTES.CONATCT_US} >CONTACT</Link></li>
       </ul>
       <div className={styles.mlinks} >
         <div className={styles.mLinks__icon}>

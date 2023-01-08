@@ -47,8 +47,21 @@
 
                 &:hover {
                     color: $primary;
+                    transition: all 0.3s ease-in-out;
+
                 }
+
+
+                transition: all 0.3s ease-in-out;
+
+
             }
+
+            .selected {
+                color: $primary;
+                transition: all 0.3s ease-in-out;
+            }
+
         }
 
         .contact {
@@ -56,6 +69,20 @@
             @include paddingTBRL(0.2vw, 0.2vw, .8vw, .8vw);
             @include buttonHoverCustom(solid 1px $primary, 20px, $dark, $primary);
             font-size: 1vw;
+
+            transition: all 0.3s ease-in-out;
+
+        }
+
+        .selected_contact {
+            @include buttonCustom(solid 1px $primary, 20px, $dark, $primary);
+            @include paddingTBRL(0.2vw, 0.2vw, .8vw, .8vw);
+            @include buttonHoverCustom(solid 1px $primary, 20px, $dark, $primary);
+            font-size: 1vw;
+
+
+            transition: all 0.3s ease-in-out;
+
         }
     }
 
