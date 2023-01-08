@@ -40,35 +40,39 @@ export default function index() {
                             <Image src={"/assets/images/about/about (4).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Ulrich Reifenhäuser</h3>
-                                <Link href={"linkedin.com"} >Linkedin</Link>
+                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+
                             </div>
                         </div>
                         <div className={styles.LinkedinImage} >
                             <Image src={"/assets/images/about/about (8).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Manish Mehta</h3>
-                                <Link href={"linkedin.com"} >Linkedin</Link>
+                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+
                             </div>
                         </div>
                         <div className={styles.LinkedinImage} >
                             <Image src={"/assets/images/about/about (5).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Amitav Ray</h3>
-                                <Link href={"linkedin.com"} >Linkedin</Link>
+                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+
                             </div>
                         </div>
                         <div className={styles.LinkedinImage} >
                             <Image src={"/assets/images/about/about (6).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Nippon Paper Industries</h3>
-                                <Link href={"linkedin.com"} >Linkedin</Link>
+                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+
                             </div>
                         </div>
                         <div className={styles.LinkedinImage} >
                             <Image src={"/assets/images/about/about (7).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Esq. Suresh Gupta</h3>
-                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} /></span> </Link>
+                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
                             </div>
                         </div>
 

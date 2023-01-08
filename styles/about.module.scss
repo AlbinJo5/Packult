@@ -158,20 +158,21 @@
 
                     a {
                         display: flex;
-                        font-size: 1.5vw;
+                        font-size: 2vw;
                         margin: 0;
                         color: rgb(24, 119, 242);
                         text-decoration: underline;
                         position: absolute;
-                        bottom: 2.5vw;
+                        bottom: 2vw;
                         font-family: "Visby Medium Italic";
 
                         span {
                             width: 1.5vw;
                             height: max-content;
+                            margin-left: 1vw;
 
                             img {
-                                border-radius: none;
+                                border-radius: 0;
                                 width: 100%;
                                 height: 100%;
 
