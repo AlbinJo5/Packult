@@ -8,6 +8,8 @@ import { ROUTES } from '../common/routes'
 import Carousel from 'nuka-carousel'
 import WorkNumbers from '../components/workNumbers'
 import Contact from '../components/contact'
+import BlogCarousel from '../components/blogCarousel'
+import { blog_dummy } from '../data/dummy'
 export default function Home() {
   return (
     <Layout >
@@ -186,6 +188,7 @@ export default function Home() {
 
         </Carousel>
       </div>
+      <BlogCarousel heading={"Blog"} isBlogPage={false} data={blog_dummy} />
       <div className={styles.awards}>
         <div className={styles.bg_plane}>
         </div>
@@ -193,11 +196,11 @@ export default function Home() {
           <div className={styles.left}>
             <div className={styles.scrollable}>
               <div className={styles.award_box}>
-                <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
-                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
+                {/* <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} /> */}
               </div>
               <div className={styles.award_box}>
-                <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+                <h4> <span> IFCA 2022</span> DESIGN OF THE YEAR 2022</h4>
                 <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
               </div>
               <div className={styles.award_box}>

@@ -1,0 +1,18 @@
+.blogCarousel {
+    padding-left: 10vw;
+    margin: 5vw 0vw 10vw 0vw;
+
+    .content {
+        display: flex;
+        gap: 2vw;
+        overflow-x: scroll;
+
+        .card {
+            min-width: 40vw;
+            height: max-content;
+            padding: 2.5vw;
+            border-radius: 2vw;
+            box-shadow: 0vw 0vw 2vw 0vw rgba(0, 0, 0, 0.2);
+        }
+    }
+}

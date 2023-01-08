@@ -22,8 +22,8 @@ export default function Header() {
         <li><Link href="#">SCOPE</Link></li>
         <li><Link href="#">SERVICES</Link></li>
         <li><Link href="#">OUR WORK</Link></li>
-        <li><Link href="#">ABOUT</Link></li>
-        <li><Link href="#" className={styles.contact}>CONTACT</Link></li>
+        <li><Link href={ROUTES.ABOUT}>ABOUT</Link></li>
+        <li><Link href={ROUTES.CONATCT_US} className={styles.contact}>CONTACT</Link></li>
       </ul>
       <div className={styles.mlinks} >
         <div className={styles.mLinks__icon}>

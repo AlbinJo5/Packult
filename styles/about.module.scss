@@ -9,15 +9,28 @@
     h4 {
         font-size: 1.5vw;
         color: $secondary;
-        font-family: "VisbyRoundCF-Bold";
+        font-family: "Visby Regular";
+        letter-spacing: .1vw;
     }
 
     h1 {
         font-size: 3vw;
         color: $primary;
+        font-family: "Visby Bold";
+
 
         span {
             color: $dark;
+            position: relative;
+
+            .background {
+                position: absolute;
+                height: 1.5vw;
+                width: 100%;
+                background-color: $primary;
+                bottom: 0;
+                z-index: -1;
+            }
         }
     }
 
@@ -25,6 +38,7 @@
         font-size: 2vw;
         color: $dark;
         margin-top: 1vw;
+        font-family: "Visby Regular";
     }
 
     .section1 {
@@ -36,6 +50,9 @@
             color: $light;
             padding: 1vw;
             border-radius: 10vw;
+            font-size: 1.5vw;
+            font-family: "Visby SemiBold";
+            letter-spacing: .1vw;
         }
 
         img {
@@ -47,11 +64,22 @@
     .section2 {
         margin-top: 10vw;
         display: flex;
-        gap: 5vw;
+        gap: 10vw;
 
-        img {
-            width: 20vw;
-            height: max-content;
+        .img_holder {
+            position: relative;
+            width: 50vw;
+
+            img {
+                position: absolute;
+                width: 20vw;
+                height: max-content;
+
+                &:nth-child(2) {
+                    top: 10;
+                    left: 0;
+                }
+            }
         }
     }
 
