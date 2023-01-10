@@ -10,9 +10,14 @@ import WorkNumbers from '../components/workNumbers'
 import Contact from '../components/contact'
 import BlogCarousel from '../components/blogCarousel'
 import { blog_dummy } from '../data/dummy'
+import Particles from '../components/particles'
 export default function Home() {
   return (
     <Layout >
+      <Particles color="#C2D950" height="50vw" width="150vw" top="150vh" left="90vw" blur='10vw' />
+      <Particles color="#FFD7EA" height="30vw" width="150vw" top="290vh" left="-135vw" blur='5vw' />
+      <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="440vh" left="90vw" blur='10vw' />
+      <Particles color="#FFD7EA" height="30vw" width="150vw" top="620vh" left="-135vw" blur='5vw' />
       <div className={styles.langingPage} >
         <div className={styles.scroll_down}>
           <Image src="/assets/images/home/mouse.png" width={1000} height={1000} alt="scroll_down" />
@@ -21,7 +26,6 @@ export default function Home() {
       </div>
       <div className={styles.intro}>
         <div className={styles.bgRectangle}></div>
-        <div className={styles.bgOval}></div>
         <div className={styles.content} >
           <div className={styles.brand} >
             <Image src="/assets/images/home/brandOwners.png" width={1000} height={1000} alt="Brand Owners" />
@@ -187,6 +191,13 @@ export default function Home() {
             <Image src="/assets/images/home/customers (4).png" alt='customers4' width={1000} height={1000} />
             <Image src="/assets/images/home/customers (5).png" alt='customers5' width={1000} height={1000} />
           </div>
+          <div className={styles.carousel} >
+            <Image src="/assets/images/home/customers (1).png" alt='customers1' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (2).png" alt='customers2' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (3).png" alt='customers3' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (4).png" alt='customers4' width={1000} height={1000} />
+            <Image src="/assets/images/home/customers (5).png" alt='customers5' width={1000} height={1000} />
+          </div>
 
         </Carousel>
       </div>
@@ -196,20 +207,17 @@ export default function Home() {
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.scrollable}>
-              <div className={styles.award_box}>
-                {/* <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+            <div className={styles.award_box}>
+              {/* <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
                 <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} /> */}
-              </div>
-              <div className={styles.award_box}>
-                <h4> <span> IFCA 2022</span> DESIGN OF THE YEAR 2022</h4>
-                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
-              </div>
-              <div className={styles.award_box}>
-                <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
-                <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
-              </div>
-
+            </div>
+            <div className={styles.award_box}>
+              <h4> <span> IFCA 2022</span> DESIGN OF<br />THE YEAR<br /> 2022</h4>
+              <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
+            </div>
+            <div className={styles.award_box}>
+              <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+              <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
           </div>
           <div className={styles.right}>

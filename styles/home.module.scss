@@ -56,7 +56,7 @@
 
     .bgRectangle {
         position: absolute;
-        top: 7vw;
+        top: 5vw;
         left: 20vw;
         z-index: -1;
         width: 50vw;
@@ -66,24 +66,13 @@
         filter: blur(1vw);
     }
 
-    .bgOval {
-        position: absolute;
-        bottom: -5vw;
-        right: -10vw;
-        z-index: -1;
-        width: 20vw;
-        height: 35vw;
-        background: #C2D950;
-        filter: blur(10vw);
-        border-radius: 50%;
 
-    }
 
     .content {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 3vw 0vw;
+        margin: 1vw 0vw;
 
 
 
@@ -164,13 +153,13 @@
 
         img {
             width: max-content;
-            height: 25vw;
+            height: 23vw;
             margin: 0;
             // background-color: #87BE42;
         }
 
         h2 {
-            font-size: 2.4vw;
+            font-size: 2.2vw;
             letter-spacing: .3vw;
             font-weight: 500;
             font-family: 'Visby Bold';
@@ -190,7 +179,7 @@
             li {
                 margin: 0;
                 margin-bottom: 2vw;
-                font-size: 2vw;
+                font-size: 1.8vw;
                 font-weight: 500;
                 font-family: 'Visby Regular';
                 position: relative;
@@ -219,7 +208,7 @@
 
     .content {
         h3 {
-            font-size: 2vw;
+            font-size: $text;
             font-weight: 500;
             font-family: 'Visby Regular';
             margin-bottom: 2vw;
@@ -233,17 +222,36 @@
             margin-bottom: 2vw;
             margin-right: -10vw;
 
-            // override padding from carousel
+
+            // design scrollbar
             &::-webkit-scrollbar {
-                width: 0px;
-                background: transparent;
-                /* make scrollbar transparent */
+                width: .5vw;
+                height: .55vw;
+
+
+
+
+                &-track {
+                    background: $light;
+                    border-radius: 1vw;
+                }
+
+                &-thumb {
+                    background: $primary;
+                    border-radius: 1vw;
+                }
+
+                &-button {
+                    display: none;
+                }
+
+
             }
 
 
             img {
                 width: max-content;
-                height: 30vw;
+                height: 25vw;
                 border-radius: 1vw;
                 object-fit: cover;
             }
@@ -276,15 +284,24 @@
             a {
                 background-color: $primary;
                 color: $light;
-                font-size: 2.5vw;
+                font-size: $button;
                 font-family: 'Visby Bold';
                 padding: 1vw 2vw;
                 border-radius: 2.5vw;
                 // drop shadow
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
+                &:hover {
+                    background-color: $light;
+                    color: $primary;
+                    box-shadow: 0px 4px 8px $primary;
+                    transition: all 0.5s ease-in-out;
+                }
+
             }
         }
+
+
     }
 }
 
@@ -311,7 +328,7 @@
             margin-top: 2vw;
 
             p {
-                font-size: 1.5vw;
+                font-size: $text;
                 font-family: 'Visby Regular';
                 line-height: 2.5vw;
             }
@@ -319,11 +336,21 @@
             h2 {
                 font-size: 2.5vw;
                 font-family: 'Visby Bold';
+                cursor: pointer;
 
                 img {
                     margin: 0 1vw;
                     width: 1.5vw;
                     height: max-content;
+                    transition: all 0.5s ease-in-out;
+
+                }
+
+                &:hover {
+                    img {
+                        transform: rotate(-135deg) scale(1.2);
+                        transition: all 0.5s ease-in-out;
+                    }
                 }
             }
 
@@ -342,6 +369,12 @@
                     font-family: 'Visby Bold';
                     text-decoration: underline;
                     line-height: 3vw;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $primary;
+                        transition: all 0.3s ease-in-out;
+                    }
                 }
 
             }
@@ -372,6 +405,19 @@
                         margin: 0 1vw;
                         width: 2vw;
                         height: max-content;
+                        transition: all 0.3s ease-in-out;
+
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0px 4px 8px $primary;
+
+                    img {
+                        transform: scale(0.5) rotateZ(-135deg) translateY(-1vw);
+                        transition: all 0.3s ease-in-out;
+
+
                     }
                 }
             }
@@ -393,14 +439,25 @@
             a {
                 background-color: $primary;
                 color: $light;
-                font-size: 2.5vw;
+                font-size: $button;
                 font-family: 'Visby Bold';
                 padding: 1vw 2vw;
                 border-radius: 2.5vw;
                 // drop shadow
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 
+                &:hover {
+
+                    background-color: $light;
+                    color: $primary;
+                    box-shadow: 0px 4px 8px $primary;
+                    transition: all 0.5s ease-in-out;
+
+                }
+
             }
+
+
         }
     }
 }
@@ -497,8 +554,15 @@
         justify-content: space-around;
         align-items: center;
 
+        &:nth-child(3n) {
+            img {
+                width: 50vw;
+                height: max-content;
+            }
+        }
+
         img {
-            width: max-content;
+            width: 5vw;
             height: max-content;
 
         }
@@ -531,112 +595,97 @@
         .left {
             width: 60%;
 
-            .scrollable {
+            display: flex;
+            gap: 2vw;
+            margin-left: -10vw;
+
+
+            .award_box {
+
+
+                position: relative;
+                height: 20vw;
+                min-width: 20vw;
+                background-color: $dark;
+                color: $light;
+                border-radius: 1.5vw;
                 display: flex;
-                overflow-x: scroll;
-                overflow-y: hidden;
-                gap: 2vw;
-                margin-left: -10vw;
+                justify-content: center;
 
-                // override padding from carousel
-                &::-webkit-scrollbar {
-                    width: 0px;
-                    background: transparent;
-                    /* make scrollbar transparent */
-                }
+                align-items: flex-start;
 
-                .award_box {
-
-                    &:nth-child(2) {
-                        display: flex;
-                        flex-direction: column;
-
-
-                        h4 {
-                            font-size: 1.5vw;
-                            font-family: 'Visby Thin';
-                            margin: 0;
-
-
-                            span {
-                                font-size: 2vw;
-                                font-family: 'Visby Bold';
-                            }
-
-                        }
-                    }
-
-                    position: relative;
-                    height: 20vw;
-                    width: 20vw;
-                    background-color: $dark;
-                    color: $light;
-                    border-radius: 1.5vw;
-                    display: flex;
-                    justify-content: center;
-
-                    align-items: center;
-
+                &:nth-child(2) {
                     h4 {
-                        font-size: 1.5vw;
-                        font-family: 'Visby Thin';
-                        margin: 0;
-                        width: 10vw;
-                        text-align: center;
 
-                        span {
-                            font-size: 2vw;
-                            font-family: 'Visby Bold';
-                            margin-right: 2vw;
-                        }
-
-                    }
-
-                    img {
-                        position: absolute;
-                        width: 12vw;
-                        height: max-content;
-                        bottom: 3vw;
+                        padding-top: 3.5vw;
                     }
                 }
 
+                &:nth-child(3) {
+                    h4 {
+
+                        padding-top: 3vw;
+                    }
+                }
+
+                h4 {
+                    font-size: 1.5vw;
+                    font-family: 'Visby Thin';
+                    margin: 0;
+                    width: 10vw;
+                    text-align: center;
+
+                    span {
+                        font-size: 2vw;
+                        font-family: 'Visby Bold';
+                    }
+
+                }
+
+                img {
+                    position: absolute;
+                    width: 12vw;
+                    height: max-content;
+                    bottom: 3vw;
+                }
             }
 
         }
 
-        .right {
-            width: 40%;
+    }
 
-            display: flex;
-            flex-direction: column;
-            padding-left: 5vw;
+    .right {
+        width: 40%;
 
-            h2 {
-                font-size: 3vw;
-                font-family: 'Visby Bold';
-                margin: 0;
-                width: 30vw;
-                margin-bottom: 1vw;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10vw;
 
-            }
+        h2 {
+            font-size: 3vw;
+            font-family: 'Visby Bold';
+            margin: 0;
+            width: 30vw;
+            margin-bottom: 1vw;
 
-            h3 {
-                font-size: 2vw;
-                font-family: 'Visby Regular';
-                margin: 0;
-                width: 30vw;
-                margin-bottom: 1.5vw;
-            }
+        }
+
+        h3 {
+            font-size: 2vw;
+            font-family: 'Visby Regular';
+            margin: 0;
+            width: 30vw;
+            margin-bottom: 1.5vw;
+        }
 
 
 
-            p {
-                font-size: 1.5vw;
-                font-family: 'Visby Regular';
-                margin: 0;
-                width: 22vw;
+        p {
+            font-size: 1.5vw;
+            font-family: 'Visby Regular';
+            margin: 0;
+            width: 22vw;
 
-            }
         }
     }
 }

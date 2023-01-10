@@ -1,3 +1,5 @@
+@import './theme.scss';
+
 .brandowners {
     padding: 5vw 10vw;
     padding-bottom: 0vw;
@@ -6,12 +8,15 @@
         font-size: 3.5vw;
         font-weight: 700;
         margin-bottom: 2vw;
+        font-family: "Visby Bold"
+
     }
 
     p {
         width: 60vw;
         font-size: 1.5vw;
         line-height: 2.1vw;
+        font-family: "Visby Regular";
     }
 
     .brandowners__content {
