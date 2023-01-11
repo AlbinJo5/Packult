@@ -23,3 +23,29 @@
         margin-top: 8vw;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .brandowners {
+        padding: 10vw 10vw;
+        padding-bottom: 0vw;
+
+        h1 {
+            font-size: 4vw;
+            font-weight: 700;
+            margin-bottom: 2vw;
+            font-family: "Visby Bold"
+
+        }
+
+        p {
+            font-size: 2vw;
+            line-height: 3vw;
+            font-family: "Visby Regular";
+            letter-spacing: 0.1vw;
+        }
+
+        .brandowners__content {
+            margin-top: 8vw;
+        }
+    }
+}

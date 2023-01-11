@@ -8,7 +8,6 @@ import styles from "../../styles/services.module.scss"
 function index() {
     return (
         <Layout>
-            <Particles width="10vw" height="20vw" color="red" top="10vw" />
             <div className={styles.services} >
                 <h2>Services</h2>
                 <p className={styles.paragraph} >We provide your product world class solution with our service and expertise. </p>
