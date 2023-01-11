@@ -1,4 +1,5 @@
 import CardContent from "../../components/cardContent"
+import Contact from "../../components/contact"
 import Layout from "../../components/layout"
 import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
@@ -21,6 +22,8 @@ function index() {
                 </div>
             </div>
             <WorkNumbers />
+            <Contact />
+
         </Layout>
     )
 }
