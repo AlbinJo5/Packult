@@ -91,20 +91,34 @@
 }
 
 @media screen and (max-width: $mobile) {
-    .logo {
-        display: none;
-    }
+    .nav {
+        height: 10vw;
 
-    .mlogo {
-        display: block;
-    }
+        .logo {
+            display: none;
+        }
 
-    .links {
-        display: none;
-    }
+        .mlogo {
+            display: block;
+            img {
+                width: 20vw;
+                height: max-content;
+            }
+        }
 
-    .mlinks {
-        display: block;
+
+        .links {
+            display: none;
+        }
+
+        .mlinks {
+            display: block;
+            img{
+                width: 5vw;
+                height: max-content;
+                margin-right: 10vw;
+            }
+        }
     }
 
 

@@ -32,18 +32,8 @@ export default function Header() {
         <li><Link className={currentRoute === ROUTES.CONATCT_US ? styles.selected_contact : styles.contact} href={ROUTES.CONATCT_US} >CONTACT</Link></li>
       </ul>
       <div className={styles.mlinks} >
-        <div className={styles.mLinks__icon}>
-          <Image src="/assets/icons/hamburger.svg" alt="Packult" width={30} height={30} />
-        </div>
-        <div className={styles.mLinks__links}>
-          <ul>
-            <li><Link href="#">SCOPE</Link></li>
-            <li><Link href="#">SERVICES</Link></li>
-            <li><Link href="#">OUR WORK</Link></li>
-            <li><Link href="#">ABOUT</Link></li>
-            <li><Link href="#" className={styles.contact}>CONTACT</Link></li>
-          </ul>
-        </div>
+          <Image src="/assets/icons/hamburger.png" alt="Packult" width={1000} height={1000} />
+        
       </div>
 
     </nav>
