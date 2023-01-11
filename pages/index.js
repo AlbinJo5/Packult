@@ -14,10 +14,19 @@ import Particles from '../components/particles'
 export default function Home() {
   return (
     <Layout >
-      <Particles color="#C2D950" height="50vw" width="150vw" top="150vh" left="90vw" blur='10vw' />
-      <Particles color="#FFD7EA" height="30vw" width="150vw" top="290vh" left="-135vw" blur='5vw' />
-      <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="440vh" left="90vw" blur='10vw' />
-      <Particles color="#FFD7EA" height="30vw" width="150vw" top="620vh" left="-135vw" blur='5vw' />
+      <div className={styles.lap_particles}>
+        <Particles color="#C2D950" height="50vw" width="150vw" top="150vh" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="30vw" width="150vw" top="290vh" left="-135vw" blur='5vw' />
+        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="440vh" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="30vw" width="150vw" top="620vh" left="-135vw" blur='5vw' />
+      </div>
+      <div className={styles.mobile_particles}>
+        <Particles color="#C2D950" height="50vw" width="150vw" top="90vh" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="130vh" left="-135vw" blur='5vw' />
+        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="180vh" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="30vw" width="150vw" top="240vh" left="-135vw" blur='5vw' />
+      </div>
+
       <div className={styles.langingPage} >
         <div className={styles.scroll_down}>
           <Image src="/assets/images/home/mouse.png" width={1000} height={1000} alt="scroll_down" />

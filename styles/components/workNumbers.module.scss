@@ -32,3 +32,16 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .workNumbers {
+        margin-left: 9vw;
+
+        .content {
+            
+            h2 {
+                font-size: 1.8vw;
+            }
+        }
+    }
+}

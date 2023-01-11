@@ -1,5 +1,12 @@
 @import "./theme.scss";
 
+.mobile_particles{
+    display: none;
+}
+.lap_particles{
+    display: block;
+}
+
 .langingPage {
     background: $dark;
     height: 100vh;
@@ -146,7 +153,6 @@
 
 .vision_mission {
     padding: 0 10vw;
-
     .content {
         display: flex;
         align-items: center;
@@ -785,6 +791,12 @@
 }
 
 @media screen and (max-width: $mobile) {
+    .lap_particles{
+        display: none;
+    }
+    .mobile_particles{
+        display: block;
+    }
 
     .langingPage {
         background: $dark;
@@ -897,6 +909,7 @@
 
     .vision_mission {
         padding: 0 10vw;
+        margin-top: 10vw;
 
         .content {
             display: flex;
@@ -1357,6 +1370,7 @@
                         margin: 0;
                         width: 15vw;
                         text-align: center;
+                        line-height: 3vw;
 
                         span {
                             font-size: 2.5vw;
