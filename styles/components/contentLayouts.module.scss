@@ -8,6 +8,7 @@
         color: $primary;
         margin: 0;
         font-size: 5vw;
+        margin-bottom: 2vw;
     }
 
     .Top {
@@ -16,8 +17,8 @@
         p {
             margin: 0;
             font-size: 2vw;
-            letter-spacing: .15vw;
-
+            letter-spacing: .2vw;
+            line-height: 2.5vw;
 
         }
 
@@ -30,7 +31,8 @@
     .Bottom {
         p {
             font-size: 2vw;
-            letter-spacing: .15vw;
+            letter-spacing: .2vw;
+            line-height: 2.5vw;
 
         }
     }
@@ -43,6 +45,8 @@
         color: $primary;
         margin: 0;
         font-size: 5vw;
+        margin-bottom: 2vw;
+
     }
 
     img {
@@ -53,7 +57,8 @@
 
     p {
         font-size: 2vw;
-        letter-spacing: .15vw;
+        letter-spacing: .2vw;
+        line-height: 2.5vw;
 
     }
 
@@ -66,11 +71,14 @@
         color: $primary;
         margin: 0;
         font-size: 5vw;
+        margin-bottom: 2vw;
+
     }
 
     p {
         font-size: 2vw;
-        letter-spacing: .15vw;
+        letter-spacing: .2vw;
+        line-height: 2.5vw;
 
     }
 
@@ -83,6 +91,8 @@
         color: $primary;
         margin: 0;
         font-size: 5vw;
+        margin-bottom: 2vw;
+
     }
 
     img {
@@ -92,6 +102,7 @@
 
     p {
         font-size: 2vw;
-        letter-spacing: .15vw;
+        letter-spacing: .2vw;
+        line-height: 2.5vw;
     }
 }
