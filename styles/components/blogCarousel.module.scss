@@ -60,3 +60,52 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .blogCarousel {
+        padding-left: 5vw;
+        margin: 10vw 0vw 10vw 0vw;
+
+        .content {
+            gap: 5vw;
+
+            &::-webkit-scrollbar {
+               display: none;
+            }
+
+            .card {
+                margin: 1vw;
+                margin-top: 3vw;
+                min-width: 60vw;
+                height: 30vw;
+                padding: 5vw;
+                border-radius: 2vw;
+                box-shadow: 0vw 0vw 1vw 0vw rgba(0, 0, 0, 0.2);
+                
+                h5{
+                    font-size: 2.5vw;
+                    font-family: 'Visby Regular';
+                    color: rgb(119, 119, 119);
+                    margin: 0;
+                }
+
+                h3{
+                    font-size: 3vw;
+                    font-family: 'Visby Bold';
+                    color: $dark;
+                    margin: 0;
+                    margin-top: 2vw;
+                }
+                
+                p{
+                    font-size: 2.8vw;
+                    letter-spacing: 0.1vw;
+                    font-family: 'Visby Regular';
+                    color: $dark;
+                    margin: 0;
+                    margin-top: 2vw;
+                }
+            }
+        }
+    }
+}

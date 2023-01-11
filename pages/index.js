@@ -216,7 +216,7 @@ export default function Home() {
               <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
             <div className={styles.award_box}>
-              <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
+              <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE<br /> 2022</h4>
               <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
           </div>

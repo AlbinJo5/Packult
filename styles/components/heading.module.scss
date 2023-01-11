@@ -21,3 +21,18 @@
         align-self: flex-end;
     }
 }
+
+@media screen and (max-width: $mobile) {
+    .heading {
+        gap: 6vw;
+
+        h1 {
+            font-size: $mobile_heading1;
+        }
+
+        hr {
+            width: 100%;
+            height: 0.2vw;
+        }
+    }
+}
