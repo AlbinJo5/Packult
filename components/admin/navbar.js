@@ -10,6 +10,7 @@ import { ADMIN_ROUTES } from "../../common/routes";
 function Navbar() {
     const auth = getAuth(app);
     const router = useRouter();
+    const currentRoute = router.pathname
     const handleSignOut = () => {
         signOut(auth).then(() => {
             localStorage.removeItem(adminToken)
@@ -22,8 +23,8 @@ function Navbar() {
         <div className={styles.navbar}>
             <h1>Admin Panel</h1>
             <ul>
-                <li><Link href={ADMIN_ROUTES.BLOGS}>Blogs</Link></li>
-                <li><Link href={ADMIN_ROUTES.BLOGS_CREATE}>New Blog</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.BLOGS ? styles.selected : ""} href={ADMIN_ROUTES.BLOGS}>Blogs</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.BLOGS_CREATE ? styles.selected : ""} href={ADMIN_ROUTES.BLOGS_CREATE}>New Blog</Link></li>
                 <li><Link href="#">Our Works</Link></li>
                 <li><Link href="#">New Work</Link></li>
 

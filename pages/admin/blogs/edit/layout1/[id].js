@@ -1,6 +1,6 @@
 import Image from "next/image"
 import AdminLayout from "../../../../../components/admin/adminLayout"
-import styles from "../../../styles/admin/blogs.module.scss"
+import styles from "../../../../../styles/admin/components/layouts.module.scss"
 function Layout1Edit() {
     return (
         <AdminLayout>
@@ -18,8 +18,6 @@ function Layout1Edit() {
                         <textarea name="para1" id="para1" cols="30" rows="10"></textarea>
                         <textarea name="para2" id="para2" cols="30" rows="10"></textarea>
                         <div className={styles.image2} >
-                            <Image src={data.images[1]} height={1000} width={1000} alt={data.title} />
-                            <Image src={data.images[2]} height={1000} width={1000} alt={data.title} />
 
                             <label htmlFor="image2">
                                 <Image src="/assets/admin/dummyImage.jpg" name="image2" height={1000} width={1000} alt="dummyImage" />
@@ -36,7 +34,6 @@ function Layout1Edit() {
                         <textarea name="para5" id="para5" cols="30" rows="10"></textarea>
                         <textarea name="para6" id="para6" cols="30" rows="10"></textarea>
 
-                        <Image className={styles.image3} src={data.images[3]} height={1000} width={1000} alt={data.title} />
                         <label htmlFor="image4">
                             <Image src="/assets/admin/dummyImage.jpg" name="image4" height={1000} width={1000} alt="dummyImage" />
                         </label>
@@ -47,7 +44,7 @@ function Layout1Edit() {
                         <textarea name="para9" id="para9" cols="30" rows="10"></textarea>
                         <textarea name="para10" id="para10" cols="30" rows="10"></textarea>
                     </div>
-                    <button type="submit">Post</button>
+                    <button type="submit">Update</button>
                 </form>
             </div>
         </AdminLayout>
