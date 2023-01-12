@@ -1,0 +1,21 @@
+@import "../theme.scss";
+
+
+.blogs {
+    button {
+        width: 42vw;
+        height: 4vw;
+        border: none;
+        border-radius: .5vw;
+        background-color: rgb(19, 180, 255);
+        margin-bottom: 1vw;
+        font-size: 2vw;
+        font-family: 'Visby Bold';
+        letter-spacing: .2vw;
+        color: $light;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        margin-top: .5vw;
+        margin-bottom: 2vw;
+    }
+}

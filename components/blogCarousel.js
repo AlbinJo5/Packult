@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from './heading'
 import styles from "../styles/components/blogCarousel.module.scss"
 
-function BlogCarousel({ heading, isBlogPage, data }) {
+function BlogCarousel({ heading, isBlogPage, data=[] }) {
     return (
         <div className={styles.blogCarousel}>
             {

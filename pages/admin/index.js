@@ -22,7 +22,7 @@ function Index() {
                 // Signed in 
                 const user = userCredential.user;
                 localStorage.setItem(adminToken, user.accessToken)
-                router.push("/admin/blog")
+                router.push("/admin/blogs")
             })
             .catch((error) => {
                 const errorCode = error.code;
