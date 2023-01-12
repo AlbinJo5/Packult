@@ -50,7 +50,7 @@
                     &::placeholder{
                         font-family: "Visby Bold";
                         font-size: 3vw;
-                        color: $dark;
+                        color: $secondary;
                     }
 
                 }
@@ -95,7 +95,7 @@
                 &::placeholder{
                     font-family: "Visby Regular";
                     font-size: 1.2vw;
-                    color: $dark;
+                    color: $secondary;
                     letter-spacing: 0.1vw;
                     line-height: 1.5vw;
                 }
@@ -106,7 +106,7 @@
                 gap: 1vw;
 
                 img{
-                    width: 100%;
+                    width: 37vw;
                     height: max-content;
                     object-fit: cover;
                     border-radius: 1vw;
