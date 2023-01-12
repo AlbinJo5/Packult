@@ -19,6 +19,7 @@ function Navbar() {
     }
     return (
         <div className={styles.navbar}>
+            <h1>Admin Panel</h1>
             <ul>
                 <li><Link href="#">Blogs</Link></li>
                 <li><Link href="#">New Blog</Link></li>
