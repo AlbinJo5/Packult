@@ -6,3 +6,10 @@ export const ROUTES = {
     ABOUT: "/about",
     SERVICES: "/services",
 }
+
+export const ADMIN_ROUTES = {
+    LOGIN: "/admin",
+    BLOGS: "/admin/blogs",
+    BLOGS_CREATE: "/admin/blogs/create",
+    BLOGS_EDIT_LAYOUT_1: "/admin/blogs/edit/layout-1/",
+}

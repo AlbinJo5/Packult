@@ -6,6 +6,7 @@ import app from "../../utils/firebase";
 import Toast from "../../components/toast";
 import { adminToken } from "../../core/localstorage";
 import { useRouter } from "next/router";
+import { ADMIN_ROUTES } from "../../common/routes";
 
 function Index() {
     const email = useRef();
@@ -22,7 +23,7 @@ function Index() {
                 // Signed in 
                 const user = userCredential.user;
                 localStorage.setItem(adminToken, user.accessToken)
-                router.push("/admin/blogs")
+                router.push(ADMIN_ROUTES.BLOGS)
             })
             .catch((error) => {
                 const errorCode = error.code;
