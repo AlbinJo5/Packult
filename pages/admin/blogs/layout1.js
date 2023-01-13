@@ -71,7 +71,8 @@ function Index() {
                 image1,
                 image2,
                 image3,
-                image4
+                image4,
+                layout: "layout1"
             }
             console.log(data)
         }
