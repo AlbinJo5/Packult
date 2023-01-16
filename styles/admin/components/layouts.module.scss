@@ -39,6 +39,7 @@
                     margin-right: 1vw;
                     border: none;
                     height: 5vw;
+
                     &:focus {
                         outline: none;
                     }
@@ -47,7 +48,7 @@
                     font-family: "Visby Bold";
                     font-size: 3vw;
 
-                    &::placeholder{
+                    &::placeholder {
                         font-family: "Visby Bold";
                         font-size: 3vw;
                         color: $secondary;
@@ -59,6 +60,7 @@
                     width: 15%;
                     border: none;
                     height: 3vw;
+
                     &:focus {
                         outline: none;
                     }
@@ -67,23 +69,25 @@
                     font-family: "Visby Bold";
                     font-size: 1vw;
 
-                    &::placeholder{
+                    &::placeholder {
                         font-family: "Visby Bold";
                         font-size: 1vw;
                         color: $secondary;
-                    } 
+                    }
                 }
             }
 
         }
 
-        .content{
+        .content {
             margin-top: 1vw;
-            textarea{
+
+            textarea {
                 width: 100%;
                 height: 15vw;
                 margin: 1vw 0;
                 border: none;
+
                 &:focus {
                     outline: none;
                 }
@@ -91,8 +95,10 @@
                 color: $dark;
                 font-family: "Visby Regular";
                 font-size: 1.2vw;
+                letter-spacing: 0.1vw;
+                line-height: 1.5vw;
 
-                &::placeholder{
+                &::placeholder {
                     font-family: "Visby Regular";
                     font-size: 1.2vw;
                     color: $secondary;
@@ -101,11 +107,11 @@
                 }
             }
 
-            .image2{
+            .image2 {
                 display: flex;
                 gap: 1vw;
 
-                img{
+                img {
                     width: 37vw;
                     height: max-content;
                     object-fit: cover;
@@ -114,12 +120,12 @@
                 }
             }
 
-            label{
+            label {
                 margin-bottom: 1vw;
             }
         }
 
-        button{
+        button {
             width: 100%;
             height: 5vw;
             border: none;
@@ -129,7 +135,8 @@
             font-size: 1.5vw;
             cursor: pointer;
             margin-top: 1vw;
-            &:focus{
+
+            &:focus {
                 outline: none;
             }
         }
