@@ -70,6 +70,7 @@ function Index() {
         // check for empty fields with images
         if (image1 === "" || image2 === "" || image3 === "" || image4 === "" || title === "" || date === "" || para1 === "" || para2 === "" || para3 === "" || para4 === "" || para5 === "" || para6 === "" || para7 === "" || para8 === "" || para9 === "" || para10 === "") {
             alert("Please fill all the fields")
+            setloading(false)
             return
         }
 

@@ -12,5 +12,5 @@ export const ADMIN_ROUTES = {
     BLOGS: "/admin/blogs",
     BLOGS_CREATE: "/admin/blogs/create",
     BLOGS_LAYOUT_1: "/admin/blogs/layout1",
-    BLOGS_EDIT_LAYOUT_1: "/admin/blogs/edit/layout-1/",
+    BLOGS_EDIT_LAYOUT_1: "/admin/blogs/edit/layout1/",
 }
