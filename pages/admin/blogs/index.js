@@ -12,7 +12,6 @@ function Index() {
         fetch('/api/blog/get')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setblogs(data)
                 setloading(false)
             })

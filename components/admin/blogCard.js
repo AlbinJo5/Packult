@@ -12,8 +12,15 @@ function BlogCard({ img, title, description, id }) {
             <h4>{title}</h4>
             <p>{description}</p>
             <div className={styles.footer} >
-                <button onClick={()=>{ router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + id) }} >Edit</button>
-                <button>Delete</button>
+                <button onClick={() => { router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + id) }} >Edit</button>
+                <button onClick={() => {
+                    // delete api with id as params
+                    fetch(`/api/blog/delete?id=${id}`)
+                        .then(res => res.json())
+                        .then(data => {
+                            router.reload()
+                        })
+                }} >Delete</button>
             </div>
         </div>
     )
