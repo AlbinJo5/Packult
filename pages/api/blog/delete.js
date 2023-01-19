@@ -9,8 +9,9 @@ export default async function handler(req, res) {
 
         // delete subCollection from blogs collection using id
         const querySnapshot = await getDocs(collection(db, 'blogs', id, 'details'));
-        querySnapshot.forEach(async (doc) => {
-            await deleteDoc(doc(db, 'blogs', id, 'details', doc.id));
+        querySnapshot.forEach(async (docs) => {
+            console.log(docs.id);
+            await deleteDoc(doc(db, 'blogs', id, 'details', docs.id));
         });
 
         // delete document from blogs collection using id
