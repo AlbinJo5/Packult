@@ -157,7 +157,7 @@ function Layout1Edit() {
             }
 
             // if image is changed then update the mainImage in the blog
-            if (data.image1 !== image1Url) blog.mainImage = newData.newImage1
+            if (data.image1 !== image1Url) blog.mainImage = newData.image1
 
             // update the data in the firestore database
             const blogRef = doc(db, "blogs", params.id);
@@ -175,6 +175,7 @@ function Layout1Edit() {
         } catch (error) {
             
             alert("Something went wrong")
+            console.log(error);
             setUpdating(false)
         }
     }

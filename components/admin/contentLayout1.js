@@ -2,6 +2,7 @@ import Image from "next/image"
 import styles from "../../styles/admin/components/layouts.module.scss"
 
 function ContentLayout1({ data, isAdmin }) {
+    console.log(data);
     return (
         <div className={isAdmin ? styles.admin_content_layout_1 : styles.client_content_layout_1} >
             {
