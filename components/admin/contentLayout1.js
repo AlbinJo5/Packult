@@ -5,17 +5,20 @@ import { ADMIN_ROUTES } from "../../common/routes"
 
 function ContentLayout1({ data, isAdmin }) {
     const router = useRouter()
+    const params = router.query
     return (
         <div className={styles.content_layout_1} >
             {
                 isAdmin ? (
                     <div className={styles.admin_options} >
                         <button onClick={() => {
-                            router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + data.id)
+                            router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + params.id)
                         }} >Edit</button>
                         <button onClick={() => {
                             // delete api with id as params
-                            fetch(`/api/blog/delete?id=${data.id}`)
+                            console.log(data.id);
+                            fetch(`/api/blog/delete?id=${params.id}`)
+
                                 .then(res => res.json())
                                 .then(data => {
                                     router.push(ADMIN_ROUTES.BLOGS)

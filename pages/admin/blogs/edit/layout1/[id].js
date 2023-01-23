@@ -73,7 +73,7 @@ function Layout1Edit() {
         fetch('/api/blog/getById?id=' + params.id)
             .then(res => res.json())
             .then(data => {
-                
+
                 setdata(data)
                 setloading(false)
                 setImage1Url(data.image1)
@@ -173,7 +173,7 @@ function Layout1Edit() {
             setUpdating(false)
 
         } catch (error) {
-            
+
             alert("Something went wrong")
             console.log(error);
             setUpdating(false)
