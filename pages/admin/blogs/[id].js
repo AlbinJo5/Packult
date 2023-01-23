@@ -10,15 +10,17 @@ function Index() {
     const [loading, setloading] = useState(true)
     const [blog, setblog] = useState({})
     useEffect(() => {
+        if (!params.id) return
         // get blog using id
-        fetch(`/api/blog/get?id=${params.id}`)
+        console.log(params.id);
+        fetch(`/api/blog/getById?id=${params.id}`)
             .then(res => res.json())
             .then(data => {
                 setblog(data)
                 setloading(false)
             })
 
-    }, [ params.id ])
+    }, [params.id])
 
     return (
         <AdminLayout>

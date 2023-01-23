@@ -119,6 +119,8 @@ function Index() {
                                             para8: para8,
                                             para9: para9,
                                             para10: para10,
+                                            layout: "layout1"
+
                                         }
                                         // split the words by 30
                                         const para1Words = para1.split(" ")

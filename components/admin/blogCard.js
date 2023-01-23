@@ -7,13 +7,16 @@ function BlogCard({ img, title, description, id }) {
 
     const router = useRouter()
     return (
-        <div className={styles.blog_card} >
+        <div className={styles.blog_card} onClick={() => {
+            router.push(ADMIN_ROUTES.BLOGS_ID + id)
+        }} >
             <Image src={img} height={1000} width={1000} alt={title} />
             <h4>{title}</h4>
             <p>{description}</p>
             <div className={styles.footer} >
-                <button onClick={() => { router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + id) }} >Edit</button>
-                <button onClick={() => {
+                <button onClick={(e) => { e.stopPropagation(); router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + id) }} >Edit</button>
+                <button onClick={(e) => {
+                    e.stopPropagation();
                     // delete api with id as params
                     fetch(`/api/blog/delete?id=${id}`)
                         .then(res => res.json())

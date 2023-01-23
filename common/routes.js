@@ -10,6 +10,7 @@ export const ROUTES = {
 export const ADMIN_ROUTES = {
     LOGIN: "/admin",
     BLOGS: "/admin/blogs",
+    BLOGS_ID: "/admin/blogs/",
     BLOGS_CREATE: "/admin/blogs/create",
     BLOGS_LAYOUT_1: "/admin/blogs/layout1",
     BLOGS_EDIT_LAYOUT_1: "/admin/blogs/edit/layout1/",
