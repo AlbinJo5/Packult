@@ -157,6 +157,8 @@
 
         button {
 
+            border-radius: 1vw;
+
             // edit and delete buttons
             &:nth-child(1) {
                 width: max-content;
@@ -180,9 +182,10 @@
             &:nth-child(2) {
                 width: max-content;
                 height: 3vw;
-                border: red 0.1vw solid;
+                padding: 0 1vw;
+                border: rgb(245, 104, 104) 0.1vw solid;
                 background: $light;
-                color: red;
+                color: rgb(245, 104, 104) ;
                 font-family: "Visby Regular";
                 font-size: 1.5vw;
                 cursor: pointer;
@@ -190,7 +193,7 @@
                 transition: all 0.3s ease-in-out;
 
                 &:hover {
-                    background: red;
+                    background: rgb(245, 104, 104);
                     color: $light;
                 }
             }
