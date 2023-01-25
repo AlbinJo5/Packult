@@ -10,9 +10,9 @@ function Create() {
             <div className={styles.create} >
                 <h2>Choose layout</h2>
                 <div className={styles.layouts} >
-                    <Image onClick={()=>{ router.push(ADMIN_ROUTES.BLOGS_LAYOUT_1) }} src="/assets/admin/layout1.png" height={1000} width={1000} alt="layout1" data-title="Name" />
-                    <Image src="/assets/admin/layout1.png" height={1000} width={1000} alt="layout2" />
-                    <Image src="/assets/admin/layout1.png" height={1000} width={1000} alt="layout3" />
+                    <Image onClick={() => { router.push(ADMIN_ROUTES.BLOGS_LAYOUT_1) }} src="/assets/admin/layout1.png" height={1000} width={1000} alt="layout1" data-title="Name" />
+                    <Image onClick={() => { router.push(ADMIN_ROUTES.BLOGS_LAYOUT_2) }} src="/assets/admin/layout1.png" height={1000} width={1000} alt="layout2" />
+                    <Image onClick={() => { router.push(ADMIN_ROUTES.BLOGS_LAYOUT_3) }} src="/assets/admin/layout1.png" height={1000} width={1000} alt="layout3" />
                 </div>
             </div>
         </AdminLayout>

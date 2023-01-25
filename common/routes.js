@@ -14,4 +14,8 @@ export const ADMIN_ROUTES = {
     BLOGS_CREATE: "/admin/blogs/create",
     BLOGS_LAYOUT_1: "/admin/blogs/layout1",
     BLOGS_EDIT_LAYOUT_1: "/admin/blogs/edit/layout1/",
+    BLOGS_LAYOUT_2: "/admin/blogs/layout2",
+    BLOGS_EDIT_LAYOUT_2: "/admin/blogs/edit/layout2/",
+    BLOGS_LAYOUT_3: "/admin/blogs/layout3",
+    BLOGS_EDIT_LAYOUT_3: "/admin/blogs/edit/layout3/",
 }

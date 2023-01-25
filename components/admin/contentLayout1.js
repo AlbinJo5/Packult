@@ -16,7 +16,6 @@ function ContentLayout1({ data, isAdmin }) {
                         }} >Edit</button>
                         <button onClick={() => {
                             // delete api with id as params
-                            console.log(data.id);
                             fetch(`/api/blog/delete?id=${params.id}`)
 
                                 .then(res => res.json())
