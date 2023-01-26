@@ -4,9 +4,11 @@ import AdminLayout from '../../../components/admin/adminLayout'
 import styles from '../../../styles/admin/components/layouts.module.scss'
 import { db, storage } from "../../../utils/firebase.js"
 import { collection, doc, setDoc } from "firebase/firestore"
-import { uploadBytes, ref, getDownloadURL } from "firebase/storage"
+import { uploadBytes, ref, getDownloadURL, deleteObject } from "firebase/storage"
 import { ADMIN_ROUTES } from '../../../common/routes'
+import { useRouter } from 'next/router'
 function Index() {
+    const router = useRouter()
     const [loading, setLoading] = useState(false)
     const [image1Url, setImage1Url] = useState("/assets/admin/dummyImage.jpg")
 
@@ -27,73 +29,82 @@ function Index() {
     async function handleSubmit(e) {
         e.preventDefault()
         setLoading(true)
-        // check for empty fields with images
-        if (image1 === "" || title === "" || date === "" || para1 === "" || para2 === "") {
-            alert("Please fill all the fields")
+        try {
+
+
+            // check for empty fields with images
+            if (image1 === "" || title === "" || date === "" || para1 === "" || para2 === "") {
+                alert("Please fill all the fields")
+                setLoading(false)
+                return
+            }
+
+            // create a ref to firestore
+            const blogRef = doc(collection(db, "blogs"))
+
+            // upload images to firebase storage and get the urls
+            const image1Ref = ref(storage, `blogs/${blogRef.id}/image1`)
+            await uploadBytes(image1Ref, image1)
+            const image1Url = await getDownloadURL(image1Ref)
+
+            // create a blog Details object
+            const blogDetails = {
+                image1: image1Url,
+                title: title,
+                date: date,
+                para1: para1,
+                para2: para2,
+                layout: "layout3"
+            }
+
+            // split the words by 30 for para 1
+            const para1Words = para1.split(" ")
+            const para1Words30 = para1Words.slice(0, 30)
+            const para1Words30String = para1Words30.join(" ")
+            const para1Words30StringWithDots = para1Words30String + "..."
+
+            // create a blog with only title, date, mainImage, desc  and layout, and rest should be inside a details collection
+            const blog = {
+                title: title,
+                date: date,
+                mainImage: image1Url,
+                description: para1Words30StringWithDots,
+                layout: "layout3"
+            }
+
+            // set the blog and blogDetails to firestore
+            setDoc(blogRef, blog)
+                .then(() => {
+                    const blogDetailsRef = doc(collection(db, "blogs", blogRef.id, "details"))
+                    setDoc(blogDetailsRef, blogDetails, { merge: true })
+                        .then(() => {
+                            alert("Blog added successfully")
+                            setLoading(false)
+                            // reset the form
+                            setImage1Url("/assets/admin/dummyImage.jpg")
+                            setImage1("")
+                            setTitle("")
+                            setDate("")
+                            setPara1("")
+                            setPara2("")
+
+                            // redirect to blogs page
+                            router.push(ADMIN_ROUTES.BLOGS)
+
+                        })
+                        .catch((error) => {
+                            alert(error.message)
+                            // delete the images from storage
+                            deleteObject(ref(storage, `blogs/${blogRef.id}/image1`))
+
+                            setLoading(false)
+                        })
+                })
+        } catch (error) {
+            alert(error.message)
             setLoading(false)
-            return
+            console.log(error);
         }
-
-        // create a ref to firestore
-        const blogRef = doc(collection(db, "blogs"))
-
-        // upload images to firebase storage and get the urls
-        const image1Ref = ref(storage, `blogs/${blogRef.id}/image1`)
-        const image1Url = await getDownloadURL(await uploadBytes(image1Ref, image1))
-
-        // create a blog Details object
-        const blogDetails = {
-            image1: image1Url,
-            title: title,
-            date: date,
-            para1: para1,
-            para2: para2,
-            layout: "layout3"
-        }
-
-        // split the words by 30 for para 1
-        const para1Words = para1.split(" ")
-        const para1Words30 = para1Words.slice(0, 30)
-        const para1Words30String = para1Words30.join(" ")
-        const para1Words30StringWithDots = para1Words30String + "..."
-
-        // create a blog with only title, date, mainImage, desc  and layout, and rest should be inside a details collection
-        const blog = {
-            title: title,
-            date: date,
-            mainImage: image1Url,
-            description: para1Words30StringWithDots,
-            layout: "layout3"
-        }
-
-        // set the blog and blogDetails to firestore
-        setDoc(blogRef, blog)
-            .then(() => {
-                const blogDetailsRef = doc(collection(db, "blogs", blogRef.id, "details"))
-                setDoc(blogDetailsRef, blogDetails, { merge: true })
-                    .then(() => {
-                        alert("Blog added successfully")
-                        setLoading(false)
-                        // reset the form
-                        setImage1Url("/assets/admin/dummyImage.jpg")
-                        setImage1("")
-                        setTitle("")
-                        setDate("")
-                        setPara1("")
-                        setPara2("")
-
-                        // redirect to blogs page
-                        router.push(ADMIN_ROUTES.BLOGS)
-
-                    })
-                    .catch((error) => {
-                        alert(error.message)
-                        // delete the images from storage
-                        deleteObject(ref(storage, `blogs/${blogRef.id}/image1`))
-
-                        setLoading(false)
-                    })
-            })
 
 
     }

@@ -37,6 +37,7 @@ function Layout3Edit() {
         fetch('/api/blog/getById?id=' + params.id)
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 setdata(data)
                 setTitle(data.title)
                 setDate(data.date)
@@ -107,7 +108,7 @@ function Layout3Edit() {
         <AdminLayout>
             <div className={styles.layout3} >
                 {
-                    loading ? <h3>Posting the blog ...</h3> :
+                    loading ? <h3>Loading...</h3> : updating ? <h3>Updating...</h3> :
                         <form onSubmit={handleSubmit}>
                             <div className={styles.head}>
                                 <label htmlFor="layout2_image1">
@@ -115,15 +116,15 @@ function Layout3Edit() {
                                 </label>
                                 <input onChange={handleImage1} type="file" id="layout2_image1" />
                                 <div className={styles.title} >
-                                    <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder='Title' />
-                                    <input onChange={(e) => setDate(e.target.value)} type="date" />
+                                    <input defaultValue={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder='Title' />
+                                    <input defaultValue={date} onChange={(e) => setDate(e.target.value)} type="date" />
                                 </div>
                             </div>
                             <div className={styles.content}>
-                                <textarea onChange={(e) => setPara1(e.target.value)} placeholder='Quisque ut tortor orci. Donec ullamcorper consequat nisi vel pharetra. Donec lobortis mauris id nunc posuere iaculis. Praesent ut finibus mi. Nam id mi nec magna imperdiet suscipit. Aliquam odio ligula, gravida in diam quis, accumsan fringilla enim. Sed volutpat pulvinar nunc sit amet lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nunc quis sapien finibus luctus. Nunc vel malesuada erat. Duis ac egestas dui. Ut dapibus, lacus in rutrum fringilla, dolor nulla porttitor odio, vitae pellentesque sem ante eu sapien. Sed eu ex a justo ullamcorper venenatis eget sed ex. Sed consectetur ex vitae dui tincidunt, sed tincidunt est pharetra. Proin id ligula justo. Morbi dictum nulla orci.' cols="30" rows="10"></textarea>
-                                <textarea onChange={(e) => setPara2(e.target.value)} placeholder='Quisque ut tortor orci. Donec ullamcorper consequat nisi vel pharetra. Donec lobortis mauris id nunc posuere iaculis. Praesent ut finibus mi. Nam id mi nec magna imperdiet suscipit. Aliquam odio ligula, gravida in diam quis, accumsan fringilla enim. Sed volutpat pulvinar nunc sit amet lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nunc quis sapien finibus luctus. Nunc vel malesuada erat. Duis ac egestas dui. Ut dapibus, lacus in rutrum fringilla, dolor nulla porttitor odio, vitae pellentesque sem ante eu sapien. Sed eu ex a justo ullamcorper venenatis eget sed ex. Sed consectetur ex vitae dui tincidunt, sed tincidunt est pharetra. Proin id ligula justo. Morbi dictum nulla orci.' cols="30" rows="10"></textarea>
+                                <textarea defaultValue={para1} onChange={(e) => setPara1(e.target.value)} placeholder='Quisque ut tortor orci. Donec ullamcorper consequat nisi vel pharetra. Donec lobortis mauris id nunc posuere iaculis. Praesent ut finibus mi. Nam id mi nec magna imperdiet suscipit. Aliquam odio ligula, gravida in diam quis, accumsan fringilla enim. Sed volutpat pulvinar nunc sit amet lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nunc quis sapien finibus luctus. Nunc vel malesuada erat. Duis ac egestas dui. Ut dapibus, lacus in rutrum fringilla, dolor nulla porttitor odio, vitae pellentesque sem ante eu sapien. Sed eu ex a justo ullamcorper venenatis eget sed ex. Sed consectetur ex vitae dui tincidunt, sed tincidunt est pharetra. Proin id ligula justo. Morbi dictum nulla orci.' cols="30" rows="10"></textarea>
+                                <textarea defaultValue={para2} onChange={(e) => setPara2(e.target.value)} placeholder='Quisque ut tortor orci. Donec ullamcorper consequat nisi vel pharetra. Donec lobortis mauris id nunc posuere iaculis. Praesent ut finibus mi. Nam id mi nec magna imperdiet suscipit. Aliquam odio ligula, gravida in diam quis, accumsan fringilla enim. Sed volutpat pulvinar nunc sit amet lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nunc quis sapien finibus luctus. Nunc vel malesuada erat. Duis ac egestas dui. Ut dapibus, lacus in rutrum fringilla, dolor nulla porttitor odio, vitae pellentesque sem ante eu sapien. Sed eu ex a justo ullamcorper venenatis eget sed ex. Sed consectetur ex vitae dui tincidunt, sed tincidunt est pharetra. Proin id ligula justo. Morbi dictum nulla orci.' cols="30" rows="10"></textarea>
                             </div>
-                            <button type='submit'>Post</button>
+                            <button type='submit'>Update</button>
                         </form>
                 }
 

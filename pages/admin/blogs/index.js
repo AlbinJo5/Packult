@@ -25,7 +25,7 @@ function Index() {
                 {
                     loading ? <h3>Loading...</h3> : <div className={styles.all_blogs}>
                         {
-                            blogs.map(blog => <BlogCard key={blog.id} id={blog.id} img={blog.mainImage} title={blog.title} description={blog.description} />)
+                            blogs.map(blog => <BlogCard key={blog.id} id={blog.id} img={blog.mainImage} title={blog.title} description={blog.description} layout={blog.layout} />)
                         }
                     </div>
                 }

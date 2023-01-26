@@ -4,7 +4,7 @@ import styles from "../../../styles/admin/components/layouts.module.scss"
 import { useState } from "react"
 import { db, storage } from "../../../utils/firebase.js"
 import { collection, doc, setDoc } from "firebase/firestore"
-import { uploadBytes, ref, getDownloadURL } from "firebase/storage"
+import { uploadBytes, ref, getDownloadURL, deleteObject } from "firebase/storage"
 import { ADMIN_ROUTES } from "../../../common/routes"
 import { useRouter } from "next/router"
 

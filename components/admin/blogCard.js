@@ -3,7 +3,7 @@ import styles from "../../styles/admin/components/blogCard.module.scss"
 import { useRouter } from "next/router"
 import { ADMIN_ROUTES } from "../../common/routes"
 
-function BlogCard({ img, title, description, id }) {
+function BlogCard({ img, title, description, id, layout }) {
 
     const router = useRouter()
     return (
@@ -14,7 +14,17 @@ function BlogCard({ img, title, description, id }) {
             <h4>{title}</h4>
             <p>{description}</p>
             <div className={styles.footer} >
-                <button onClick={(e) => { e.stopPropagation(); router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + id) }} >Edit</button>
+                <button onClick={(e) => {
+                    e.stopPropagation();
+                    if (layout === "layout1")
+                        router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_1 + id)
+                    else if (layout === "layout2")
+                        router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_2 + id)
+                    else
+                        router.push(ADMIN_ROUTES.BLOGS_EDIT_LAYOUT_3 + id)
+
+                }}
+                >Edit</button>
                 <button onClick={(e) => {
                     e.stopPropagation();
                     // delete api with id as params
