@@ -18,4 +18,8 @@ export const ADMIN_ROUTES = {
     BLOGS_EDIT_LAYOUT_2: "/admin/blogs/edit/layout2/",
     BLOGS_LAYOUT_3: "/admin/blogs/layout3",
     BLOGS_EDIT_LAYOUT_3: "/admin/blogs/edit/layout3/",
+
+    OUR_WORKS: "/admin/our-works",
+    OUR_WORKS_EDIT: "/admin/edit/our-works/",
+    NEW_WORK: "/admin/our-works/new-work",
 }
