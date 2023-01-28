@@ -20,6 +20,6 @@ export const ADMIN_ROUTES = {
     BLOGS_EDIT_LAYOUT_3: "/admin/blogs/edit/layout3/",
 
     OUR_WORKS: "/admin/our-works",
-    OUR_WORKS_EDIT: "/admin/edit/our-works/",
+    OUR_WORKS_EDIT: "/admin/our-works/edit/our-work/",
     NEW_WORK: "/admin/our-works/new-work",
 }

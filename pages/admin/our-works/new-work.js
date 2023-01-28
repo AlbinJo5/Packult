@@ -1,6 +1,6 @@
 import Image from "next/image"
 import AdminLayout from "../../../components/admin/adminLayout"
-import styles from "../../../styles/admin/new-work.module.scss"
+import styles from "../../../styles/admin/components/new-work.module.scss"
 import { useState } from 'react'
 import { useRouter } from "next/router"
 import { db, storage } from "../../../utils/firebase.js"

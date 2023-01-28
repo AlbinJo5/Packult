@@ -25,8 +25,8 @@ function Navbar() {
             <ul>
                 <li><Link className={currentRoute === ADMIN_ROUTES.BLOGS ? styles.selected : ""} href={ADMIN_ROUTES.BLOGS}>Blogs</Link></li>
                 <li><Link className={currentRoute === ADMIN_ROUTES.BLOGS_CREATE ? styles.selected : ""} href={ADMIN_ROUTES.BLOGS_CREATE}>New Blog</Link></li>
-                <li><Link href="#">Our Works</Link></li>
-                <li><Link href="#">New Work</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.OUR_WORKS? styles.selected: "" } href={ADMIN_ROUTES.OUR_WORKS}>Our Works</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.NEW_WORK? styles.selected: "" } href={ADMIN_ROUTES.NEW_WORK}>New Work</Link></li>
 
             </ul>
             <button onClick={handleSignOut}>Sign out</button>

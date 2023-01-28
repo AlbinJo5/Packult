@@ -1,14 +1,17 @@
 import { db } from '../../../utils/firebase';
-import { collection, getDocs } from "firebase/firestore";
+import {  doc, getDoc } from "firebase/firestore";
 
 export default async function handler(req, res) {
-    const { id } = req.query;
-    // get document from ourWork collection using id
-    const querySnapshot = await getDocs(collection(db, 'our-works', id));
-    const post = [];
-    querySnapshot.forEach((doc) => {
-        post.push({ ...doc.data(), id: doc.id });
-    });
+    try {
+        const { id } = req.query;        
+        const docRef = doc(db, "our-works", id);
+        const docSnap = await getDoc(docRef);
+        const post = [];
+        post.push({ ...docSnap.data(), id: docSnap.id });
 
-    res.status(200).json(post[0]);
+        res.status(200).json(post[0]);
+    } catch (error) {
+        res.status(500).json({ error: error });
+
+    }
 }

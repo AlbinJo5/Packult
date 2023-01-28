@@ -8,11 +8,15 @@ function Index() {
     const [ourWorks, setourWorks] = useState([])
 
     useEffect(() => {
-        fetch('/api/our-works/get')
+        fetch('/api/our-work/get')
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 setourWorks(data)
                 setloading(false)
+            })
+            .catch(err => {
+                console.log(err);
             })
     }, [])
     return (

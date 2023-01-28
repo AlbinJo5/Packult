@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useEffect, useState } from 'react'
 import AdminLayout from "../../../../../components/admin/adminLayout"
-import styles from "../../../../../styles/admin/our-works.module.scss"
+import styles from "../../../../../styles/admin/components/new-work.module.scss"
 import { useRouter } from "next/router"
 import { storage, db } from "../../../../../utils/firebase"
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage"
@@ -64,7 +64,7 @@ function OurWorkEdit() {
 
     useEffect(() => {
         if (params.id) {
-            fetch(`http://localhost:3000/api/our-works/${params.id}`)
+            fetch('/api/our-work/getById?id=' + params.id)
                 .then(res => res.json())
                 .then(data => {
                     setdata(data)
@@ -77,6 +77,10 @@ function OurWorkEdit() {
                     setImage2Url(data.image2)
                     setImage3Url(data.image3)
                     setImage4Url(data.image4)
+                    setloading(false)
+                })
+                .catch(err => {
+                    console.log(err)
                     setloading(false)
                 })
         }
@@ -132,32 +136,36 @@ function OurWorkEdit() {
     return (
         <AdminLayout>
             <div className={styles.newWork}>
-                <form >
-                    <input type="text" defaultValue={title} placeholder="Title" />
-                    <label htmlFor="new_work_image1">
-                        <Image src={image1Url} height={1000} width={1000} alt="our work" />
-                    </label>
-                    <input type="file" id="new_work_image1" />
-                    <textarea defaultValue={para1} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
-                    <textarea defaultValue={para2} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
-                    <div className={styles.images2} >
-                        <label htmlFor="new_work_image2">
-                            <Image src={image2Url} height={1000} width={1000} alt="our work" />
-                        </label>
-                        <input type="file" id="new_work_image2" />
-                        <label htmlFor="new_work_image3">
-                            <Image src={image3Url} height={1000} width={1000} alt="our work" />
-                        </label>
-                        <input type="file" id="new_work_image3" />
-                    </div>
-                    <label htmlFor="new_work_image4">
-                        <Image src={image4Url} height={1000} width={1000} alt="our work" />
-                    </label>
-                    <input type="file" id="new_work_image4" />
-                    <textarea defaultValue={para3} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
-                    <textarea defaultValue={para4} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
-                    <button type="submit" >Update</button>
-                </form>
+                {
+                    loading ? <h3>Loading...</h3> : updating ? <h3>Updating...</h3> :
+                        <form onSubmit={handleSubmit}>
+                            <input type="text" defaultValue={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
+                            <label htmlFor="new_work_image1">
+                                <Image src={image1Url} height={1000} width={1000} alt="our work" />
+                            </label>
+                            <input onChange={handleImage1} type="file" id="new_work_image1" />
+                            <textarea onChange={(e) => setPara1(e.target.value)} defaultValue={para1} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+                            <textarea onChange={(e) => setPara2(e.target.value)} defaultValue={para2} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+                            <div className={styles.images2} >
+                                <label htmlFor="new_work_image2">
+                                    <Image src={image2Url} height={1000} width={1000} alt="our work" />
+                                </label>
+                                <input onChange={handleImage2} type="file" id="new_work_image2" />
+                                <label htmlFor="new_work_image3">
+                                    <Image src={image3Url} height={1000} width={1000} alt="our work" />
+                                </label>
+                                <input onChange={handleImage3} type="file" id="new_work_image3" />
+                            </div>
+                            <label htmlFor="new_work_image4">
+                                <Image src={image4Url} height={1000} width={1000} alt="our work" />
+                            </label>
+                            <input onChange={handleImage4} type="file" id="new_work_image4" />
+                            <textarea onChange={(e) => setPara3(e.target.value)} defaultValue={para3} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+                            <textarea onChange={(e) => setPara4(e.target.value)} defaultValue={para4} cols="30" rows="10" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+                            <button type="submit" >Update</button>
+                        </form>
+                }
+
             </div>
         </AdminLayout>
     )
