@@ -10,7 +10,26 @@ import WorkNumbers from '../components/workNumbers'
 import Contact from '../components/contact'
 import BlogCarousel from '../components/blogCarousel'
 import Particles from '../components/particles'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 export default function Home() {
+
+  const [data, setdata] = useState([])
+  const router = useRouter()
+
+  useEffect(() => {
+    //   fetch blog data using api
+    fetch('/api/our-work/get')
+      .then(res => res.json())
+      .then(data => {
+        // reverse the array to get latest blog first
+        data.reverse()
+        setdata(data)
+      })
+      .catch(err => console.log(err))
+  }, [])
+
+
   return (
     <Layout >
       <div className={styles.lap_particles}>
@@ -82,12 +101,14 @@ export default function Home() {
           <h3>Some more of our work, social posts many more things...</h3>
 
           <div className={styles.scroll}>
-            <Image src="/assets/images/home/gallery (1).png" alt='gallery1' width={1000} height={1000} />
-            <Image src="/assets/images/home/gallery (2).png" alt='gallery2' width={1000} height={1000} />
-            <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
-            <Image src="/assets/images/home/gallery (2).png" alt='gallery1' width={1000} height={1000} />
-            <Image src="/assets/images/home/gallery (1).png" alt='gallery2' width={1000} height={1000} />
-            <Image src="/assets/images/home/gallery (3).png" alt='gallery3' width={1000} height={1000} />
+            {
+              data.map((item, index) => {
+                return (
+                  <Image onClick={()=>{router.push(ROUTES.OUR_WORKS+item.id)}} key={index} src={item.image1} alt={item.title} width={1000} height={1000} />
+                )
+              })
+            }
+           
           </div>
           <div className={styles.all_services_button} >
             <hr></hr>
@@ -209,7 +230,7 @@ export default function Home() {
 
         </Carousel>
       </div>
-      <BlogCarousel heading={"Blog"} isBlogPage={false}  />
+      <BlogCarousel heading={"Blog"} isBlogPage={false} />
       <div className={styles.awards}>
         <div className={styles.bg_plane}>
         </div>
