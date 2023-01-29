@@ -104,15 +104,15 @@ export default function Home() {
             {
               data.map((item, index) => {
                 return (
-                  <Image onClick={()=>{router.push(ROUTES.OUR_WORKS+item.id)}} key={index} src={item.image1} alt={item.title} width={1000} height={1000} />
+                  <Image onClick={() => { router.push(ROUTES.OUR_WORKS + item.id) }} key={index} src={item.image2} alt={item.title} width={1000} height={1000} />
                 )
               })
             }
-           
+
           </div>
           <div className={styles.all_services_button} >
             <hr></hr>
-            <Link href={"/"}>View all Images</Link>
+            <Link href={"/gallery"}>View all Images</Link>
             <hr></hr>
           </div>
         </div>

@@ -128,7 +128,7 @@ function NewWork() {
         <AdminLayout>
             <div className={styles.newWork}>
                 {
-                    loading ? <h3>Posting the blog ...</h3> :
+                    loading ? <h3>Posting the work ...</h3> :
                         <form onSubmit={handleSubmit} >
                             <input type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)} />
                             <label htmlFor="new_work_image1">

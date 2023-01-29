@@ -7,6 +7,7 @@ export const ROUTES = {
     SERVICES: "/services",
     BLOG: "/blog/",
     OUR_WORKS: "/work-page/",
+    GALLERY : "/gallery",
 }
 
 export const ADMIN_ROUTES = {

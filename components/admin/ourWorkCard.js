@@ -1,12 +1,14 @@
 import Image from "next/image"
 import styles from "../../styles/admin/components/ourWorkCard.module.scss"
 import { useRouter } from "next/router"
-import { ADMIN_ROUTES } from "../../common/routes"
+import { ADMIN_ROUTES, ROUTES } from "../../common/routes"
 
 function OorWorkCard({data}) {
     const router = useRouter()
     return (
-        <div className={styles.ourWork_card}>
+        <div className={styles.ourWork_card} onClick={()=>{
+            router.push(ROUTES.OUR_WORKS + data.id)
+        }} >
             <h4>{data.title}</h4>
             <Image src={data.image2} height={1000} width={1000} alt="our work" />
             <div className={styles.footer} >
