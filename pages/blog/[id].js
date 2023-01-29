@@ -5,6 +5,9 @@ import BlogPage1 from "../../components/blogPage1"
 import BlogPage2 from "../../components/blogPage2"
 import BlogPage3 from "../../components/blogPage3"
 import Layout from "../../components/layout"
+import BlogCarousel from "../../components/blogCarousel"
+import WorkNumbers from "../../components/workNumbers"
+import Contact from "../../components/contact"
 
 function Index() {
 
@@ -39,6 +42,9 @@ function Index() {
                                     <h1>Oops, Something is wrong</h1>
                 }
             </div>
+            <BlogCarousel heading={"Related Articles For you"} isBlogPage={true} />
+            <WorkNumbers />
+            <Contact />
         </Layout>
     )
 }

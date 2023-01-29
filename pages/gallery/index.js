@@ -4,11 +4,15 @@ import Contact from '../../components/contact'
 import Layout from '../../components/layout'
 import WorkNumbers from '../../components/workNumbers'
 import styles from '../../styles/gallery.module.scss'
+import { useRouter } from 'next/router'
+import { ROUTES } from '../../common/routes'
 
 function Index() {
 
     const [loading, setloading] = useState(true)
     const [images, setimages] = useState([])
+
+    const router = useRouter()
 
     useEffect(() => {
 
@@ -42,7 +46,9 @@ function Index() {
                         <div className={styles.gallerys}>
                             {
                                 images.map((image, index) => (
-                                    <div key={index} className={styles.image}>
+                                    <div key={index} className={styles.image} onClick={() => {
+                                        router.push(ROUTES.OUR_WORKS + image.id)
+                                    }} >
                                         <Image src={image.image2} alt={image.title} width={1000} height={1000} />
                                         <div className={styles.overlay}>
                                             <h2>{image.title}</h2>
@@ -54,7 +60,7 @@ function Index() {
                 }
 
                 <WorkNumbers />
-                <Contact/>
+                <Contact />
             </div>
 
         </Layout>
