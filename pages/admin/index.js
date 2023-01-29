@@ -7,6 +7,7 @@ import Toast from "../../components/toast";
 import { adminToken } from "../../core/localstorage";
 import { useRouter } from "next/router";
 import { ADMIN_ROUTES } from "../../common/routes";
+import Image from "next/image";
 
 function Index() {
     const email = useRef();
@@ -47,7 +48,7 @@ function Index() {
 
     return (
         <div className={styles.auth_container}>
-            <h2>PACKULT</h2>
+            <Image src="/assets/logos/logo.svg" height={1000} width={1000} alt="logo" />
             <form onSubmit={handleSubmit} >
                 <label htmlFor="email">Email:</label><br />
                 <input ref={email} type="email" id="email" name="email" /><br />

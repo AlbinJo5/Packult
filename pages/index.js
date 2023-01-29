@@ -9,7 +9,6 @@ import Carousel from 'nuka-carousel'
 import WorkNumbers from '../components/workNumbers'
 import Contact from '../components/contact'
 import BlogCarousel from '../components/blogCarousel'
-import { blog_dummy } from '../data/dummy'
 import Particles from '../components/particles'
 export default function Home() {
   return (
@@ -210,7 +209,7 @@ export default function Home() {
 
         </Carousel>
       </div>
-      <BlogCarousel heading={"Blog"} isBlogPage={false} data={blog_dummy} />
+      <BlogCarousel heading={"Blog"} isBlogPage={false}  />
       <div className={styles.awards}>
         <div className={styles.bg_plane}>
         </div>

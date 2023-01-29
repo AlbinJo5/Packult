@@ -5,6 +5,7 @@ export const ROUTES = {
     CONATCT_US: "/contact-us",
     ABOUT: "/about",
     SERVICES: "/services",
+    BLOG: "/blog/",
 }
 
 export const ADMIN_ROUTES = {
