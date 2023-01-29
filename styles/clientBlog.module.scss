@@ -2,6 +2,12 @@
 
 .blog {
     margin-top: 7vw;
+    h1{
+        font-size: 3vw;
+        font-family: 'Visby Bold';
+        color: $dark;
+        margin: 0;
+    }
 }
 
 .blog3 {
@@ -10,7 +16,7 @@
 
     img {
         width: 100%;
-        height: max-content;
+        height: 35vw;
         object-fit: cover;
         border-radius: 1vw;
     }
@@ -53,7 +59,7 @@
 
     img {
         width: 100%;
-        height: max-content;
+        height: 35vw;
         object-fit: cover;
         border-radius: 1vw;
 
@@ -158,6 +164,10 @@
 }
 
 @media screen and (max-width: $mobile) {
+    .blog{
+        margin-top: 15vw;
+        min-height: 80vh;
+    }
     .blog1 {
         h3 {
             font-size: 4vw;

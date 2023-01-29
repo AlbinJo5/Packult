@@ -1,14 +1,14 @@
 import Image from "next/image"
 import styles from "../../styles/admin/components/blogCard.module.scss"
 import { useRouter } from "next/router"
-import { ADMIN_ROUTES } from "../../common/routes"
+import { ADMIN_ROUTES, ROUTES } from "../../common/routes"
 
 function BlogCard({ img, title, description, id, layout }) {
 
     const router = useRouter()
     return (
         <div className={styles.blog_card} onClick={() => {
-            router.push(ADMIN_ROUTES.BLOGS_ID + id)
+            router.push(ROUTES.BLOG + id)
         }} >
             <Image src={img} height={1000} width={1000} alt={title} />
             <h4>{title}</h4>
