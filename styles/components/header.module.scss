@@ -93,6 +93,7 @@
 @media screen and (max-width: $mobile) {
     .nav {
         height: 10vw;
+        position: relative;
 
         .logo {
             display: none;
@@ -100,6 +101,7 @@
 
         .mlogo {
             display: block;
+
             img {
                 width: 20vw;
                 height: max-content;
@@ -113,10 +115,108 @@
 
         .mlinks {
             display: block;
-            img{
+
+            img {
                 width: 5vw;
                 height: max-content;
                 margin-right: 10vw;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                background-color: $dark;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 1vw;
+
+                .closebtn {
+                    position: absolute;
+                    top: 2vw;
+                    right: .1vw;
+                    color: $light;
+
+                    img {
+                        width: 5vw;
+                        height: max-content;
+                    }
+                }
+
+
+
+                ul {
+                    width: 100%;
+                    height: 80vh;
+                    @include flexContentSpaceEvenly;
+                    padding-top: 15vw;
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 2vw;
+
+                        a {
+                            font-size: 3vw;
+                            text-decoration: none;
+                            color: $light;
+                            width: max-content;
+                            height: max-content;
+                        }
+                    }
+                }
+            }
+
+            .sidenav_close {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                background-color: $dark;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 1vw;
+
+                .closebtn {
+                    position: absolute;
+                    top: 2vw;
+                    right: .1vw;
+                    color: $light;
+
+                    img {
+                        width: 5vw;
+                        height: max-content;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    height: 80vh;
+                    @include flexContentSpaceEvenly;
+                    padding-top: 15vw;
+                    flex-direction: column;
+                    align-items: center;
+
+                    li {
+                        list-style: none;
+                        margin-bottom: 2vw;
+
+                        a {
+                            font-size: 3vw;
+                            text-decoration: none;
+                            color: $light;
+                            width: max-content;
+                            height: max-content;
+                        }
+                    }
+                }
             }
         }
     }

@@ -83,3 +83,26 @@
         }
     }
 }
+
+@media screen and (max-width: $mobile) {
+
+    .ourWork {
+        .header {
+            .text {
+                h1 {
+                    font-size: 5vw;
+                }
+
+                p {
+                    font-size: 3vw;
+                    line-height: 4vw;
+                }
+            }
+
+            img {
+                width: max-content;
+                height: 30vw;
+            }
+        }
+    }
+}

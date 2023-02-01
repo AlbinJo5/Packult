@@ -10,25 +10,38 @@
     grid-gap: 2vw;
 
     .content {
-        display: flex;
+        display: grid;
         text-align: left;
         align-items: center;
+        // 2 columns
+        
+
 
         h1 {
+            width: 29vw;
             font-size: 10vw;
             font-family: 'Visby Bold';
-            font-weight: 500;
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: .1vw;
             color: $dark;
-
         }
 
         h2 {
             font-size: 1.5vw;
-            font-weight: 500;
             font-family: 'Visby Regular';
             color: $dark;
+        }
+
+        &:nth-child(2) {
+            h1 {
+                width: max-content;
+            }
+        }
+
+        &:nth-child(3) {
+            h1 {
+                width: 15vw;
+            }
         }
     }
 }
@@ -38,7 +51,7 @@
         margin-left: 9vw;
 
         .content {
-            
+
             h2 {
                 font-size: 1.8vw;
             }
