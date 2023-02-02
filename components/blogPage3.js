@@ -15,7 +15,7 @@ function BlogPage3({ data }) {
 
   return (
     <div className={styles.blog3} >
-      <Image src={data.image1} alt={data.title} width={1000} height={1000} />
+      <Image data-aos="fade-right" src={data.image1} alt={data.title} width={1000} height={1000} />
       {/* head */}
       <div className={styles.head} >
 

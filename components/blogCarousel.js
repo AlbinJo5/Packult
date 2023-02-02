@@ -41,7 +41,7 @@ function BlogCarousel({ heading, isBlogPage }) {
                 {
                     data.map((item, index) => {
                         return (
-                            <div className={styles.card} key={index}
+                            <div data-aos="fade-up" data-aos-duration="1000" className={styles.card} key={index}
                                 onClick={() => router.push(ROUTES.BLOG + item.id)}
                             >
                                 <h5>{date(item.date)}</h5>

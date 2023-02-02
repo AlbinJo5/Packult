@@ -28,7 +28,7 @@ export default function Contact() {
                         <button type="submit" >Submit</button>
                     </form>
                 </div>
-                <Image src="/assets/images/components/contactPerson.svg" height={100} width={100} alt={"Contact Person"} />
+                <Image data-aos="fade-up" data-aos-offset="-500" src="/assets/images/components/contactPerson.svg" height={100} width={100} alt={"Contact Person"} />
             </div>
         </div>
     )

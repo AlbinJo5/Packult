@@ -15,32 +15,34 @@ function BlogPage1({ data }) {
 
 
     return (
-  
-            <div className={styles.blog1} >
-                <Image src={data.image1} alt={data.title} width={1000} height={1000} />
-                {/* head */}
-                <div className={styles.head} >
-                    <h3>{data.title}</h3>
-                    <h5>{date(data.date)}</h5>
-                </div>
-                <p>{data.para1}</p>
-                <p>{data.para2}</p>
-                <div className={styles.images} >
-                    <Image src={data.image2} alt={data.title} width={1000} height={1000} />
-                    <Image src={data.image3} alt={data.title} width={1000} height={1000} />
-                </div>
-                <p>{data.para3}</p>
-                <p>{data.para4}</p>
-                <p>{data.para5}</p>
-                <p>{data.para6}</p>
-                <Image src={data.image4} alt={data.title} width={1000} height={1000} />
-                <p>{data.para7}</p>
-                <p>{data.para8}</p>
-                <p>{data.para9}</p>
-                <p>{data.para10}</p>
-            </div>
 
-      
+        <div className={styles.blog1} >
+            <Image data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" src={data.image1} alt={data.title} width={1000} height={1000} />
+            {/* head */}
+            <div className={styles.head} >
+                <h3>{data.title}</h3>
+                <h5>{date(data.date)}</h5>
+            </div>
+            <p>{data.para1}</p>
+            <p>{data.para2}</p>
+            <div className={styles.images} >
+                <Image data-aos="fade-right" src={data.image2} alt={data.title} width={1000} height={1000} />
+                <Image data-aos="fade-left" src={data.image3} alt={data.title} width={1000} height={1000} />
+            </div>
+            <p>{data.para3}</p>
+            <p>{data.para4}</p>
+            <p>{data.para5}</p>
+            <p>{data.para6}</p>
+            <Image data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom" src={data.image4} alt={data.title} width={1000} height={1000} />
+            <p>{data.para7}</p>
+            <p>{data.para8}</p>
+            <p>{data.para9}</p>
+            <p>{data.para10}</p>
+        </div>
+
+
     )
 }
 

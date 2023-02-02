@@ -10,15 +10,16 @@
     grid-gap: 2vw;
 
     .content {
-        display: grid;
+        display: flex;
         text-align: left;
         align-items: center;
         // 2 columns
-        
+
 
 
         h1 {
-            width: 29vw;
+            min-width: 26.5vw;
+            max-width: 26.5vw;
             font-size: 10vw;
             font-family: 'Visby Bold';
             -webkit-text-fill-color: transparent;
@@ -34,13 +35,15 @@
 
         &:nth-child(2) {
             h1 {
-                width: max-content;
+                min-width: 9.8vw;
+                max-width: 9.8vw;
             }
         }
 
         &:nth-child(3) {
             h1 {
-                width: 15vw;
+                min-width: 15.5vw;
+                max-width: 15.5vw;
             }
         }
     }
@@ -51,6 +54,35 @@
         margin-left: 9vw;
 
         .content {
+            h1 {
+                min-width: 26.5vw;
+                max-width: 26.5vw;
+                font-size: 10vw;
+                font-family: 'Visby Bold';
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: .1vw;
+                color: $dark;
+            }
+
+            h2 {
+                font-size: 1.5vw;
+                font-family: 'Visby Regular';
+                color: $dark;
+            }
+
+            &:nth-child(2) {
+                h1 {
+                    min-width: 9.8vw;
+                    max-width: 9.8vw;
+                }
+            }
+
+            &:nth-child(3) {
+                h1 {
+                    min-width: 16vw;
+                    max-width: 16vw;
+                }
+            }
 
             h2 {
                 font-size: 1.8vw;

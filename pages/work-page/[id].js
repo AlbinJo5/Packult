@@ -46,15 +46,17 @@ function WorkPage() {
                     <Layout>
                         <div className={styles.work_page}>
                             <h3>{data.title}</h3>
-                            <Image src={data.image1} height={1000} width={1000} alt={data.title} />
+                            <Image data-aos="fade-up"
+                                data-aos-anchor-placement="center-bottom" src={data.image1} height={1000} width={1000} alt={data.title} />
                             <p>{data.para1}</p>
                             <p>{data.para2}</p>
                             {/* images */}
                             <div className={styles.images}>
-                                <Image src={data.image2} height={1000} width={1000} alt={data.title} />
-                                <Image src={data.image3} height={1000} width={1000} alt={data.title} />
+                                <Image data-aos="fade-right" src={data.image2} height={1000} width={1000} alt={data.title} />
+                                <Image data-aos="fade-left" src={data.image3} height={1000} width={1000} alt={data.title} />
                             </div>
-                            <Image src={data.image4} height={1000} width={1000} alt={data.title} />
+                            <Image data-aos="fade-up"
+                                data-aos-anchor-placement="center-bottom" src={data.image4} height={1000} width={1000} alt={data.title} />
                             <p>{data.para3}</p>
                             <p>{data.para4}</p>
 
@@ -67,7 +69,7 @@ function WorkPage() {
                                             return (
                                                 // exlcude current item
                                                 item.id === data.id ? null :
-                                                    <Image onClick={() => { router.push(ROUTES.OUR_WORKS + item.id) }} key={index} src={item.image2} alt={item.title} width={1000} height={1000} />
+                                                    <Image data-aos="fade-up" onClick={() => { router.push(ROUTES.OUR_WORKS + item.id) }} key={index} src={item.image2} alt={item.title} width={1000} height={1000} />
                                             )
                                         })
                                     }

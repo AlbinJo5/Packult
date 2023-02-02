@@ -12,6 +12,8 @@ import BlogCarousel from '../components/blogCarousel'
 import Particles from '../components/particles'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import CountUp from 'react-countup';
+
 export default function Home() {
 
   const [data, setdata] = useState([])
@@ -51,21 +53,21 @@ export default function Home() {
           <p>SCROLL DOWN</p>
         </div>
       </div>
-      <div className={styles.intro}>
+      <div className={styles.intro} >
         <div className={styles.bgRectangle}></div>
         <div className={styles.content} >
-          <div className={styles.brand} >
+          <div className={styles.brand} data-aos="fade-up" >
             <Image src="/assets/images/home/brandOwners.png" width={1000} height={1000} alt="Brand Owners" />
-            <div className={styles.brandCard}>
+            <div className={styles.brandCard} data-aos="fade-up" data-aos-duration="1000">
               <Link href={ROUTES.BRAND_OWNERS} >
                 <h3>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
               </Link>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia vero qui, hic molestias accusamus blanditiis dolores praesentium repudiandae. Quis, enim voluptatum excepturi itaque distinctio porro tempora aspernatur eum aliquam!</p>
             </div>
           </div>
-          <div className={styles.brand}>
+          <div className={styles.brand} data-aos="fade-up" >
             <Image src="/assets/images/home/packagingConverters.png" width={1000} height={1000} alt="Packaging Converters" />
-            <div className={styles.brandCard}>
+            <div className={styles.brandCard} data-aos="fade-up" data-aos-duration="1000">
               <Link href={ROUTES.PACKAGING_CONVERTERS} >
                 <h3>Packaging Converters<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
               </Link>
@@ -77,18 +79,26 @@ export default function Home() {
       <div className={styles.vision_mission} >
         <Heading heading="Vision and Mission" line={true} />
         <div className={styles.content} >
-          <Image src="/assets/images/home/vision.png" alt='vision' height={1000} width={1000} />
+          <Image data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" src="/assets/images/home/vision.png" alt='vision' height={1000} width={1000} />
           <h2>OUR VISION</h2>
-          <ul>
+          <ul data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
             <li>To Provide a platform for sustanable and Innovative packaging solution.</li>
             <li>Always try to make sustanble solutions.</li>
             <li>Disruptive and value for money packaging solution.</li>
           </ul>
         </div>
         <div className={styles.content} >
-          <Image src="/assets/images/home/mission.png" alt='vision' height={1000} width={1000} />
+          <Image data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" src="/assets/images/home/mission.png" alt='vision' height={1000} width={1000} />
           <h2>OUR MISSION</h2>
-          <ul>
+          <ul data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
             <li>Close contact with brand owners, converters, and raw material suppliers.</li>
             <li>Using the appropriate chemistry, process expertise with the right machine technology for cost-optimal solutions.</li>
             <li>To ensure end users get the best experience and expertise at an affordable cost.</li>
@@ -104,7 +114,7 @@ export default function Home() {
             {
               data.map((item, index) => {
                 return (
-                  <Image onClick={() => { router.push(ROUTES.OUR_WORKS + item.id) }} key={index} src={item.image2} alt={item.title} width={1000} height={1000} />
+                  <Image data-aos="fade-up" onClick={() => { router.push(ROUTES.OUR_WORKS + item.id) }} key={index} src={item.image2} alt={item.title} width={1000} height={1000} />
                 )
               })
             }
@@ -112,7 +122,7 @@ export default function Home() {
           </div>
           <div className={styles.all_services_button} >
             <hr></hr>
-            <Link href={"/gallery"}>View all Images</Link>
+            <Link href={ROUTES.GALLERY}>View all Images</Link>
             <hr></hr>
           </div>
         </div>
@@ -129,56 +139,60 @@ export default function Home() {
                 <li><Link href={"/"}>Structural Engineering</Link></li>
               </ul>
             </div>
-            <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+            <Image data-aos="fade-left" src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
           </div>
           <hr />
         </div>
         <div className={styles.component} >
           <div className={styles.content} >
             <div>
-              <h2>Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
+              <h2 onClick={() => {
+                router.push(ROUTES.PACKAGING_SOLUTIONS)
+              }} >Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
               <ul>
                 <li><Link href={"/"}>Graphic Design</Link></li>
                 <li><Link href={"/"}>Structural Engineering</Link></li>
               </ul>
             </div>
-            <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+            <Image data-aos="fade-right" src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
           </div>
           <hr />
         </div>
         <div className={styles.component} >
           <div className={styles.content} >
             <div>
-              <h2>Value Improvement<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
+              <h2 onClick={() => {
+                router.push(ROUTES.VALUE_IMPROVEMENT)
+              }}>Value Improvement<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
               <ul>
                 <li><Link href={"/"}>Graphic Design</Link></li>
                 <li><Link href={"/"}>Structural Engineering</Link></li>
               </ul>
             </div>
-            <Image src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+            <Image data-aos="fade-left" src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
           </div>
           <div className={styles.all_services}>
-            <Link href={"/"}>
+            <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.OPERATIONAL_EXCELLENCE}>
               <h2>Operational Excellence<span className={styles.arrow} >
                 <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
               </span>
               </h2>
             </Link>
-            <Link href={"/"}>
+            <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.SOURCING_EXCELLENCE}>
               <h2>Sourcing Excellence<span className={styles.arrow} >
                 <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
               </span>
               </h2>
             </Link>
-            <Link href={"/"}>
+            <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.RESOURCING}>
               <h2>Resourcing<span className={styles.arrow} >
                 <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
               </span>
               </h2>
             </Link>
-            <Link href={"/"}>
+            <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.APP_and_Business}>
               <h2>Application & Business Dev.<span className={styles.arrow} >
                 <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
               </span>
@@ -188,7 +202,7 @@ export default function Home() {
           </div>
           <div className={styles.all_services_button} >
             <hr></hr>
-            <Link href={"/"}>View all Services</Link>
+            <Link href={ROUTES.SERVICES}>View all Services</Link>
             <hr></hr>
           </div>
         </div>
@@ -199,13 +213,27 @@ export default function Home() {
           <div className={styles.left}>
             <h2>Here's what our customers experinced after implementing Prospectss Tools</h2>
             <hr></hr>
-            <Image src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
+            <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
             <p>Packult helped our business to generate more sales and saved money on product packaging</p>
             <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
           </div>
           <hr></hr>
           <div className={styles.right}>
-            <h1>Trusted by over 233784+ Customers</h1>
+            <h1>Trusted by over</h1><br />
+
+            {/* counter */}
+            <div className={styles.counter} >
+              <h1><CountUp
+                start={0}
+                end={233784}
+                duration={3}
+                separator=""
+                decimals={0}
+                decimal=","
+                enableScrollSpy={true}
+              /> </h1>
+              <h2>+ Customers</h2>
+            </div>
           </div>
         </div>
 
@@ -236,15 +264,15 @@ export default function Home() {
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.award_box}>
+            <div data-aos="fade-right" data-aos-duration="2000" className={styles.award_box}>
               {/* <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE 2022</h4>
                 <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} /> */}
             </div>
-            <div className={styles.award_box}>
+            <div data-aos="fade-right" data-aos-duration="1500" className={styles.award_box}>
               <h4> <span> IFCA 2022</span> DESIGN OF<br />THE YEAR<br /> 2022</h4>
               <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
-            <div className={styles.award_box}>
+            <div data-aos="fade-right" data-aos-duration="1000" className={styles.award_box}>
               <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE<br /> 2022</h4>
               <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
@@ -276,7 +304,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.right}>
+          <div data-aos="fade-up" data-aos-offset="-500" className={styles.right}>
             <Image src={'/assets/images/home/mobile-app.png'} alt="mobile-app" width={1000} height={1000} />
             <div className={styles.apple_play_store}>
               <Image src={'/assets/images/home/App Store.png'} alt="app-store" width={1000} height={1000} />

@@ -1,9 +1,10 @@
 @import "./theme.scss";
 
-.mobile_particles{
+.mobile_particles {
     display: none;
 }
-.lap_particles{
+
+.lap_particles {
     display: block;
 }
 
@@ -153,6 +154,7 @@
 
 .vision_mission {
     padding: 0 10vw;
+
     .content {
         display: flex;
         align-items: center;
@@ -544,13 +546,34 @@
         .right {
             width: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             text-align: center;
 
             h1 {
                 font-size: 3vw;
                 font-family: 'Visby Medium';
                 letter-spacing: .2vw;
+
+                margin: 0;
+
+            }
+
+            h2 {
+                font-size: 3vw;
+                font-family: 'Visby Medium';
+                letter-spacing: .2vw;
+                margin: 0;
+            }
+
+            .counter {
+                display: flex;
+
+                h1 {
+                    min-width: 11vw;
+                    max-width: 11vw;
+                }
             }
 
         }
@@ -792,10 +815,11 @@
 }
 
 @media screen and (max-width: $mobile) {
-    .lap_particles{
+    .lap_particles {
         display: none;
     }
-    .mobile_particles{
+
+    .mobile_particles {
         display: block;
     }
 
@@ -1451,7 +1475,7 @@
             padding: 2vw 0;
 
             .left {
-                width:50%;
+                width: 50%;
 
                 h2 {
                     font-size: 2.65vw;

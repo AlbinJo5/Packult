@@ -7,7 +7,16 @@ export const ROUTES = {
     SERVICES: "/services",
     BLOG: "/blog/",
     OUR_WORKS: "/work-page/",
-    GALLERY : "/gallery",
+    GALLERY: "/gallery",
+    APP_and_Business: "/application-and-businness-development",
+    BUSINESS_REMODELING: "/business-remodeling",
+    CARRERS: "/careers",
+    MANAGEMENT_AND_ASSISTANCE: "/management-and-assistance",
+    RESOURCING: "/resourcing",
+    SOURCING_EXCELLENCE: "/sourcing-excellence",
+    OPERATIONAL_EXCELLENCE: "/operational-excellence",
+    VALUE_IMPROVEMENT: "/value-improvement",
+    PACKAGING_SOLUTIONS: "/packaging-solution",
 }
 
 export const ADMIN_ROUTES = {
