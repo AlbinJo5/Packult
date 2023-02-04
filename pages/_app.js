@@ -5,14 +5,14 @@ import { useEffect } from 'react';
 
 
 function MyApp({ Component, pageProps }) {
-  const cursor = document.querySelector("#cursor");
-  window.addEventListener("mousemove", (e) => {
-    console.log(e);
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
-  });
+
   useEffect(() => {
     AOS.init();
+    const cursor = document.querySelector("#cursor");
+    window.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+    });
   }, []);
 
   return (
