@@ -35,7 +35,7 @@ export default function Header() {
 
 
       <ul className={styles.links} >
-        <li><Link className={currentRoute === ROUTES.BRAND_OWNERS ? styles.selected : ""} href={ROUTES.BRAND_OWNERS}>SCOPE</Link></li>
+        <li><div className={currentRoute === ROUTES.BRAND_OWNERS ? styles.selected : ""} id="scope" >SCOPE</div></li>
         <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
         <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
         <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li>

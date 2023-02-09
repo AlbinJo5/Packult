@@ -284,9 +284,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.map}>
+      {/* <div className={styles.map}>
         <Image src={'/assets/images/home/map.png'} alt="map" width={1000} height={1000} />
-      </div>
+      </div> */}
       <WorkNumbers />
       <div className={styles.mobile_app}>
         <div className={styles.content}>
