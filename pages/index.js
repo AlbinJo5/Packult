@@ -48,6 +48,14 @@ export default function Home() {
       </div>
 
       <div className={styles.langingPage} >
+        <video src="/assets/videos/banner.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+
+        ></video>
         <div className={styles.scroll_down}>
           <Image src="/assets/images/home/mouse.png" width={1000} height={1000} alt="scroll_down" />
           <p>SCROLL DOWN</p>

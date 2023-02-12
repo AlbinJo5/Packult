@@ -45,7 +45,7 @@ function Index() {
                     loading ? <h2>Loading...</h2> :
                         <div className={styles.gallerys}>
                             {
-                                images.map((image, index) => (
+                                images.length ? images.map((image, index) => (
                                     <div key={index} className={styles.image} onClick={() => {
                                         router.push(ROUTES.OUR_WORKS + image.id)
                                     }} >
@@ -55,7 +55,7 @@ function Index() {
                                             <h2>{image.title}</h2>
                                         </div>
                                     </div>
-                                ))
+                                )) : null
                             }
                         </div>
                 }

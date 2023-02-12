@@ -31,39 +31,118 @@
     ul {
         width: 50vw;
         @include flexContentSpaceEvenly;
+
         padding: 5vw;
 
 
         li {
             // background-color: aqua;
             list-style: none;
+            margin: 0;
+            padding: 0;
 
-            a {
-                font-size: 1vw;
-                text-decoration: none;
-                color: $light;
-                width: max-content;
-                height: max-content;
+            font-size: 1vw;
+            text-decoration: none;
+            color: $light;
+            width: max-content;
+            height: max-content;
+
+
+            &:hover {
+                color: $primary;
+                transition: all 0.3s ease-in-out;
+
+            }
+
+
+            transition: all 0.3s ease-in-out;
+
+
+            &:nth-child(1) {
+                transition: all 0.3s ease-in-out;
+                position: relative;
+
 
 
                 &:hover {
-                    color: $primary;
-                    transition: all 0.3s ease-in-out;
+                    .dropdown {
+                        height: 5vw;
+                        padding: 1vw;
+                        padding-top: 2vw;
+                        font-size: 1vw;
+                        transition: font-size 0.2s .1s ease;
+                    }
+                }
+
+                .dropdown {
+                    position: absolute;
+                    height: 0;
+                    font-size: 0;
+                    width: 15vw;
+                    left: -1vw;
+                    border-radius: 0 0 .5vw .5vw;
+                    flex-direction: column;
+                    gap: 1vw;
+                    // font-size: 1vw;
+                    color: $light;
+                    padding: 0vw;
+                    display: flex;
+                    padding-top: 0vw;
+                    background-color: $dark;
+                    transition: all 0.5s .2s ease-in-out, font-size 0.1s ease;
+
+                    span {
+                        color: $light;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
 
                 }
 
 
-                transition: all 0.3s ease-in-out;
-
-
             }
+
+
+
+
+
+
+
+
+
 
             .selected {
                 color: $primary;
                 transition: all 0.3s ease-in-out;
+
             }
 
+            .scope {
+                transition: all 1.3s ease-in-out;
+                position: relative;
+                font-size: 1vw;
+
+
+
+
+                h3 {
+                    margin-top: 1vw;
+                    // padding: 0;
+                }
+
+
+
+
+
+
+            }
+
+
         }
+
 
         .contact {
             @include buttonCustom(none, 20px, $primary, $dark);

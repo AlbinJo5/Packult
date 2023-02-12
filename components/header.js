@@ -35,7 +35,12 @@ export default function Header() {
 
 
       <ul className={styles.links} >
-        <li><div className={currentRoute === ROUTES.BRAND_OWNERS ? styles.selected : ""} id="scope" >SCOPE</div></li>
+
+        <li> <span className={currentRoute === ROUTES.BRAND_OWNERS || currentRoute === ROUTES.PACKAGING_CONVERTERS ? styles.selected : ""}> SCOPE</span>
+          <div className={styles.dropdown}>
+            <Link href={ROUTES.BRAND_OWNERS}><span>BRAND OWNERS</span></Link>
+            <Link href={ROUTES.PACKAGING_CONVERTERS}><span>PACKAGING CONVERTERS</span></Link>
+          </div></li>
         <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
         <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
         <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li>
@@ -61,6 +66,6 @@ export default function Header() {
         </div>
       </div>
 
-    </nav>
+    </nav >
   )
 }
