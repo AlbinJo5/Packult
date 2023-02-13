@@ -3,7 +3,7 @@ import Contact from "../../components/contact"
 import Layout from "../../components/layout"
 import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
-import { data } from "../../data/packaging-converters"
+import { data } from "../../data/services"
 import styles from "../../styles/services.module.scss"
 
 function index() {

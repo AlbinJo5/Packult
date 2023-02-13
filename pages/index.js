@@ -70,7 +70,7 @@ export default function Home() {
               <Link href={ROUTES.BRAND_OWNERS} >
                 <h3>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
               </Link>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia vero qui, hic molestias accusamus blanditiis dolores praesentium repudiandae. Quis, enim voluptatum excepturi itaque distinctio porro tempora aspernatur eum aliquam!</p>
+              <p>Packult has been providing innovative Packaging solutions to reputed brand owners of the FMCG, HPC, Cosmetics, Pharmaceutical, Industrial products, and other industries.</p>
             </div>
           </div>
           <div className={styles.brand} data-aos="fade-up" >
@@ -79,7 +79,7 @@ export default function Home() {
               <Link href={ROUTES.PACKAGING_CONVERTERS} >
                 <h3>Packaging Converters<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
               </Link>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ut amet qui reprehenderit velit corrupti magnam fugit, perferendis, quia sapiente a libero ullam, architecto perspiciatis dolor consequatur quas voluptatum? Aliquid.</p>
+              <p>With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service</p>
             </div>
           </div>
         </div>
@@ -94,9 +94,7 @@ export default function Home() {
           <ul data-aos="fade-left"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine">
-            <li>To Provide a platform for sustanable and Innovative packaging solution.</li>
-            <li>Always try to make sustanble solutions.</li>
-            <li>Disruptive and value for money packaging solution.</li>
+            <li>Our Vision is to be the best in the business and support our partners in their journey to Packaging excellence through sustainable, innovative and disruptive solutions</li>
           </ul>
         </div>
         <div className={styles.content} >
@@ -107,9 +105,7 @@ export default function Home() {
           <ul data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine">
-            <li>Close contact with brand owners, converters, and raw material suppliers.</li>
-            <li>Using the appropriate chemistry, process expertise with the right machine technology for cost-optimal solutions.</li>
-            <li>To ensure end users get the best experience and expertise at an affordable cost.</li>
+            <li>Our mission is to make a real difference to packaging... great aesthetics, best value for money and friendly to the planet, through partnerships with Brand owners and Packaging producers</li>
           </ul>
         </div>
       </div>
@@ -141,13 +137,12 @@ export default function Home() {
           <div className={styles.content} >
             <div>
               <h2>Packaging Innovation<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
+              <p>Our team of dedicated and experienced packaging experts from multiple packaging domains bring creativity and knowledge under one roof. With the combination of in-house and outsourced resources and careful analysis of each product, we provide an innovative packaging design that elevates the quality of every product. From concept to implementation our experts have it all covered.</p>
               <ul>
                 <li> <Link href={"/"}> Graphic Design</Link></li>
-                <li><Link href={"/"}>Structural Engineering</Link></li>
               </ul>
             </div>
-            <Image data-aos="fade-left" src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+            <Image data-aos="fade-left" src="/assets/images/home/service1.png" width={1000} height={1000} alt="Service" />
           </div>
           <hr />
         </div>
@@ -157,13 +152,10 @@ export default function Home() {
               <h2 onClick={() => {
                 router.push(ROUTES.PACKAGING_SOLUTIONS)
               }} >Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
-              <ul>
-                <li><Link href={"/"}>Graphic Design</Link></li>
-                <li><Link href={"/"}>Structural Engineering</Link></li>
-              </ul>
+              <p>Sustainability is our default setting! We are a team of environmentalists that adopts eco-friendly ways to cater to our client’s needs. Our packaging solutions are sustainable, and durable and cause zero harm to the planet. As a company, we put our planet’s needs before us because we believe our corporate identity brings in some social responsibilities as well and so, we develop responsible concepts and infrastructure that resonate in moving forward economies and ecology.</p>
+
             </div>
-            <Image data-aos="fade-right" src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+            <Image data-aos="fade-right" src="/assets/images/home/service2.png" width={1000} height={1000} alt="Service" />
           </div>
           <hr />
         </div>
@@ -173,13 +165,9 @@ export default function Home() {
               <h2 onClick={() => {
                 router.push(ROUTES.VALUE_IMPROVEMENT)
               }}>Value Improvement<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni, rem amet dolor, officiis ipsam unde molestiae ea enim, itaque corporis ratione. Quaerat itaque facere fugit ipsam magnam debitis quos! Ab ipsam qui labore culpa? Eos quis aut quaerat autem.</p>
-              <ul>
-                <li><Link href={"/"}>Graphic Design</Link></li>
-                <li><Link href={"/"}>Structural Engineering</Link></li>
-              </ul>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
-            <Image data-aos="fade-left" src="/assets/images/home/service.png" width={1000} height={1000} alt="Service" />
+            <Image data-aos="fade-left" src="/assets/images/home/service3.png" width={1000} height={1000} alt="Service" />
           </div>
           <div className={styles.all_services}>
             <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.OPERATIONAL_EXCELLENCE}>

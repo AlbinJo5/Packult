@@ -20,7 +20,7 @@ export default function CardContent({ data }) {
                 }
             </div>
             <div className={styles.image} >
-                <Image data-aos="flip-left" src={image} width={100} height={100} alt={heading} />
+                <Image data-aos="flip-left" src={image} width={1000} height={1000} alt={heading} />
             </div>
         </div>
     )

@@ -7,23 +7,23 @@ import Layout from "../../components/layout";
 
 export default function index() {
   const layout1 = {
-    heading: "Packaging Solutions",
-    content1: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nisi recusandae reiciendis eum. Dolorum iure cupiditate quis! Incidunt architecto animi a facere odio aut quia, assumenda et tenetur mollitia possimus quis quaerat eum deserunt placeat repudiandae recusandae deleniti magni ipsa maxime perspiciatis iusto! Temporibus, totam delectus ipsum commodi minus obcaecati dolorum cum non pariatur perspiciatis eius, aliquam, nesciunt nihil deserunt at ducimus consequatur corrupti porro veritatis! Aperiam, sunt assumenda quam perferendis obcaecati voluptatibus maxime maiores aliquam eligendi dicta blanditiis aut, a ipsam nostrum odit sit, corporis nulla. Asperiores voluptates pariatur excepturi dolorum modi illum totam, debitis, blanditiis, officia tenetur dolore.",
-    imagePath: "/assets/images/layout/img (1).png",
+    heading: "Packaging Innovations",
+    content1: "Our team of dedicated and experienced packaging experts from multiple packaging domains bring creativity and knowledge under one roof. With the combination of in-house and outsourced resources and careful analysis of packaging brief, we provide world class future-ready packaging solutions that elevates product quality, improves imagery, and enhances shelf appeal within the cost brief. From concept to implementation our experts have it all covered. We pride ourselves on providing top-notch packaging solutions to businesses of all sizes. ",
+    imagePath: "/assets/images/packaging-solution/1.png",
     imageName: "Recyclable Packaging",
-    content2: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione ullam, rerum nobis ducimus facilis harum odit temporibus atque molestiae vitae quae nihil laboriosam qui in, deserunt dignissimos tempora quam magnam at? Id vitae, error quasi possimus similique nemo nostrum vel? Illo repellat doloremque reprehenderit voluptas voluptatum nam eius libero error. Minima delectus soluta ipsam exercitationem magnam? Possimus deleniti repellat, ipsam facilis harum debitis cum ipsa ex distinctio aperiam praesentium esse facere nam eos doloremque error libero nulla excepturi a, aliquid itaque rerum sapiente minima. Expedita molestias, corrupti neque nesciunt amet mollitia laboriosam odio architecto tempora nihil, ab hic pariatur sapiente excepturi aspernatur veritatis sit nobis tempore libero sed impedit aliquid enim magnam! Magni, voluptatibus expedita velit error optio repudiandae soluta eveniet iusto dolorem nostrum, reiciendis molestiae aperiam sit possimus repellat aliquid quidem tenetur magnam. Atque, eveniet. In, quae excepturi sint quis tenetur assumenda esse eum laudantium rerum velit, eos inventore.",
+    content2: "From development of packaging concepts, innovative shapes, 2D / 3D modelling, mock-ups, artworks, Structure and specifications, we take care of all your packaging needs. So, choose us and let us take care of all your packaging innovation needs!",
   }
   const layout2 = {
     heading: "Graphic Design",
-    imagePath: "/assets/images/layout/img (2).png",
+    imagePath: "/assets/images/packaging-solution/2.png",
     imageName: "Adobe Icons",
-    content1: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nisi recusandae reiciendis eum. Dolorum iure cupiditate quis! Incidunt architecto animi a facere odio aut quia, assumenda et tenetur mollitia possimus quis quaerat eum deserunt placeat repudiandae recusandae deleniti magni ipsa maxime perspiciatis iusto! Temporibus, totam delectus ipsum commodi minus obcaecati dolorum cum non pariatur perspiciatis eius, aliquam, nesciunt nihil deserunt at ducimus consequatur corrupti porro veritatis! Aperiam, sunt assumenda quam perferendis obcaecati voluptatibus maxime maiores aliquam eligendi dicta blanditiis aut, a ipsam nostrum odit sit, corporis nulla. Asperiores voluptates pariatur excepturi dolorum modi illum totam, debitis, blanditiis, officia tenetur dolore.",
+    content1: "We understand the importance of visual appeal in packaging and that's why we offer top-notch graphic designing service. We have a strong team of Creative and graphic designers who work closely with our customers to understand the brief and create visually stunning logos & designs that will not only retain your brand essence but also make them stand out on the shelves. Our creative team is equipped with high-end software and can also generate CGI & Hero images for your pack and adapt them to various SKUs & Pack formats. Whether you're looking for a minimalist design or something bold and colourful, our team can deliver",
   }
   const layout3 = {
     heading: "Structural Engeneering",
-    imagePath: "/assets/images/layout/img (3).png",
+    imagePath: "/assets/images/packaging-solution/3.png",
     imageName: "Round Edge Shapes",
-    content1: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nisi recusandae reiciendis eum. Dolorum iure cupiditate quis! Incidunt architecto animi a facere odio aut quia, assumenda et tenetur mollitia possimus quis quaerat eum deserunt placeat repudiandae recusandae deleniti magni ipsa maxime perspiciatis iusto! Temporibus, totam delectus ipsum commodi minus obcaecati dolorum cum non pariatur perspiciatis eius, aliquam, nesciunt nihil deserunt at ducimus consequatur corrupti porro veritatis! Aperiam, sunt assumenda quam perferendis obcaecati voluptatibus maxime maiores aliquam eligendi dicta blanditiis aut, a ipsam nostrum odit sit, corporis nulla. Asperiores voluptates pariatur excepturi dolorum modi illum totam, debitis, blanditiis, officia tenetur dolore.",
+    content1: "",
   }
   return (
     <Layout>
