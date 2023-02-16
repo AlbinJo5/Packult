@@ -20,17 +20,16 @@ export default function Footer() {
             </div>
             <div className={styles.social} >
                 <div className={styles.icons} >
-                    <Link data-aos="fade-up" data-aos-offset="-700" href="#"><Image src="/assets/icons/facebook.svg" width={30} height={30} alt="facebook" /></Link>
-                    <Link data-aos="fade-up" data-aos-offset="-700" href="#"><Image src="/assets/icons/instagram.svg" width={30} height={30} alt="instagram" /></Link>
-                    <Link data-aos="fade-up" data-aos-offset="-700" href="#"><Image src="/assets/icons/twitter.svg" width={30} height={30} alt="twitter" /></Link>
-                    <Link data-aos="fade-up" data-aos-offset="-700" href="#"><Image src="/assets/icons/linkedin.svg" width={30} height={30} alt="linkedin" /></Link>
+                    <Link data-aos="fade-up" data-aos-offset="-700" href="https://www.facebook.com/sustainovation"><Image src="/assets/icons/facebook.svg" width={30} height={30} alt="facebook" /></Link>
+                    <Link data-aos="fade-up" data-aos-offset="-700" href="https://www.instagram.com/packult2021/"><Image src="/assets/icons/instagram.svg" width={30} height={30} alt="instagram" /></Link>
+                    <Link data-aos="fade-up" data-aos-offset="-700" href="https://www.linkedin.com/company/packult-studio-private-limited"><Image src="/assets/icons/linkedin.svg" width={30} height={30} alt="linkedin" /></Link>
                 </div>
                 <div className={styles.contact} >
                     <p>
-                        <Link href="mailto: connect@packult.com">connect@packult.com</Link>
+                        <Link href="mailto: namaste@packult.com">namaste@packult.com</Link>
                     </p>
                     <p  >
-                        <Link className={styles.whatsapp} href="tel: +91 9876543210"> <Image src="/assets/icons/whatsapp.svg" width={30} height={30} alt="whatsapp" />  +91 9876543210</Link>
+                        <Link className={styles.whatsapp} href="https://api.whatsapp.com/send?phone=7718894807"> <Image src="/assets/icons/whatsapp.svg" width={30} height={30} alt="whatsapp" />7718894807</Link>
                     </p>
                     <p>
                         230, Udyog Bhavan, Sonawala road,<br />

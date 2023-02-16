@@ -59,7 +59,7 @@
 
 
             &:nth-child(1) {
-                transition: all 0.3s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 position: relative;
 
 
@@ -70,7 +70,7 @@
                         padding: 1vw;
                         padding-top: 2vw;
                         font-size: 1vw;
-                        transition: font-size 0.2s .1s ease;
+                        transition: font-size 0.1s .05s ease;
                     }
                 }
 
@@ -89,11 +89,11 @@
                     display: flex;
                     padding-top: 0vw;
                     background-color: $dark;
-                    transition: all 0.5s .2s ease-in-out, font-size 0.1s ease;
+                    transition: all 0.3s .1s ease-in-out, font-size 0.1s ease;
 
                     span {
                         color: $light;
-                        transition: all 0.3s ease-in-out;
+                        transition: all 0.1s ease-in-out;
 
                         &:hover {
                             color: $primary;
@@ -102,6 +102,54 @@
 
                 }
 
+
+            }
+
+            &:nth-child(4) {
+                // transition: all 0.5s;
+                position: relative;
+
+
+
+                &:hover {
+                    .dropdown {
+                        height: max-content;
+                        padding: 1vw;
+                        padding-top: 2vw;
+                        opacity: 1;
+                        transition: opacity 0.5s .2s ease-in-out;
+                    }
+                }
+
+                .dropdown {
+                    position: absolute;
+                    height: 0;
+                    font-size: 1vw;
+                    width: 20vw;
+                    left: -1vw;
+                    border-radius: 0 0 .5vw .5vw;
+                    flex-direction: column;
+                    gap: 1vw;
+                    // font-size: 1vw;
+                    color: $light;
+                    padding: 0vw;
+                    display: flex;
+                    padding-top: 0vw;
+                    opacity: 0;
+                    background-color: $dark;
+                    // transition: all 0.5s .5s ease-in-out, opacity 0.3s ease;
+
+                    span {
+                        color: $light;
+                        transition: all 0.4s ease-in-out;
+
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+
+                }
 
             }
 

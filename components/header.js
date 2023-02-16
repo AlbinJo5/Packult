@@ -43,7 +43,20 @@ export default function Header() {
           </div></li>
         <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
         <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
-        <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li>
+        {/* <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li> */}
+        <li> <span className={currentRoute === ROUTES.BRAND_OWNERS || currentRoute === ROUTES.PACKAGING_CONVERTERS ? styles.selected : ""}> SERVICES</span>
+          <div className={styles.dropdown}>
+            <Link href={ROUTES.PACKAGING_INNOVATION}><span>PACKAGING INNOVATIONS</span></Link>
+            <Link href={ROUTES.SUSTAINABLE_SOLUTION}><span>SUSTAINABLE SOLUTION</span></Link>
+            <Link href={ROUTES.VALUE_IMPROVEMENT}><span>VALUE IMPROVEMENT</span></Link>
+            <Link href={ROUTES.OPERATIONAL_EXCELLENCE}><span>OPERATIONAL EXCELLENCE</span></Link>
+            <Link href={ROUTES.SOURCING_EXCELLENCE}><span>SOURCING EXCELLENCE</span></Link>
+            <Link href={ROUTES.RESOURCING}><span>RESOURCING</span></Link>
+            <Link href={ROUTES.APP_and_Business}><span>APPLICATION AND BUSINNES DEVELOPMENT</span></Link>
+
+
+
+          </div></li>
         <li><Link className={currentRoute === ROUTES.CONATCT_US ? styles.selected_contact : styles.contact} href={ROUTES.CONATCT_US} >CONTACT</Link></li>
       </ul>
       <div className={styles.mlinks} >

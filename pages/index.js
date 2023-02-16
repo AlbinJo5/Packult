@@ -89,7 +89,7 @@ export default function Home() {
         <div className={styles.content} >
           <Image data-aos="fade-right"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine" src="/assets/images/home/vision.png" alt='vision' height={1000} width={1000} />
+            data-aos-easing="ease-in-sine" src="/assets/gifs/vision.gif" alt='vision' height={1000} width={1000} />
           <h2>OUR VISION</h2>
           <ul data-aos="fade-left"
             data-aos-offset="300"
@@ -100,7 +100,7 @@ export default function Home() {
         <div className={styles.content} >
           <Image data-aos="fade-left"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine" src="/assets/images/home/mission.png" alt='vision' height={1000} width={1000} />
+            data-aos-easing="ease-in-sine" src="/assets/gifs/mission.gif" alt='mission' height={1000} width={1000} />
           <h2>OUR MISSION</h2>
           <ul data-aos="fade-right"
             data-aos-offset="300"
@@ -269,7 +269,7 @@ export default function Home() {
               <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
             <div data-aos="fade-right" data-aos-duration="1000" className={styles.award_box}>
-              <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENE<br /> 2022</h4>
+              <h4> <span> INDIASTAR</span> PACKAGING DESIGN EXCELLENCE<br /> 2022</h4>
               <Image src={'/assets/images/home/award.png'} alt="award" width={1000} height={1000} />
             </div>
           </div>
@@ -301,7 +301,7 @@ export default function Home() {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-offset="-500" className={styles.right}>
-            <Image src={'/assets/images/home/mobile-app.png'} alt="mobile-app" width={1000} height={1000} />
+            <Image src={'/assets/images/home/iPhone 12 Pro.png'} alt="mobile-app" width={1000} height={1000} />
             <div className={styles.apple_play_store}>
               <Image src={'/assets/images/home/App Store.png'} alt="app-store" width={1000} height={1000} />
               <Image src={'/assets/images/home/Google Play.png'} alt="play-store" width={1000} height={1000} />

@@ -16,7 +16,8 @@ export const ROUTES = {
     SOURCING_EXCELLENCE: "/sourcing-excellence",
     OPERATIONAL_EXCELLENCE: "/operational-excellence",
     VALUE_IMPROVEMENT: "/value-improvement",
-    PACKAGING_SOLUTIONS: "/packaging-solution",
+    PACKAGING_INNOVATION: "/packaging-innovation",
+    SUSTAINABLE_SOLUTION: "/sustainable-solution",
 }
 
 export const ADMIN_ROUTES = {

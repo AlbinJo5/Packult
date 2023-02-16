@@ -17,7 +17,7 @@
 
     .scroll_down {
         position: absolute;
-        bottom: 5vw;
+        bottom: 1vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,14 +25,14 @@
 
         img {
             padding-bottom: 1.5vw;
-            width: 2vw;
+            width: 1.5vw;
             height: max-content;
             animation: scroll 1s ease-in-out infinite;
         }
 
         p {
             color: $light;
-            font-size: 1.2vw;
+            font-size: .8vw;
             font-family: 'Visby regular';
             letter-spacing: 0.2vw;
             margin: 0;
@@ -156,6 +156,7 @@
     padding: 0 10vw;
 
     .content {
+        margin-top: 2vw;
         display: flex;
         align-items: center;
 
@@ -164,7 +165,7 @@
 
             h2 {
                 transform: rotate(90deg);
-                margin: 0 -6vw 0 0vw;
+                margin: 0 0vw 0 0vw;
 
             }
         }
@@ -173,6 +174,7 @@
             width: max-content;
             height: 20vw;
             margin: 0;
+            border-radius: 1vw;
             // background-color: #87BE42;
         }
 
@@ -186,7 +188,7 @@
             align-self: center;
             display: inline;
             min-width: max-content;
-            margin: 0 0vw 0 -6vw;
+            margin: 0 0vw 0 0vw;
             // background-color: #87BE42;
         }
 
@@ -201,20 +203,9 @@
                 font-weight: 500;
                 font-family: 'Visby Regular';
                 position: relative;
+                line-height: 3vw;
 
-                &::before {
-                    content: " ";
-                    background-color: $primary;
-                    // color: $primary;
-                    position: absolute;
-                    display: inline-block;
-                    width: 1.5vw;
-                    height: 1.5vw;
-                    border-radius: 50%;
-                    margin-top: .5vw;
-                    margin-left: -2vw;
 
-                }
             }
         }
     }
@@ -795,8 +786,8 @@
             width: 50%;
 
             img {
-                width: max-content;
-                height: 27vw;
+                width: 40vw;
+                height: max-content;
             }
 
             .apple_play_store {
@@ -1291,12 +1282,32 @@
                 text-align: center;
 
                 h1 {
-                    font-size: 3.5vw;
-                    font-family: 'Visby Regular';
+                    font-size: 3vw;
+                    font-family: 'Visby Medium';
                     letter-spacing: .2vw;
-                    line-height: 5vw;
+    
+                    margin: 0;
+    
                 }
-
+    
+                h2 {
+                    font-size: 3vw;
+                    font-family: 'Visby Medium';
+                    letter-spacing: .2vw;
+                    margin: 0;
+                }
+    
+                .counter {
+                    display: flex;
+    
+                    h1 {
+                        min-width: 11vw;
+                        max-width: 11vw;
+                    }
+                }
+    
+            
+                
             }
 
 
@@ -1517,8 +1528,8 @@
                 width: 50%;
 
                 img {
-                    width: max-content;
-                    height: 29vw;
+                    width: 40vw;
+                    height: max-content;
                 }
 
                 .apple_play_store {
