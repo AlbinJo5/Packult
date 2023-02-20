@@ -1,16 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "../styles/components/cardContent.module.scss"
-
+import { useRouter } from "next/router"
 export default function CardContent({ data }) {
-    const { number, heading, content, links, image } = data;
+    const { number, heading, content, links, image, link } = data;
+    const router = useRouter();
     return (
         <div className={styles.cardContent} >
 
             <div className={styles.content} >
                 <div className={styles.heading} >
                     <h1>{number}</h1>
-                    <h2>{heading}</h2>
+                    <h2 onClick={() => {
+                        router.push(link)
+                    }} >{heading}</h2>
                 </div>
                 <p>{content}</p>
                 {

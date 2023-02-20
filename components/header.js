@@ -44,7 +44,7 @@ export default function Header() {
         <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
         <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
         {/* <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li> */}
-        <li> <span className={currentRoute === ROUTES.BRAND_OWNERS || currentRoute === ROUTES.PACKAGING_CONVERTERS ? styles.selected : ""}> SERVICES</span>
+        <li> <span className={[ROUTES.PACKAGING_INNOVATION, ROUTES.SUSTAINABLE_SOLUTION, ROUTES.VALUE_IMPROVEMENT, ROUTES.OPERATIONAL_EXCELLENCE, ROUTES.SOURCING_EXCELLENCE, ROUTES.RESOURCING, ROUTES.APP_and_Business].includes(currentRoute) ? styles.selected : ""}> SERVICES</span>
           <div className={styles.dropdown}>
             <Link href={ROUTES.PACKAGING_INNOVATION}><span>PACKAGING INNOVATIONS</span></Link>
             <Link href={ROUTES.SUSTAINABLE_SOLUTION}><span>SUSTAINABLE SOLUTION</span></Link>
@@ -70,7 +70,8 @@ export default function Header() {
             <Image onClick={closeNav} src="/assets/icons/close.png" alt="Packult" width={1000} height={1000} />
           </div>
           <ul>
-            <li><Link className={currentRoute === ROUTES.BRAND_OWNERS ? styles.selected : ""} href={ROUTES.BRAND_OWNERS}>SCOPE</Link></li>
+            <li><Link className={currentRoute === ROUTES.BRAND_OWNERS ? styles.selected : ""} href={ROUTES.BRAND_OWNERS}>BRAND OWNERS</Link></li>
+            <li><Link className={currentRoute === ROUTES.PACKAGING_CONVERTERS ? styles.selected : ""} href={ROUTES.PACKAGING_CONVERTERS}>PACKAGING CONVERTERS</Link></li>
             <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li>
             <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
             <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>

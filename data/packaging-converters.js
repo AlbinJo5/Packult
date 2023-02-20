@@ -1,3 +1,5 @@
+import { ROUTES } from "../common/routes";
+
 export const data = [
     {
         "number": "1.",
@@ -17,36 +19,38 @@ export const data = [
                 "text": "Packaging Innovation",
                 "link": "/"
             }
-            
-        ]
+
+        ],
+        "link": ROUTES.OPERATIONAL_EXCELLENCE
     },
     {
         "number": "2.",
         "heading": "Application & Bussiness Development",
         "content": "We provide support to converters with marketing and sales, co-developing new products and applications, identifying new business opportunities, expanding their customer base. building long-term partnerships with clients and providing after-sales support. With us, our converters can focus on what they do best: producing high-quality packaging",
         "image": "/assets/images/packaging-converters/box2.png",
-        
+        "link": ROUTES.APP_and_Business
+
     },
     {
         "number": "3.",
         "heading": "Resourcing",
         "content": "We pride ourselves in meeting our customers’ needs for quality manpower at every level with best quality resources pre-screened by our subject experts. Whether the need is temporary or permanent, onsite or offsite or hybrid, we have it covered! We also offer to startups and mid-size brands our services as their “extended Packaging Development team” at a fraction of the cost of a full-fledged in-house Packaging Development team.",
         "image": "/assets/images/packaging-converters/box3.png",
-        
+        "link": ROUTES.RESOURCING
     },
     {
         "number": "4.",
         "heading": "Application and business development",
         "content": "We provide support to converters with marketing and sales, co-developing new products and applications, identifying new business opportunities, expanding their customer base. building long-term partnerships with clients and providing after-sales support. With us, our converters can focus on what they do best: producing high-quality packaging.",
         "image": "/assets/images/packaging-converters/box4.png",
-        
+        "link": ROUTES.APP_and_Business
     },
     {
         "number": "5.",
         "heading": "Mergers & Acquisitions",
         "content": "We provide end to end Mergers & Acquisitions support for converters of any size including Make ready procedures for dilution or expansion, financial due diligence, integration of culture & business processes.",
         "image": "/assets/images/packaging-converters/box5.png",
-        
+        "link": ROUTES.MERGERS_AND_ACQUISITIONS
     },
 
 

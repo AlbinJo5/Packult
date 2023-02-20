@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Layout from '../components/layout'
 import styles from "../styles/home.module.scss"
-import Image from 'next/image'
 import Heading from '../components/heading'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ROUTES } from '../common/routes'
 import Carousel from 'nuka-carousel'
@@ -35,16 +35,22 @@ export default function Home() {
   return (
     <Layout >
       <div className={styles.lap_particles}>
-        <Particles color="#C2D950" height="50vw" width="150vw" top="150vh" left="90vw" blur='10vw' />
-        <Particles color="#FFD7EA" height="30vw" width="150vw" top="290vh" left="-135vw" blur='5vw' />
-        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="440vh" left="90vw" blur='10vw' />
-        <Particles color="#FFD7EA" height="30vw" width="150vw" top="620vh" left="-135vw" blur='5vw' />
+        <Particles color="#C2D950" height="50vw" width="150vw" top="70vw" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="140vw" left="-135vw" blur='5vw' />
+        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="215vw" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="285vw" left="-135vw" blur='2vw' />
+      </div>
+      <div className={styles.tablet_particles}>
+        <Particles color="#C2D950" height="50vw" width="150vw" top="100vw" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="160vw" left="-135vw" blur='5vw' />
+        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="235vw" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="300vw" left="-135vw" blur='2vw' />
       </div>
       <div className={styles.mobile_particles}>
-        <Particles color="#C2D950" height="50vw" width="150vw" top="90vh" left="90vw" blur='10vw' />
-        <Particles color="#FFD7EA" height="50vw" width="150vw" top="130vh" left="-135vw" blur='5vw' />
-        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="180vh" left="90vw" blur='10vw' />
-        <Particles color="#FFD7EA" height="30vw" width="150vw" top="240vh" left="-135vw" blur='5vw' />
+        <Particles color="#C2D950" height="50vw" width="150vw" top="200vw" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="280vw" left="-135vw" blur='5vw' />
+        <Particles color="rgba(241, 198, 68,0.7)" height="50vw" width="150vw" top="380vw" left="90vw" blur='10vw' />
+        <Particles color="#FFD7EA" height="50vw" width="150vw" top="460vw" left="-135vw" blur='5vw' />
       </div>
 
       <div className={styles.langingPage} >
@@ -136,10 +142,12 @@ export default function Home() {
         <div className={styles.component} >
           <div className={styles.content} >
             <div>
-              <h2>Packaging Innovation<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
+              <h2 onClick={() => {
+                router.push(ROUTES.PACKAGING_INNOVATION)
+              }} >Packaging Innovation<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
               <p>Our team of dedicated and experienced packaging experts from multiple packaging domains bring creativity and knowledge under one roof. With the combination of in-house and outsourced resources and careful analysis of each product, we provide an innovative packaging design that elevates the quality of every product. From concept to implementation our experts have it all covered.</p>
               <ul>
-                <li> <Link href={"/"}> Graphic Design</Link></li>
+                <li> <Link href={ROUTES.PACKAGING_INNOVATION}> Graphic Design</Link></li>
               </ul>
             </div>
             <Image data-aos="fade-left" src="/assets/images/home/service1.png" width={1000} height={1000} alt="Service" />
@@ -150,7 +158,7 @@ export default function Home() {
           <div className={styles.content} >
             <div>
               <h2 onClick={() => {
-                router.push(ROUTES.PACKAGING_SOLUTIONS)
+                router.push(ROUTES.SUSTAINABLE_SOLUTION)
               }} >Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
               <p>Sustainability is our default setting! We are a team of environmentalists that adopts eco-friendly ways to cater to our client’s needs. Our packaging solutions are sustainable, and durable and cause zero harm to the planet. As a company, we put our planet’s needs before us because we believe our corporate identity brings in some social responsibilities as well and so, we develop responsible concepts and infrastructure that resonate in moving forward economies and ecology.</p>
 
@@ -209,9 +217,63 @@ export default function Home() {
           <div className={styles.left}>
             <h2>Here's what our customers experinced after implementing Prospectss Tools</h2>
             <hr></hr>
-            <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
-            <p>Packult helped our business to generate more sales and saved money on product packaging</p>
-            <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
+            {/* review-carousel */}
+            <div style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+
+            }}  >
+              <Carousel
+                defaultControlsConfig={{
+                  nextButtonText: '>',
+                  prevButtonText: '<',
+                  nextButtonProps: { 'aria-label': 'Next' },
+                  prevButtonProps: { 'aria-label': 'Previous' },
+                  nextButtonClassName: styles.arrow,
+                  prevButtonClassName: styles.arrow,
+                  nextButtonStyle: {
+                    backgroundColor: '#87BE42',
+                    width: '2vw',
+                    height: '2vw',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease-in-out',
+
+                  },
+                  prevButtonStyle: {
+                    backgroundColor: '#87BE42',
+                    width: '2vw',
+                    height: '2vw',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease-in-out',
+
+                  },
+
+                  pagingDotsStyle: {
+                    display: 'none'
+                  }
+                }}
+              >
+                <div className={styles.carousel} >
+                  <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
+                  <p>Packult helped our business to generate more sales and saved money on product packaging</p>
+                  <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
+                </div>
+                <div className={styles.carousel}>
+                  <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
+                  <p>Packult helped our business to generate more sales and saved money on product packaging</p>
+                  <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
+                </div>
+              </Carousel>
+            </div>
           </div>
           <hr></hr>
           <div className={styles.right}>
@@ -236,6 +298,42 @@ export default function Home() {
       </div>
       <div className={styles.cutomers_gallery} >
         <Carousel
+          defaultControlsConfig={{
+            nextButtonText: '>',
+            prevButtonText: '<',
+            nextButtonProps: { 'aria-label': 'Next' },
+            prevButtonProps: { 'aria-label': 'Previous' },
+            nextButtonClassName: styles.arrow,
+            prevButtonClassName: styles.arrow,
+            nextButtonStyle: {
+              backgroundColor: '#87BE42',
+              width: '2vw',
+              height: '2vw',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease-in-out',
+
+            },
+            prevButtonStyle: {
+              backgroundColor: '#87BE42',
+              width: '2vw',
+              height: '2vw',
+              borderRadius: '50%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease-in-out',
+
+            },
+
+            pagingDotsStyle: {
+              display: 'none'
+            }
+          }}
         >
           <div className={styles.carousel} >
             <Image src="/assets/images/home/customers (1).png" alt='customers1' width={1000} height={1000} />
