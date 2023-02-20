@@ -18,14 +18,13 @@
 
 
         h1 {
-            min-width: 26.5vw;
-            max-width: 26.5vw;
-            font-size: 10vw;
+            font-size: 8vw;
+            min-width: 22vw;
             font-family: 'Visby Bold';
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: .1vw;
 
-        
+
             color: $dark;
         }
 
@@ -37,15 +36,13 @@
 
         &:nth-child(2) {
             h1 {
-                min-width: 9.8vw;
-                max-width: 9.8vw;
+                min-width: 12vw;
             }
         }
 
         &:nth-child(3) {
             h1 {
-                min-width: 15.5vw;
-                max-width: 15.5vw;
+                min-width: 13.5vw;
             }
         }
     }
@@ -57,9 +54,8 @@
 
         .content {
             h1 {
-                min-width: 26.5vw;
-                max-width: 26.5vw;
-                font-size: 10vw;
+                font-size: 8vw;
+                min-width: 22vw;
                 font-family: 'Visby Bold';
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke: .1vw;
@@ -74,15 +70,13 @@
 
             &:nth-child(2) {
                 h1 {
-                    min-width: 9.8vw;
-                    max-width: 9.8vw;
+                    min-width: 12vw;
                 }
             }
 
             &:nth-child(3) {
                 h1 {
-                    min-width: 16vw;
-                    max-width: 16vw;
+                    min-width: 13.5vw;
                 }
             }
 

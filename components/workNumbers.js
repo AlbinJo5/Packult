@@ -20,7 +20,7 @@ export default function WorkNumbers() {
       <div className={styles.content}>
         <h1><CountUp
           start={0}
-          end={18}
+          end={20}
           duration={3}
           separator=""
           decimals={0}
@@ -32,7 +32,7 @@ export default function WorkNumbers() {
       <div className={styles.content}>
         <h1><CountUp
           start={0}
-          end={156}
+          end={132}
           duration={3}
           separator=""
           decimals={0}

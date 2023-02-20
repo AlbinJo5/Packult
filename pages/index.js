@@ -297,60 +297,62 @@ export default function Home() {
 
       </div>
       <div className={styles.cutomers_gallery} >
-        <Carousel
-          defaultControlsConfig={{
-            nextButtonText: '>',
-            prevButtonText: '<',
-            nextButtonProps: { 'aria-label': 'Next' },
-            prevButtonProps: { 'aria-label': 'Previous' },
-            nextButtonClassName: styles.arrow,
-            prevButtonClassName: styles.arrow,
-            nextButtonStyle: {
-              backgroundColor: '#87BE42',
-              width: '2vw',
-              height: '2vw',
-              borderRadius: '50%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease-in-out',
+        <Heading heading="We are working with" line={true} />
+        {/* content */}
+        <div className={styles.content} >
+          <Carousel
+            defaultControlsConfig={{
+              nextButtonText: '>',
+              prevButtonText: '<',
+              nextButtonProps: { 'aria-label': 'Next' },
+              prevButtonProps: { 'aria-label': 'Previous' },
+              nextButtonClassName: styles.arrow,
+              prevButtonClassName: styles.arrow,
+              nextButtonStyle: {
+                backgroundColor: '#87BE42',
+                width: '2vw',
+                height: '2vw',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease-in-out',
 
-            },
-            prevButtonStyle: {
-              backgroundColor: '#87BE42',
-              width: '2vw',
-              height: '2vw',
-              borderRadius: '50%',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease-in-out',
+              },
+              prevButtonStyle: {
+                backgroundColor: '#87BE42',
+                width: '2vw',
+                height: '2vw',
+                borderRadius: '50%',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease-in-out',
 
-            },
+              },
 
-            pagingDotsStyle: {
-              display: 'none'
-            }
-          }}
-        >
-          <div className={styles.carousel} >
-            <Image src="/assets/images/home/customers (1).png" alt='customers1' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (2).png" alt='customers2' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (3).png" alt='customers3' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (4).png" alt='customers4' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (5).png" alt='customers5' width={1000} height={1000} />
-          </div>
-          <div className={styles.carousel} >
-            <Image src="/assets/images/home/customers (1).png" alt='customers1' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (2).png" alt='customers2' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (3).png" alt='customers3' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (4).png" alt='customers4' width={1000} height={1000} />
-            <Image src="/assets/images/home/customers (5).png" alt='customers5' width={1000} height={1000} />
-          </div>
+              pagingDotsStyle: {
+                display: 'none'
+              }
+            }}
+          >
+            <div className={styles.carousel} >
+              <Image src="/assets/images/home/Working logos-01.jpg" alt='customers1' width={1000} height={1000} />
+              <Image src="/assets/images/home/Working logos-02.jpg" alt='customers2' width={1000} height={1000} />
+              <Image src="/assets/images/home/Working logos-03.jpg" alt='customers3' width={1000} height={1000} />
+              <Image src="/assets/images/home/Working logos-04.jpg" alt='customers4' width={1000} height={1000} />
+              <Image src="/assets/images/home/Working logos-05.jpg" alt='customers5' width={1000} height={1000} />
+            </div>
+            <div className={styles.carousel} >
+              <Image src="/assets/images/home/Working logos-06.jpg" alt='customers1' width={1000} height={1000} />
+              <Image src="/assets/images/home/Working logos-07.jpg" alt='customers2' width={1000} height={1000} />
+              <Image src="/assets/images/home/Working logos-08.jpg" alt='customers3' width={1000} height={1000} />
+            </div>
 
-        </Carousel>
+          </Carousel>
+        </div>
       </div>
       <BlogCarousel heading={"Blog"} isBlogPage={false} />
       <div className={styles.awards}>
@@ -385,15 +387,15 @@ export default function Home() {
       <div className={styles.mobile_app}>
         <div className={styles.content}>
           <div className={styles.left}>
-            <h2>Download our Mobile App</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, ea eligendi! Iste beatae perspiciatis laborum suscipit accusamus animi facilis magni.</p>
+            <h2>Download our Packarma App</h2>
+            <p>Packarma is an online packaging material solutions platform to not only get the right structure for your product but also to sell and buy packaging material. It gives you a seamless connect between the customer and the vendor for packaging solutions and gives you the ultimate UX for all your needs in packaging solutions.</p>
             <div className={styles.qr_codes}>
               <div>
-                <Image src={'/assets/images/home/customer-qr-code.png'} alt="cutomer-qr-code" width={1000} height={1000} />
+                <Image src={'/assets/images/home/Packarma Customer (1).png'} alt="cutomer-qr-code" width={1000} height={1000} />
                 <h5>Customer App</h5>
               </div>
               <div>
-                <Image src={'/assets/images/home/vendor-qr-code.png'} alt="vendor-qr-code" width={1000} height={1000} />
+                <Image src={'/assets/images/home/Packarma Vendor (1).png'} alt="vendor-qr-code" width={1000} height={1000} />
                 <h5>Vendor App</h5>
               </div>
             </div>
