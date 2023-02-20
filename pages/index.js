@@ -376,7 +376,7 @@ export default function Home() {
           <div className={styles.right}>
             <h2>Our Awards</h2>
             <h3>Our Well Deserved Awards</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam est ullam recusandae dolores nam dolore a nemo architecto fuga illum.</p>
+            <p>At Packult we're proud to have received recognitions from a variety of organizations for our commitment to excellence in packaging design,innovation and skills.</p>
           </div>
         </div>
       </div>
