@@ -2,6 +2,18 @@
 @import "./utils.scss";
 @import "../asset/visby-cufonfonts-webfont/style.css";
 
+.mobile_particles {
+    display: none;
+}
+
+.lap_particles {
+    display: block;
+}
+
+.tablet_particles {
+    display: none;
+}
+
 .about {
     @include pagePadding();
     margin-top: 10vw;
@@ -183,5 +195,33 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width:$mobile ) and (max-width: $tablet) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: none;
+    }
+
+    .tablet_particles {
+        display: block;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: block;
+    }
+
+    .tablet_particles {
+        display: none;
     }
 }

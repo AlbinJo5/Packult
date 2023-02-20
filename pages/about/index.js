@@ -9,10 +9,24 @@ import styles from "../../styles/about.module.scss";
 export default function index() {
     return (
         <Layout>
+
+            <div className={styles.lap_particles}>
+                <Particles color={"rgba(241, 198, 68, 0.6)"} height="50vw" width="150vw" top="10vw" left="90vw" blur='10vw' />
+                <Particles color={"#A3DCFF"} height="50vw" width="150vw" top="110vw" left="-140vw" blur='10vw' />
+                <Particles color={"rgba(187, 128, 255, 0.6)"} height="50vw" width="150vw" top="200vw" left="-130vw" blur='5vw' />
+            </div>
+            <div className={styles.tablet_particles}>
+                <Particles color={"rgba(241, 198, 68, 0.6)"} height="50vw" width="150vw" top="10vw" left="90vw" blur='10vw' />
+                <Particles color={"#A3DCFF"} height="50vw" width="150vw" top="110vw" left="-140vw" blur='10vw' />
+                <Particles color={"rgba(187, 128, 255, 0.6)"} height="50vw" width="150vw" top="200vw" left="90vw" blur='5vw' />
+            </div>
+            <div className={styles.mobile_particles}>
+                <Particles color={"rgba(241, 198, 68, 0.6)"} height="50vw" width="150vw" top="10vw" left="90vw" blur='10vw' />
+                <Particles color={"#A3DCFF"} height="50vw" width="150vw" top="150vw" left="-140vw" blur='10vw' />
+                <Particles color={"rgba(187, 128, 255, 0.6)"} height="50vw" width="150vw" top="240vw" left="90vw" blur='5vw' />
+            </div>
+
             <main className={styles.about} >
-            <Particles color={"rgba(241, 198, 68, 0.6)"} height="50vw" width="150vw" top="15vh" left="80vw" blur='10vw' />
-            <Particles color={"#A3DCFF"} height="50vw" width="150vw" top="400vh" left="-120vw" blur='10vw' />
-            <Particles color={"rgba(187, 128, 255, 0.6)"} height="50vw" width="150vw" top="500vh" left="80vw" blur='10vw' />
 
                 <section className={styles.section1} >
                     <div>
@@ -45,7 +59,7 @@ export default function index() {
                             <Image src={"/assets/images/about/about (4).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Ulrich Reifenhäuser</h3>
-                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+                                <Link href={"https://www.linkedin.com/in/ulrich-reifenhauser-plastics-expert-extrusion/?trk=public-profile-join-page"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
 
                             </div>
                         </div>
@@ -53,7 +67,7 @@ export default function index() {
                             <Image src={"/assets/images/about/about (5).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Manish Mehta</h3>
-                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+                                <Link href={"https://www.linkedin.com/in/manish-mehta-886b557/?originalSubdomain=in"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
 
                             </div>
                         </div>
@@ -61,7 +75,7 @@ export default function index() {
                             <Image src={"/assets/images/about/about (6).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Amitav Ray</h3>
-                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+                                <Link href={"https://www.linkedin.com/company/packult-studio-private-limited/"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
 
                             </div>
                         </div>
@@ -69,7 +83,7 @@ export default function index() {
                             <Image src={"/assets/images/about/about (7).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Nippon Paper Industries</h3>
-                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+                                <Link href={"https://www.linkedin.com/company/nippon-paper-industries-usa/"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
 
                             </div>
                         </div>
@@ -77,7 +91,7 @@ export default function index() {
                             <Image src={"/assets/images/about/about (8).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
                                 <h3>Esq. Suresh Gupta</h3>
-                                <Link href={"linkedin.com"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+                                <Link href={"https://www.linkedin.com/company/packult-studio-private-limited/"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
                             </div>
                         </div>
 

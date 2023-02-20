@@ -1,10 +1,23 @@
 import Layout from "../../components/layout"
+import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/contact-us.module.scss"
 
 function index() {
     return (
         <Layout>
+            <div className={styles.lap_particles}>
+                <Particles color={"#B3E2FF"} height="50vw" width="150vw" top="-15vw" left="90vw" blur='10vw' />
+                <Particles color={"#B3E2FF"} height="50vw" width="150vw" top="20vw" left="-140vw" blur='10vw' />
+            </div>
+            <div className={styles.tablet_particles}>
+                <Particles color={"#B3E2FF"} height="50vw" width="150vw" top="-15vw" left="90vw" blur='10vw' />
+                <Particles color={"#B3E2FF"} height="50vw" width="150vw" top="20vw" left="-140vw" blur='10vw' />
+            </div>
+            <div className={styles.mobile_particles}>
+                <Particles color={"#B3E2FF"} height="50vw" width="150vw" top="-15vw" left="90vw" blur='10vw' />
+                <Particles color={"#B3E2FF"} height="50vw" width="150vw" top="50vw" left="-140vw" blur='10vw' />
+            </div>
             <div className={styles.contact_us} >
                 <div className={styles.content}>
                     <div className={styles.left}>

@@ -10,7 +10,7 @@ export const ROUTES = {
     GALLERY: "/gallery",
     APP_and_Business: "/application-and-businness-development",
     BUSINESS_REMODELING: "/business-remodeling",
-    CARRERS: "/careers",
+    CARRERS: "/carrers",
     MANAGEMENT_AND_ASSISTANCE: "/management-and-assistance",
     RESOURCING: "/resourcing",
     SOURCING_EXCELLENCE: "/sourcing-excellence",

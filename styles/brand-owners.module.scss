@@ -1,5 +1,17 @@
 @import './theme.scss';
 
+.mobile_particles {
+    display: none;
+}
+
+.lap_particles {
+    display: block;
+}
+
+.tablet_particles {
+    display: none;
+}
+
 .brandowners {
     padding: 5vw 10vw;
     padding-bottom: 0vw;
@@ -24,7 +36,19 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: block;
+    }
+
+    .tablet_particles {
+        display: none;
+    }
+
     .brandowners {
         padding: 10vw 10vw;
         padding-bottom: 0vw;
@@ -47,5 +71,19 @@
         .brandowners__content {
             margin-top: 8vw;
         }
+    }
+}
+
+@media screen and (min-width:$mobile ) and (max-width: $tablet) {
+    .lap_particles {
+        display: none;
+    }
+
+    .mobile_particles {
+        display: none;
+    }
+
+    .tablet_particles {
+        display: block;
     }
 }

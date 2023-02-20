@@ -19,7 +19,7 @@ export const data = [
         "heading": "Sustainable Solution",
         "content": "Sustainability is at the core of everything we do. The Packult team is highly adaptive to the changing customer needs in development of eco-friendly solutions. Our sustainable packaging solutions are intended to be in harmony with nature without impacting performance or aesthetics.",
         "image": "/assets/images/brand-owners/box (2).png",
-        "link": ROUTES.SUSTAINABLE_SOLUTION    
+        "link": ROUTES.SUSTAINABLE_SOLUTION
     },
     {
         "number": "3.",
@@ -46,7 +46,7 @@ export const data = [
                 "text": "Packaging Innovation",
                 "link": "/"
             }
-            
+
         ],
         "link": ROUTES.OPERATIONAL_EXCELLENCE
     },
@@ -70,6 +70,6 @@ export const data = [
         "content": "We provide support to converters with marketing and sales, co-developing new products and applications, identifying new business opportunities, expanding their customer base. building long-term partnerships with clients and providing after-sales support. With us, our converters can focus on what they do best: producing high-quality packaging.",
         "image": "/assets/images/packaging-converters/box4.png",
         "link": ROUTES.APP_and_Business
-        
+
     },
 ]
