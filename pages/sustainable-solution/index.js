@@ -16,11 +16,16 @@ function index() {
     }
     return (
         <Layout>
-            <section className={styles.content1} >
-                <ContentLayout1 data={layout1} />
-            </section>
-            <WorkNumbers />
-            <Contact />
+            <div style={{
+                minHeight: "85vh",
+            }} >
+
+                <section className={styles.content1} >
+                    <ContentLayout1 data={layout1} />
+                </section>
+                <WorkNumbers />
+                <Contact />
+            </div>
         </Layout>
     )
 }

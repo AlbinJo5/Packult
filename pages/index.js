@@ -215,7 +215,7 @@ export default function Home() {
       <div className={styles.customers} >
         <div className={styles.content}>
           <div className={styles.left}>
-            <h2>Here's what our customers experinced after implementing Prospectss Tools</h2>
+            <h2>Here's what our customers experinced after <br/> implementing Prospectss Tools</h2>
             <hr></hr>
             {/* review-carousel */}
             <div style={{

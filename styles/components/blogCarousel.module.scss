@@ -4,7 +4,7 @@
     padding: 0 10vw;
 
     .content {
-        margin: 5vw 0vw -10vw 0vw;
+        margin: 0vw -10vw 0vw 0vw;
         display: flex;
         gap: 2vw;
         overflow-x: scroll;
@@ -68,7 +68,8 @@
         padding: 0 10vw;
 
         .content {
-            margin: 5vw 0vw -10vw 0vw;
+            margin: 0vw -10vw 0vw 0vw;
+
             gap: 5vw;
 
             &::-webkit-scrollbar {
