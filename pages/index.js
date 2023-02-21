@@ -262,11 +262,7 @@ export default function Home() {
                   }
                 }}
               >
-                <div className={styles.carousel} >
-                  <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
-                  <p>Packult helped our business to generate more sales and saved money on product packaging</p>
-                  <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
-                </div>
+                
                 <div className={styles.carousel}>
                   <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
                   <p>Promised, Packult - delivered! Team Packult did what they promised they would right from designing, artworks, mock-ups, and delivery of the project well within the timelines. The final product developed exceeded expectations and we are delighted with the consumer response to the ‘new’ packaging !! Many thanks to Team Packult 👍</p>

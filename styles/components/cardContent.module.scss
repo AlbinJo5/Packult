@@ -16,7 +16,7 @@
         .heading {
             display: flex;
             gap: 2vw;
-
+            align-items: center;
             h1 {
                 font-family: "Visby bold";
                 font-size: 8vw;
@@ -75,6 +75,7 @@
         img {
             width: 30vw;
             height: max-content;
+            border-radius: 3vw;
         }
     }
 }
@@ -150,6 +151,7 @@
             img {
                 margin-top: 2vw;
                 width: 30vw;
+                border-radius: 3vw;
                 height: max-content;
             }
         }

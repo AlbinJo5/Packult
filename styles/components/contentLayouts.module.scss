@@ -6,6 +6,7 @@
     font-family: 'Visby Regular';
 
     h1 {
+        font-family: "Visby Bold";
         color: $primary;
         margin: 0;
         font-size: 5vw;
@@ -24,8 +25,9 @@
         }
 
         img {
-            width: max-content;
-            height: 30vw;
+            width: 30vw;
+            height: 40vw;
+            object-fit: contain;
         }
     }
 
@@ -45,6 +47,7 @@
     padding: 0 10vw;
 
     h1 {
+        font-family: "Visby Bold";
         color: $primary;
         margin: 0;
         font-size: 5vw;
@@ -72,6 +75,7 @@
     padding: 0 10vw;
 
     h1 {
+        font-family: "Visby Bold";
         color: $primary;
         margin: 0;
         font-size: 5vw;
@@ -94,6 +98,7 @@
     padding: 0 10vw;
 
     h1 {
+        font-family: "Visby Bold";
         color: $primary;
         margin: 0;
         font-size: 5vw;

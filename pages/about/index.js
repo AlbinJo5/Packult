@@ -5,8 +5,11 @@ import Layout from "../../components/layout";
 import Particles from "../../components/particles";
 import WorkNumbers from "../../components/workNumbers";
 import styles from "../../styles/about.module.scss";
+import { useRouter } from "next/router";
+import { ROUTES } from "../../common/routes";
 
 export default function index() {
+    const router = useRouter();
     return (
         <Layout>
 
@@ -33,7 +36,9 @@ export default function index() {
                         <h4>About Us</h4>
                         <h1> <span> <div className={styles.background}></div> Unique</span> Business Ideas for your Digital Business</h1>
                         <p>Our team has strong end to end capabilities across Creatives, Artworks & Graphics, Packaging Development, Value improvement, Sourcing Excellence & Operational excellence, which makes it easier for us to address our clients’ diverse demands. Starting from ideation, product research, development, design, feasibility, supply chain management and execution, our team assist our clients at every step</p>
-                        <button>View our work</button>
+                        <button onClick={() => {
+                            router.push(ROUTES.GALLERY)
+                        }}  >View our work</button>
                     </div>
                     <div>
                         <Image src={"/assets/images/about/about (1).png"} alt="coffe" width={1000} height={1000} />
