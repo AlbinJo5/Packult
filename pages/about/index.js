@@ -5,8 +5,8 @@ import Layout from "../../components/layout";
 import Particles from "../../components/particles";
 import WorkNumbers from "../../components/workNumbers";
 import styles from "../../styles/about.module.scss";
-import { useRouter } from "next/router";
 import { ROUTES } from "../../common/routes";
+import { useRouter } from 'next/router'
 
 export default function index() {
     const router = useRouter();
