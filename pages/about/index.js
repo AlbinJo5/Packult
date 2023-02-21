@@ -82,8 +82,8 @@ export default function index() {
                         <div className={styles.LinkedinImage} >
                             <Image src={"/assets/images/about/about (7).png"} alt="coffe" width={1000} height={1000} />
                             <div className={styles.NameLink} >
-                                <h3>Nippon Paper Industries</h3>
-                                <Link href={"https://www.linkedin.com/company/nippon-paper-industries-usa/"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
+                                <h3>Dr. Brend Kunze</h3>
+                                <Link href={"https://www.linkedin.com/company/packult-studio-private-limited/"} >Linkedin <span><Image src={"/assets/images/about/about (9).png"} width={1000} height={1000} alt="arrow" /></span> </Link>
 
                             </div>
                         </div>

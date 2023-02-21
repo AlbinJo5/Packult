@@ -269,30 +269,13 @@ export default function Home() {
                 </div>
                 <div className={styles.carousel}>
                   <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
-                  <p>Packult helped our business to generate more sales and saved money on product packaging</p>
-                  <h4> <span> Azim Premji</span> Founder Chairman of Wipro</h4>
+                  <p>Promised, Packult - delivered! Team Packult did what they promised they would right from designing, artworks, mock-ups, and delivery of the project well within the timelines. The final product developed exceeded expectations and we are delighted with the consumer response to the ‘new’ packaging !! Many thanks to Team Packult 👍</p>
+                  <h4> <span> Gigani </span> </h4>
                 </div>
               </Carousel>
             </div>
           </div>
-          <hr></hr>
-          <div className={styles.right}>
-            <h1>Trusted by over</h1><br />
-
-            {/* counter */}
-            <div className={styles.counter} >
-              <h1><CountUp
-                start={0}
-                end={233784}
-                duration={3}
-                separator=""
-                decimals={0}
-                decimal=","
-                enableScrollSpy={true}
-              /> </h1>
-              <h2>+ Customers</h2>
-            </div>
-          </div>
+          
         </div>
 
       </div>

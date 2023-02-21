@@ -30,9 +30,12 @@ export default function WorkNumbers() {
         <h2>Skilled Professionals</h2>
       </div>
       <div className={styles.content}>
-        <h1><CountUp
+        
+        <h1>
+          <span>0</span>
+          <CountUp
           start={0}
-          end={132}
+          end={32}
           duration={3}
           separator=""
           decimals={0}
