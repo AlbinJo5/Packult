@@ -42,7 +42,7 @@ function index() {
 
                 <h1><span ><div className={styles.background}></div> Join our team</span> of Creators, Designers, and world-class Problem Solvers</h1>
                 <p>To be the company our customers want us to be, It takes an eclectic group of passionate operators. Get to know the people Leading the way at Packult.</p>
-                <div data-aos="fade-right" className={styles.images}>
+                <div className={styles.images}>
                     <Image src="/assets/images/carrers/carrers (1).png" width={1000} height={1000} alt="carrers (1).png" />
                     <Image src="/assets/images/carrers/carrers (2).png" width={1000} height={1000} alt="carrers (2).png" />
                 </div>

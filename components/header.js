@@ -42,7 +42,7 @@ export default function Header() {
             <Link href={ROUTES.PACKAGING_CONVERTERS}><span>PACKAGING CONVERTERS</span></Link>
           </div></li>
         <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
-        <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
+        <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT US</Link></li>
         {/* <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li> */}
         <li> <span className={[ROUTES.PACKAGING_INNOVATION, ROUTES.SUSTAINABLE_SOLUTION, ROUTES.VALUE_IMPROVEMENT, ROUTES.OPERATIONAL_EXCELLENCE, ROUTES.SOURCING_EXCELLENCE, ROUTES.RESOURCING, ROUTES.APP_and_Business].includes(currentRoute) ? styles.selected : ""}> SERVICES</span>
           <div className={styles.dropdown}>
@@ -74,7 +74,7 @@ export default function Header() {
             <li><Link className={currentRoute === ROUTES.PACKAGING_CONVERTERS ? styles.selected : ""} href={ROUTES.PACKAGING_CONVERTERS}>PACKAGING CONVERTERS</Link></li>
             <li><Link className={currentRoute === ROUTES.GALLERY ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li>
             <li><Link className={currentRoute === ROUTES.ABOUT ? styles.selected : ""} href={ROUTES.GALLERY}>OUR WORK</Link></li>
-            <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT</Link></li>
+            <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.ABOUT}>ABOUT US</Link></li>
             <li><Link className={currentRoute === ROUTES.CONATCT_US ? styles.selected_contact : styles.contact} href={ROUTES.CONATCT_US} >CONTACT</Link></li>
           </ul>
         </div>

@@ -49,8 +49,7 @@ function Index() {
                                     <div key={index} className={styles.image} onClick={() => {
                                         router.push(ROUTES.OUR_WORKS + image.id)
                                     }} >
-                                        <Image data-aos="fade-up"
-                                            data-aos-anchor-placement="center-bottom" src={image.image2} alt={image.title} width={1000} height={1000} />
+                                        <Image src={image.image2} alt={image.title} width={1000} height={1000} />
                                         <div className={styles.overlay}>
                                             <h2>{image.title}</h2>
                                         </div>

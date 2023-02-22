@@ -7,7 +7,7 @@ function CarrersCard() {
                 <button>Apply</button>
             </div>
             <div className={styles.card_content}>
-                <p>we&apos;re looking for a mid-level product designer to join our team</p>
+                {/* <p>we&apos;re looking for a mid-level product designer to join our team</p> */}
                 <div className={styles.card_content_buttons} >
                     <button>100% Remote</button>
                     <button>Full-time</button>

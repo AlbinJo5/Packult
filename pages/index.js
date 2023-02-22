@@ -94,22 +94,22 @@ export default function Home() {
         <Heading heading="Vision and Mission" line={true} />
         <div className={styles.content} >
           <Image data-aos="fade-right"
-            data-aos-offset="300"
+            data-aos-offset="100"
             data-aos-easing="ease-in-sine" src="/assets/gifs/vision.gif" alt='vision' height={1000} width={1000} />
           <h2>OUR VISION</h2>
           <ul data-aos="fade-left"
-            data-aos-offset="300"
+            data-aos-offset="100"
             data-aos-easing="ease-in-sine">
             <li>Our Vision is to be the best in the business and support our partners in their journey to Packaging excellence through sustainable, innovative and disruptive solutions</li>
           </ul>
         </div>
         <div className={styles.content} >
           <Image data-aos="fade-left"
-            data-aos-offset="300"
+            data-aos-offset="100"
             data-aos-easing="ease-in-sine" src="/assets/gifs/mission.gif" alt='mission' height={1000} width={1000} />
           <h2>OUR MISSION</h2>
           <ul data-aos="fade-right"
-            data-aos-offset="300"
+            data-aos-offset="100"
             data-aos-easing="ease-in-sine">
             <li>Our mission is to make a real difference to packaging... great aesthetics, best value for money and friendly to the planet, through partnerships with Brand owners and Packaging producers</li>
           </ul>
@@ -215,7 +215,7 @@ export default function Home() {
       <div className={styles.customers} >
         <div className={styles.content}>
           <div className={styles.left}>
-            <h2>Here's what our customers experinced after <br/> implementing Prospectss Tools</h2>
+            <h2>Here's what our customers experinced after <br /> implementing Prospectss Tools</h2>
             <hr></hr>
             {/* review-carousel */}
             <div style={{
@@ -262,7 +262,7 @@ export default function Home() {
                   }
                 }}
               >
-                
+
                 <div className={styles.carousel}>
                   <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
                   <p>Promised, Packult - delivered! Team Packult did what they promised they would right from designing, artworks, mock-ups, and delivery of the project well within the timelines. The final product developed exceeded expectations and we are delighted with the consumer response to the ‘new’ packaging !! Many thanks to Team Packult 👍</p>
@@ -271,7 +271,7 @@ export default function Home() {
               </Carousel>
             </div>
           </div>
-          
+
         </div>
 
       </div>

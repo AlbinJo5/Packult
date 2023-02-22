@@ -17,6 +17,7 @@
             display: flex;
             gap: 2vw;
             align-items: center;
+
             h1 {
                 font-family: "Visby bold";
                 font-size: 8vw;
@@ -30,10 +31,11 @@
             h2 {
                 font-family: "Visby bold";
                 letter-spacing: .5vw;
+                line-height: 4vw;
                 font-size: 4vw;
                 font-weight: 500;
                 margin: 0;
-                width: 3vw;
+                width: 30vw;
                 color: $primary;
             }
 

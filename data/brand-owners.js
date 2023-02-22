@@ -16,7 +16,7 @@ export const data = [
     },
     {
         "number": "2.",
-        "heading": "Sustanable Solution",
+        "heading": "Sustainable Solution",
         "content": "Sustainability is at the core of everything we do. The Packult team is highly adaptive to the changing customer needs in development of eco-friendly solutions. Our sustainable packaging solutions are intended to be in harmony with nature without impacting performance or aesthetics.",
         "image": "/assets/images/brand-owners/box (2).png",
         "link": ROUTES.SUSTAINABLE_SOLUTION

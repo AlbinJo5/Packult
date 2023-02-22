@@ -9,7 +9,7 @@
         font-family: "Visby Bold";
         color: $primary;
         margin: 0;
-        font-size: 3.5vw;
+        font-size: $heading1;
         margin-bottom: 2vw;
     }
 
@@ -27,7 +27,7 @@
         img {
             width: 30vw;
             height: 40vw;
-            object-fit: contain;
+            border-radius: 3vw; 
         }
     }
 
@@ -50,7 +50,7 @@
         font-family: "Visby Bold";
         color: $primary;
         margin: 0;
-        font-size: 3.5vw;
+        font-size: $heading1;
         margin-bottom: 2vw;
 
     }
@@ -78,7 +78,7 @@
         font-family: "Visby Bold";
         color: $primary;
         margin: 0;
-        font-size: 3.5vw;
+        font-size: $heading1;
         margin-bottom: 2vw;
 
     }
@@ -101,7 +101,7 @@
         font-family: "Visby Bold";
         color: $primary;
         margin: 0;
-        font-size: 3.5vw;
+        font-size: $heading1;
         margin-bottom: 2vw;
 
     }

@@ -26,7 +26,7 @@ function index() {
                             <input type="email" name="email" placeholder="Email Address*" required={true} />
                             <input type="number" name="phone" placeholder="Phone Number" />
                             <textarea name="queries" placeholder="Share your thoughts or Queries"></textarea>
-                            <button type="submit">SHARE YOUR FEEDBACK</button>
+                            <button type="submit">SUBMIT</button>
                         </form>
                     </div>
                     <div className={styles.right}>

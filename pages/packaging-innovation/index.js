@@ -20,7 +20,7 @@ export default function index() {
     content1: "We understand the importance of visual appeal in packaging and that's why we offer top-notch graphic designing service. We have a strong team of Creative and graphic designers who work closely with our customers to understand the brief and create visually stunning logos & designs that will not only retain your brand essence but also make them stand out on the shelves. Our creative team is equipped with high-end software and can also generate CGI & Hero images for your pack and adapt them to various SKUs & Pack formats. Whether you're looking for a minimalist design or something bold and colourful, our team can deliver",
   }
   const layout3 = {
-    heading: "Structural Engeneering",
+    heading: "Structural Engineering",
     imagePath: "/assets/images/packaging-solution/3.png",
     imageName: "Round Edge Shapes",
     content1: "",
