@@ -8,7 +8,7 @@ import styles from "../../styles/about.module.scss";
 import { ROUTES } from "../../common/routes";
 import { useRouter } from 'next/router'
 
-export default function index() {
+export default function Index() {
     const router = useRouter();
     return (
         <Layout>
