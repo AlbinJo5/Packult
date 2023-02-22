@@ -36,7 +36,7 @@ function Index() {
                     <div className={styles.text} >
                         <h1>Our</h1>
                         <h1>Work</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab facilis, dignissimos aut alias magnam, nobis maiores corrupti porro ad cum dolor iste quasi odit ullam dolorem nemo omnis vel molestias.</p>
+                        <p>We pride ourselves over our quality and skill. These are a few samples of our best works which not only satisfies the demands of the client but exceeds their expectations.</p>
                     </div>
                     <Image src="/assets/images/gallery/1.png" alt="Gallery" width={1000} height={1000} />
                 </div>
