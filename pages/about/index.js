@@ -34,8 +34,8 @@ export default function Index() {
                 <section className={styles.section1} >
                     <div>
                         <h4>About Us</h4>
-                        <h1> <span> <div className={styles.background}></div> Unique</span> Business Ideas for your Digital Business</h1>
-                        <p>Our team has strong end to end capabilities across Creatives, Artworks & Graphics, Packaging Development, Value improvement, Sourcing Excellence & Operational excellence, which makes it easier for us to address our clients’ diverse demands. Starting from ideation, product research, development, design, feasibility, supply chain management and execution, our team assist our clients at every step</p>
+                        <h1> <span> <div className={styles.background}></div> Your trusted partner</span>  in the evolution towards world-class packaging solutions</h1>
+                        <p>Our team has strong end to end capabilities across Creatives, Artworks & Graphics, Packaging Development, Value improvement, Sourcing Excellence & Operational excellence, which makes it easier for us to address our clients’ diverse demands. Starting from ideation, product research, development, design, feasibility, supply chain management and execution, our team assist our clients at every step.</p>
                         <button onClick={() => {
                             router.push(ROUTES.GALLERY)
                         }}  >View our work</button>
@@ -51,14 +51,14 @@ export default function Index() {
                     </div>
                     <div>
                         <h4>Why Us</h4>
-                        <h1> <span>Unique</span> Business Ideas for your Digital Business</h1>
+                        <h1> <span>Unmatched breadth</span> Unmatched breadth of offerings encompassing every aspect of Packaging</h1>
                         <p>With innovation and expertise at heart and equipped with the best of capabilities, we make sure that our clients are offered the best of the best. Our unique approach in spheres of creation, development and execution makes us the best at what we do.</p>
                     </div>
 
                 </section>
                 <section className={styles.section3}>
                     <h4>Stake Holders and Top Management</h4>
-                    <h1> Meet our <span>stakeholders</span> and Top Management</h1>
+                    <h1> Meet our <span>stakeholders</span></h1>
                     <div className={styles.content} >
                         <div className={styles.LinkedinImage} >
                             <Image src={"/assets/images/about/about (4).png"} alt="coffe" width={1000} height={1000} />

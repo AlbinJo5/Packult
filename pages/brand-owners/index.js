@@ -45,7 +45,7 @@ export default function index() {
 
                 <h1>Brand Owners</h1>
                 <p>
-                    Packult has been providing innovative Packaging solutions to reputed brand owners of the FMCG, HPC, Cosmetics, Pharmaceutical, Industrial products, and other industries.
+                Packult has been providing innovative Packaging solutions to reputed FMCG, Cosmetics, Pharmaceuticals, Consumer Durables, Automotives, Chemicals, Agro-Chemicals and other industries.
                 </p>
 
                 <div className={styles.brandowners__content} >

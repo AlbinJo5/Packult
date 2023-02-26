@@ -27,17 +27,21 @@ export default function index() {
   }
   return (
     <Layout>
-      <section className={styles.content1} >
-        <ContentLayout1 data={layout1} />
-      </section>
-      <section>
+      <div style={{
+        minHeight: "85vh",
+      }} >
+        <section className={styles.content1} >
+          <ContentLayout1 data={layout1} />
+        </section>
+        {/* <section>
         <ContentLayout2 data={layout2} />
       </section>
       <section>
         <ContentLayout2 data={layout3} />
-      </section>
-      <WorkNumbers />
-      <Contact />
+      </section> */}
+        <WorkNumbers />
+        <Contact />
+      </div>
     </Layout>
   )
 }

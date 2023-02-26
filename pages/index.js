@@ -118,7 +118,7 @@ export default function Home() {
       <div className={styles.gallery} >
         <Heading heading="Gallery" line={true} />
         <div className={styles.content} >
-          <h3>Some more of our work, social posts many more things...</h3>
+          <h3>A glimpse of our work and innovative concepts...</h3>
 
           <div className={styles.scroll}>
             {
@@ -145,10 +145,11 @@ export default function Home() {
               <h2 onClick={() => {
                 router.push(ROUTES.PACKAGING_INNOVATION)
               }} >Packaging Innovation<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
-              <p>Our team of dedicated and experienced packaging experts from multiple packaging domains bring creativity and knowledge under one roof. With the combination of in-house and outsourced resources and careful analysis of each product, we provide an innovative packaging design that elevates the quality of every product. From concept to implementation our experts have it all covered.</p>
-              <ul>
+              <p>Our team of dedicated and experienced packaging experts from multiple packaging domains bring creativity and knowledge under one roof and we provide world class future-ready packaging solutions that elevates product quality, improves imagery, and enhances shelf appeal within the cost brief. From concept to implementation our experts have it all covered. We pride ourselves on providing top-notch packaging solutions to businesses of all sizes.
+                From development of packaging concepts, innovative shapes, 2D / 3D modelling, mock-ups, artworks, structure and specifications, we take care of all your packaging innovation needs</p>
+              {/* <ul>
                 <li> <Link href={ROUTES.PACKAGING_INNOVATION}> Graphic Design</Link></li>
-              </ul>
+              </ul> */}
             </div>
             <Image data-aos="fade-left" src="/assets/images/home/service1.png" width={1000} height={1000} alt="Service" />
           </div>
@@ -160,7 +161,7 @@ export default function Home() {
               <h2 onClick={() => {
                 router.push(ROUTES.SUSTAINABLE_SOLUTION)
               }} >Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
-              <p>Sustainability is our default setting! We are a team of environmentalists that adopts eco-friendly ways to cater to our client’s needs. Our packaging solutions are sustainable, and durable and cause zero harm to the planet. As a company, we put our planet’s needs before us because we believe our corporate identity brings in some social responsibilities as well and so, we develop responsible concepts and infrastructure that resonate in moving forward economies and ecology.</p>
+              <p>Sustainability is at the core of everything we do. The Packult team is highly adaptive to the changing customer needs in development of eco-friendly solutions. Our sustainable packaging solutions are intended to be in harmony with nature without impacting performance or aesthetics.</p>
 
             </div>
             <Image data-aos="fade-right" src="/assets/images/home/service2.png" width={1000} height={1000} alt="Service" />
@@ -173,7 +174,7 @@ export default function Home() {
               <h2 onClick={() => {
                 router.push(ROUTES.VALUE_IMPROVEMENT)
               }}>Value Improvement<span className={styles.arrow} > <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" /> </span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+              <p>In today’s competitive world, it is not only important to have a great packaging but also the most cost efficient one, to stay competitive and provide fuel for growth for the business. Our Packaging Value chain understanding is unparalleled, and our deep expertise of various levers influencing cost helps us deliver the best packaging solutions at most optimum cost through interventions in specifications, print design, dimensions, conversion processes, complexity reduction, Design to Value and more! Our team of experts will analyze your current packaging and identify potential cost saving opportunities without compromising on the quality or functionality of the packaging.</p>
             </div>
             <Image data-aos="fade-left" src="/assets/images/home/service3.png" width={1000} height={1000} alt="Service" />
           </div>

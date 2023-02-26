@@ -18,6 +18,7 @@ export const ROUTES = {
     VALUE_IMPROVEMENT: "/value-improvement",
     PACKAGING_INNOVATION: "/packaging-innovation",
     SUSTAINABLE_SOLUTION: "/sustainable-solution",
+    ARTWORK_AND_GRAPHICS: "/artwork-and-graphics",
 }
 
 export const ADMIN_ROUTES = {

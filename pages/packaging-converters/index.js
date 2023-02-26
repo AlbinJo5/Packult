@@ -47,7 +47,7 @@ export default function index() {
                 <Particles color={"#FFD7EA"} height="50vw" width="150vw" top="380vh" left="-130vw" blur='5vw' /> */}
                 <h1>Packaging Converters</h1>
                 <p>
-                    With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service
+                With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service.
                 </p>
 
                 <div className={styles.brandowners__content} >
