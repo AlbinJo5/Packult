@@ -46,13 +46,15 @@ export default function Header() {
         {/* <li><Link className={currentRoute === ROUTES.SERVICES ? styles.selected : ""} href={ROUTES.SERVICES}>SERVICES</Link></li> */}
         <li> <span className={[ROUTES.PACKAGING_INNOVATION, ROUTES.SUSTAINABLE_SOLUTION, ROUTES.VALUE_IMPROVEMENT, ROUTES.OPERATIONAL_EXCELLENCE, ROUTES.SOURCING_EXCELLENCE, ROUTES.RESOURCING, ROUTES.APP_and_Business].includes(currentRoute) ? styles.selected : ""}> SERVICES</span>
           <div className={styles.dropdown}>
-            <Link href={ROUTES.PACKAGING_INNOVATION}><span>PACKAGING INNOVATIONS</span></Link>
-            <Link href={ROUTES.SUSTAINABLE_SOLUTION}><span>SUSTAINABLE SOLUTION</span></Link>
             <Link href={ROUTES.VALUE_IMPROVEMENT}><span>VALUE IMPROVEMENT</span></Link>
-            <Link href={ROUTES.OPERATIONAL_EXCELLENCE}><span>OPERATIONAL EXCELLENCE</span></Link>
+            <Link href={ROUTES.PACKAGING_INNOVATION}><span>PACKAGING INNOVATIONS</span></Link>
+            <Link href={ROUTES.ARTWORK_AND_GRAPHICS}><span>ARTWORKS & GRAPHICS MANAGEMENT</span></Link>
+            <Link href={ROUTES.SUSTAINABLE_SOLUTION}><span>SUSTAINABLE SOLUTION</span></Link>
             <Link href={ROUTES.SOURCING_EXCELLENCE}><span>SOURCING EXCELLENCE</span></Link>
             <Link href={ROUTES.RESOURCING}><span>RESOURCING</span></Link>
+            <Link href={ROUTES.OPERATIONAL_EXCELLENCE}><span>OPERATIONAL EXCELLENCE</span></Link>
             <Link href={ROUTES.APP_and_Business}><span>APPLICATION AND BUSINNES DEVELOPMENT</span></Link>
+            <Link href={ROUTES.MANAGEMENT_AND_ASSISTANCE}><span>MERGERS & ACQUISITIONS</span></Link>
 
 
 

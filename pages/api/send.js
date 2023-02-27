@@ -8,9 +8,8 @@ export default async function handler(req, res) {
 
     const content = {
         to: "albinjo12345alex@gmail.com",
-        from: "creative@packult.com",
+        from: "namaste@packult.com",
         subject: "New Message from Contact Form",
-        text: message,
         html: `<p>Name: ${name}</p>
                 <p>Email: ${email}</p>
                 <p>Message: ${message}</p>`,
@@ -18,6 +17,7 @@ export default async function handler(req, res) {
 
     try {
         await sgMail.send(content);
+        console.log(sgMail);
         res.status(200).json({ message: "Email sent successfully!" });
     } catch (error) {
         console.log(error);

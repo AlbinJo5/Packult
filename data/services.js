@@ -81,6 +81,6 @@ export const data = [
         "heading": "Mergers & Acquisitions",
         "content": "We provide M&A support to Converters for adding strategic capabilities and reach through Target screening, Financial Due Diligence and integration of culture & business processes.",
         "image": "/assets/images/packaging-converters/box5.png",
-        "link": ROUTES.MERGERS_AND_ACQUISITIONS
+        "link": ROUTES.MANAGEMENT_AND_ASSISTANCE
     },
 ]

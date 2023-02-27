@@ -203,6 +203,18 @@ export default function Home() {
               </span>
               </h2>
             </Link>
+            <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.ARTWORK_AND_GRAPHICS}>
+              <h2>Artwork & Graphics Mgmt.<span className={styles.arrow} >
+                <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
+              </span>
+              </h2>
+            </Link>
+            <Link data-aos="fade-up" data-aos-duration="1000" href={ROUTES.MANAGEMENT_AND_ASSISTANCE}>
+              <h2>Mergers & Acquisition<span className={styles.arrow} >
+                <Image src="/assets/icons/arrow2.png" height={1000} width={1000} alt="arrow2" />
+              </span>
+              </h2>
+            </Link>
 
           </div>
           <div className={styles.all_services_button} >
@@ -371,11 +383,11 @@ export default function Home() {
             <p>Packarma is an online packaging material solutions platform to not only get the right structure for your product but also to sell and buy packaging material. It gives you a seamless connect between the customer and the vendor for packaging solutions and gives you the ultimate UX for all your needs in packaging solutions.</p>
             <div className={styles.qr_codes}>
               <div>
-                <Image src={'/assets/images/home/Packarma Customer (1).png'} alt="cutomer-qr-code" width={1000} height={1000} />
+                <Image src={'/assets/images/home/Packarma_Customer (1).png'} alt="cutomer-qr-code" width={1000} height={1000} />
                 <h5>Customer App</h5>
               </div>
               <div>
-                <Image src={'/assets/images/home/Packarma Vendor (1).png'} alt="vendor-qr-code" width={1000} height={1000} />
+                <Image src={'/assets/images/home/Packarma_vendor.png'} alt="vendor-qr-code" width={1000} height={1000} />
                 <h5>Vendor App</h5>
               </div>
             </div>
