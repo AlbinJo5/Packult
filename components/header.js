@@ -28,7 +28,7 @@ export default function Header() {
           <Image src="/assets/logos/logo.svg" alt="Packult" width={1000} height={1000} />
         </div>
         <div className={styles.mlogo}>
-          <Image src="/assets/logos/mobileLogo.svg" alt="Packult" width={1000} height={1000} />
+          <Image src="/assets/logos/logo.svg" alt="Packult" width={1000} height={1000} />
 
         </div>
       </Link>
