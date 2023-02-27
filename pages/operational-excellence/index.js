@@ -20,7 +20,7 @@ export default function index() {
         content1: " We provide following services under Process Excellence: Recipe evaluation and selection, Material and Process optimization, Product failure investigation – RCA and Troubleshooting, On-site Technical support, Safety checks, Trim waste reduction, Specialty inline / offline coatings, SOPs for Screen changing and Die & Coating Head cleaning",
     }
     const layout3 = {
-        heading: "Machine Automation",
+        heading: "Converting Excellence",
         imagePath: "/assets/images/operational-excellence/3.png",
         imageName: "Round Edge Shapes",
         content1: "We provide the following services under Converting Excellence: Machine retrofit, repairs & maintenance, Productivity enhancement and wastage reduction through electrical and mechanical upgradation, Software development and automation for upgradation to the latest generation Dismantling & decommissioning of machines from one location and recommissioning at another, Operational training on preventive maintenance & safety enhancement, Technical advisory on machine selection",

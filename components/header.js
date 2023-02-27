@@ -49,7 +49,7 @@ export default function Header() {
             <Link href={ROUTES.VALUE_IMPROVEMENT}><span>VALUE IMPROVEMENT</span></Link>
             <Link href={ROUTES.PACKAGING_INNOVATION}><span>PACKAGING INNOVATIONS</span></Link>
             <Link href={ROUTES.ARTWORK_AND_GRAPHICS}><span>ARTWORKS & GRAPHICS MANAGEMENT</span></Link>
-            <Link href={ROUTES.SUSTAINABLE_SOLUTION}><span>SUSTAINABLE SOLUTION</span></Link>
+            <Link href={ROUTES.SUSTAINABLE_SOLUTION}><span>SUSTAINABLE SOLUTIONS</span></Link>
             <Link href={ROUTES.SOURCING_EXCELLENCE}><span>SOURCING EXCELLENCE</span></Link>
             <Link href={ROUTES.RESOURCING}><span>RESOURCING</span></Link>
             <Link href={ROUTES.OPERATIONAL_EXCELLENCE}><span>OPERATIONAL EXCELLENCE</span></Link>

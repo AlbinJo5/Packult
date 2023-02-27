@@ -30,7 +30,7 @@ export const data = [
     },
     {
         "number": "4.",
-        "heading": "Sustainable Solution",
+        "heading": "Sustainable Solutions",
         "content": "Sustainability is at the core of everything we do. The Packult team is highly adaptive to the changing customer needs in development of eco-friendly solutions. Our sustainable packaging solutions are intended to be in harmony with nature without impacting performance or aesthetics.",
         "image": "/assets/images/brand-owners/box (2).png",
         "link": ROUTES.SUSTAINABLE_SOLUTION
@@ -46,7 +46,7 @@ export const data = [
     {
         "number": "6.",
         "heading": "Resourcing",
-        "content": "We pride ourselves in meeting our customers’ needs for quality manpower at every level with best quality resources pre-screened by our subject experts. We understand that it is not always feasible to increase headcount for temporary needs due to a sudden increase in bandwidth requirement (innovations & renovations, specification harmonisation, cost savings projects, trials, NPD and roll out etc.), hence we support Brand owners with quality manpower with the right fit for temporary requirement starting 6 months onwards. Whether the requirement is offsite or onsite or hybrid, we can offer tailor-made solutions. Read More",
+        "content": "We pride ourselves in meeting our customers’ needs for quality manpower at every level with best quality resources pre-screened by our subject experts. We understand that it is not always feasible to increase headcount for temporary needs due to a sudden increase in bandwidth requirement (innovations & renovations, specification harmonisation, cost savings projects, trials, NPD and roll out etc.), hence we support Brand owners with quality manpower with the right fit for temporary requirement starting 6 months onwards. Whether the requirement is offsite or onsite or hybrid, we can offer tailor-made solutions. ",
         "image": "/assets/images/brand-owners/box (5).png",
         "link": ROUTES.RESOURCING
     },

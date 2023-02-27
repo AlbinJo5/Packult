@@ -32,7 +32,7 @@ function index() {
                     <div className={styles.right}>
                         <h1 data-aos="fade-left">Contact</h1>
                         <h2><span><hr /></span>Us</h2>
-                        <p>It is very important for us to keep in touch with you. So we are always ready to answer any questions that interests you. Shoot!</p>
+                        <p>We are always ready to answer any questions that interests you. Shoot!</p>
                     </div>
                 </div>
                 <WorkNumbers />

@@ -19,6 +19,7 @@ export const ROUTES = {
     PACKAGING_INNOVATION: "/packaging-innovation",
     SUSTAINABLE_SOLUTION: "/sustainable-solution",
     ARTWORK_AND_GRAPHICS: "/artwork-and-graphics",
+    TERMS_AND_CONDITIONS: "/terms-and-conditions",
 }
 
 export const ADMIN_ROUTES = {

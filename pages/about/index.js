@@ -57,7 +57,7 @@ export default function Index() {
 
                 </section>
                 <section className={styles.section3}>
-                    <h4>Stake Holders and Top Management</h4>
+                    <h4>Stake Holders</h4>
                     <h1> Meet our <span>stakeholders</span></h1>
                     <div className={styles.content} >
                         <div className={styles.LinkedinImage} >

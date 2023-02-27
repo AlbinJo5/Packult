@@ -76,7 +76,7 @@ export default function Home() {
               <Link href={ROUTES.BRAND_OWNERS} >
                 <h3>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
               </Link>
-              <p>Packult has been providing innovative Packaging solutions to reputed brand owners of the FMCG, HPC, Cosmetics, Pharmaceutical, Industrial products, and other industries.</p>
+              <p>Packult has been providing innovative Packaging solutions to reputed FMCG, Cosmetics, Pharmaceuticals, Consumer Durables, Automotives, Chemicals, Agro-Chemicals and other industries.</p>
             </div>
           </div>
           <div className={styles.brand} data-aos="fade-up" >
@@ -85,7 +85,7 @@ export default function Home() {
               <Link href={ROUTES.PACKAGING_CONVERTERS} >
                 <h3>Packaging Converters<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
               </Link>
-              <p>With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service</p>
+              <p>With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service.</p>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Home() {
             <div>
               <h2 onClick={() => {
                 router.push(ROUTES.SUSTAINABLE_SOLUTION)
-              }} >Sustainable Solution<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
+              }} >Sustainable Solutions<span className={styles.arrow} > <Image src="/assets/icons/arrow green.png" height={1000} width={1000} alt="arrow green" /> </span></h2>
               <p>Sustainability is at the core of everything we do. The Packult team is highly adaptive to the changing customer needs in development of eco-friendly solutions. Our sustainable packaging solutions are intended to be in harmony with nature without impacting performance or aesthetics.</p>
 
             </div>
@@ -228,7 +228,7 @@ export default function Home() {
       <div className={styles.customers} >
         <div className={styles.content}>
           <div className={styles.left}>
-            <h2>Here's what our customers experinced after <br /> implementing Prospectss Tools</h2>
+            <h2>Here's what a few of our customers have to say </h2>
             <hr></hr>
             {/* review-carousel */}
             <div style={{
@@ -278,7 +278,7 @@ export default function Home() {
 
                 <div className={styles.carousel}>
                   <Image data-aos="zoom-in" data-aos-duration="1500" src={'/assets/images/home/stars.png'} alt="stars" height={1000} width={1000} />
-                  <p>Promised, Packult - delivered! Team Packult did what they promised they would right from designing, artworks, mock-ups, and delivery of the project well within the timelines. The final product developed exceeded expectations and we are delighted with the consumer response to the ‘new’ packaging !! Many thanks to Team Packult 👍</p>
+                  <p>PACKult - Promised, PACKult - delivered! Team Packult did what they promised they would right from designing, artworks, mock-ups, and delivery of the project well within the timelines. The final product developed exceeded expectations and we are delighted with the consumer response to the ‘new’ packaging !! Many thanks to Team Packult 👍</p>
                   <h4> <span> Gigani </span> </h4>
                 </div>
               </Carousel>

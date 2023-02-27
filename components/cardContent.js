@@ -15,7 +15,14 @@ export default function CardContent({ data }) {
                         router.push(link)
                     }} >{heading}</h2>
                 </div>
-                <p>{content}</p>
+                <p>{content}
+                    {
+                        heading === "Resourcing" ? <span onClick={() => {
+                            router.push(link)
+                        }} >Read More</span> : null
+                    }
+                </p>
+
                 {
                     links?.map((link, index) => (
                         <Link href={link.link} key={index} >{link.text}</Link>

@@ -15,6 +15,7 @@ export default function Footer() {
                     {/* <li><Link href={ROUTES.GALLERY}>Gallery</Link></li> */}
                     <li><Link href={ROUTES.CARRERS}>Careers</Link></li>
                     <li><Link href={ROUTES.HOME}>Blog</Link></li>
+                    <li><Link href={ROUTES.TERMS_AND_CONDITIONS}>Terms & Conditions</Link></li>
                 </ul>
 
             </div>
@@ -32,8 +33,8 @@ export default function Footer() {
                         <Link className={styles.whatsapp} href="https://api.whatsapp.com/send?phone=7718894807"> <Image src="/assets/icons/whatsapp.svg" width={30} height={30} alt="whatsapp" />7718894807</Link>
                     </p>
                     <p>
-                        7, Udyog Bhavan 230, Sonawala Rd,<br />
-                        Gurgao (E), Mumbai, Maharashtra<br />
+                        7, Udyog Bhavan, Sonawala Rd,<br />
+                        Goregaon (E), Mumbai, Maharashtra<br />
                         400063
                     </p>
                 </div>
