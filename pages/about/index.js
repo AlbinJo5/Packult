@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 export default function Index() {
     const router = useRouter();
     return (
-        <Layout>
+        <Layout pageMeta={{description:"Your trusted partner in the evolution towards world-class packaging solutions"}} >
 
             <div className={styles.lap_particles}>
                 <Particles color={"rgba(241, 198, 68, 0.6)"} height="50vw" width="150vw" top="10vw" left="90vw" blur='10vw' />
@@ -51,7 +51,7 @@ export default function Index() {
                     </div>
                     <div>
                         <h4>Why Us</h4>
-                        <h1> <span>Unmatched breadth</span> Unmatched breadth of offerings encompassing every aspect of Packaging</h1>
+                        <h1> <span>Unmatched breadth</span> of offerings encompassing every aspect of Packaging</h1>
                         <p>With innovation and expertise at heart and equipped with the best of capabilities, we make sure that our clients are offered the best of the best. Our unique approach in spheres of creation, development and execution makes us the best at what we do.</p>
                     </div>
 

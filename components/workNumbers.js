@@ -15,7 +15,7 @@ export default function WorkNumbers() {
             suffix="+ "
             enableScrollSpy={true}
           /></h1>
-        <h2>Working professional Experience</h2>
+        <h2>Years of Experience</h2>
       </div>
       <div className={styles.content}>
         <h1><CountUp
@@ -30,19 +30,19 @@ export default function WorkNumbers() {
         <h2>Skilled Professionals</h2>
       </div>
       <div className={styles.content}>
-        
+
         <h1>
           <span>0</span>
           <CountUp
-          start={0}
-          end={32}
-          duration={3}
-          separator=""
-          decimals={0}
-          decimal=","
-          enableScrollSpy={true}
-        /></h1>
-        <h2>Projects World wide</h2>
+            start={0}
+            end={32}
+            duration={3}
+            separator=""
+            decimals={0}
+            decimal=","
+            enableScrollSpy={true}
+          /></h1>
+        <h2>Projects</h2>
       </div>
     </div>
   )

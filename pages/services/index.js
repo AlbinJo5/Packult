@@ -9,7 +9,7 @@ import styles from "../../styles/services.module.scss"
 
 function index() {
     return (
-        <Layout>
+        <Layout pageMeta={{ description: "Comprehensive Packaging services and solutions for Brand Owners & Packaging converters" }} >
             <div className={styles.lap_particles}>
                 <Image src="/assets/images/vectors/2.png" alt="Brand Owners" width={1000} height={1000}
                     style={{ position: "absolute", top: "0", right: "0", zIndex: "1", width: "15vw", height: "max-content" }}

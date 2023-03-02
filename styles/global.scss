@@ -24,6 +24,28 @@ a {
     padding: 0;
 }
 
+.madeBy {
+    font-size: 1.2vw;
+    padding: 1vw;
+    color: white;
+    text-align: center;
+    background-color: #1E1E1E;
+    font-family: "Visby SemiBold";
+    cursor: pointer;
+
+
+
+
+@media screen and (max-width: 900) {
+    font-size: 3vw;
+}
+
+@media screen and (max-width: 600) {
+    font-size: 6vw;
+}
+
+}
+
 // circle following mouse
 #cursor {
     width: 2vw;

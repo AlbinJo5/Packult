@@ -963,19 +963,7 @@
                     letter-spacing: .1vw;
                     position: relative;
 
-                    &::before {
-                        content: " ";
-                        background-color: $primary;
-                        // color: $primary;
-                        position: absolute;
-                        display: inline-block;
-                        width: 1.5vw;
-                        height: 1.5vw;
-                        border-radius: 50%;
-                        margin-top: .5vw;
-                        margin-left: -2vw;
-
-                    }
+                  
                 }
             }
         }

@@ -6,12 +6,12 @@
     gap: 4vw;
     margin-bottom: 0vw;
 
+
     &:nth-child(even) {
         flex-direction: row-reverse;
     }
 
     .content {
-
         // width: 40vw;
         .heading {
             display: flex;
@@ -50,6 +50,11 @@
             width: 100%;
             color: $dark;
 
+            span {
+                color: $primary;
+                text-decoration: underline;
+
+            }
         }
 
         a {

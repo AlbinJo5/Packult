@@ -12,15 +12,23 @@ import BlogCarousel from '../components/blogCarousel'
 import Particles from '../components/particles'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import CountUp from 'react-countup';
 
 export default function Home() {
 
   const [data, setdata] = useState([])
   const router = useRouter()
 
+  // get scrren size
+  const [mobile, setMobile] = useState(false)
+
+
+
+
   useEffect(() => {
     //   fetch blog data using api
+
+    setMobile(window.innerWidth < 768 ? true : false)
+
     fetch('/api/our-work/get')
       .then(res => res.json())
       .then(data => {
@@ -67,54 +75,107 @@ export default function Home() {
           <p>SCROLL DOWN</p>
         </div>
       </div>
-      <div className={styles.intro} >
-        <div className={styles.bgRectangle}></div>
-        <div className={styles.content} >
-          <div className={styles.brand} data-aos="fade-up" >
-            <Image src="/assets/images/home/brandOwners.png" width={1000} height={1000} alt="Brand Owners" />
-            <div className={styles.brandCard} data-aos="fade-up" data-aos-duration="1000">
-              <Link href={ROUTES.BRAND_OWNERS} >
-                <h3>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
-              </Link>
-              <p>Packult has been providing innovative Packaging solutions to reputed FMCG, Cosmetics, Pharmaceuticals, Consumer Durables, Automotives, Chemicals, Agro-Chemicals and other industries.</p>
+      {
+        mobile ? <>
+          <div className={styles.intro} >
+            <div className={styles.bgRectangle}></div>
+            <div className={styles.content} >
+              <div className={styles.brand}  >
+                <Image src="/assets/images/home/brandOwners.png" width={1000} height={1000} alt="Brand Owners" />
+                <div className={styles.brandCard} data-aos-duration="1000">
+                  <Link href={ROUTES.BRAND_OWNERS} >
+                    <h3>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
+                  </Link>
+                  <p>Packult has been providing innovative Packaging solutions to reputed FMCG, Cosmetics, Pharmaceuticals, Consumer Durables, Automotives, Chemicals, Agro-Chemicals and other industries.</p>
+                </div>
+              </div>
+              <div className={styles.brand}  >
+                <Image src="/assets/images/home/packagingConverters.png" width={1000} height={1000} alt="Packaging Converters" />
+                <div className={styles.brandCard} data-aos-duration="1000">
+                  <Link href={ROUTES.PACKAGING_CONVERTERS} >
+                    <h3>Packaging Converters<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
+                  </Link>
+                  <p>With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className={styles.brand} data-aos="fade-up" >
-            <Image src="/assets/images/home/packagingConverters.png" width={1000} height={1000} alt="Packaging Converters" />
-            <div className={styles.brandCard} data-aos="fade-up" data-aos-duration="1000">
-              <Link href={ROUTES.PACKAGING_CONVERTERS} >
-                <h3>Packaging Converters<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
-              </Link>
-              <p>With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service.</p>
+          <div className={styles.vision_mission} >
+            <Heading heading="Vision and Mission" line={true} />
+            <div className={styles.content} >
+              <Image
+                src="/assets/gifs/vision.gif" alt='vision' height={1000} width={1000} />
+              <h2>OUR VISION</h2>
+              <ul
+              >
+                <li>Our Vision is to be the best in the business and support our partners in their journey to Packaging excellence through sustainable, innovative and disruptive solutions</li>
+              </ul>
+            </div>
+            <div className={styles.content} >
+              <Image
+                src="/assets/gifs/mission.gif" alt='mission' height={1000} width={1000} />
+              <h2>OUR MISSION</h2>
+              <ul
+              >
+                <li>Our mission is to make a real difference to packaging... great aesthetics, best value for money and friendly to the planet, through partnerships with Brand owners and Packaging producers</li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <div className={styles.vision_mission} >
-        <Heading heading="Vision and Mission" line={true} />
-        <div className={styles.content} >
-          <Image data-aos="fade-right"
-            data-aos-offset="100"
-            data-aos-easing="ease-in-sine" src="/assets/gifs/vision.gif" alt='vision' height={1000} width={1000} />
-          <h2>OUR VISION</h2>
-          <ul data-aos="fade-left"
-            data-aos-offset="100"
-            data-aos-easing="ease-in-sine">
-            <li>Our Vision is to be the best in the business and support our partners in their journey to Packaging excellence through sustainable, innovative and disruptive solutions</li>
-          </ul>
-        </div>
-        <div className={styles.content} >
-          <Image data-aos="fade-left"
-            data-aos-offset="100"
-            data-aos-easing="ease-in-sine" src="/assets/gifs/mission.gif" alt='mission' height={1000} width={1000} />
-          <h2>OUR MISSION</h2>
-          <ul data-aos="fade-right"
-            data-aos-offset="100"
-            data-aos-easing="ease-in-sine">
-            <li>Our mission is to make a real difference to packaging... great aesthetics, best value for money and friendly to the planet, through partnerships with Brand owners and Packaging producers</li>
-          </ul>
-        </div>
-      </div>
+        </> : <>
+          <div className={styles.intro} >
+            <div className={styles.bgRectangle}></div>
+            <div className={styles.content} >
+              <div className={styles.brand} data-aos="fade-up" >
+                <Image src="/assets/images/home/brandOwners.png" width={1000} height={1000} alt="Brand Owners" />
+                <div className={styles.brandCard} data-aos="fade-up" data-aos-duration="1000">
+                  <Link href={ROUTES.BRAND_OWNERS} >
+                    <h3>Brand Owners<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
+                  </Link>
+                  <p>Packult has been providing innovative Packaging solutions to reputed FMCG, Cosmetics, Pharmaceuticals, Consumer Durables, Automotives, Chemicals, Agro-Chemicals and other industries.</p>
+                </div>
+              </div>
+              <div className={styles.brand} data-aos="fade-up" >
+                <Image src="/assets/images/home/packagingConverters.png" width={1000} height={1000} alt="Packaging Converters" />
+                <div className={styles.brandCard} data-aos="fade-up" data-aos-duration="1000">
+                  <Link href={ROUTES.PACKAGING_CONVERTERS} >
+                    <h3>Packaging Converters<span className={styles.arrow} > <Image src="/assets/icons/arrow45.svg" height={10} width={10} alt="arrow45" /> </span></h3>
+                  </Link>
+                  <p>With our global connections and strong machine expertise, we bring in the best of the latest technologies for improving efficiency, productivity & safety at your plant with highest quality of service.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.vision_mission} >
+            <Heading heading="Vision and Mission" line={true} />
+            <div className={styles.content} >
+              <Image data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-easing="ease-in-sine" src="/assets/gifs/vision.gif" alt='vision' height={1000} width={1000} />
+              <h2>OUR VISION</h2>
+              <ul data-aos="fade-left"
+                data-aos-offset="100"
+                data-aos-easing="ease-in-sine">
+                <li>Our Vision is to be the best in the business and support our partners in their journey to Packaging excellence through sustainable, innovative and disruptive solutions</li>
+              </ul>
+            </div>
+            <div className={styles.content} >
+              <Image data-aos="fade-left"
+                data-aos-offset="100"
+                data-aos-easing="ease-in-sine" src="/assets/gifs/mission.gif" alt='mission' height={1000} width={1000} />
+              <h2>OUR MISSION</h2>
+              <ul data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-easing="ease-in-sine">
+                <li>Our mission is to make a real difference to packaging... great aesthetics, best value for money and friendly to the planet, through partnerships with Brand owners and Packaging producers</li>
+              </ul>
+            </div>
+          </div>
+        </>
+      }
+
+
+
+
       <div className={styles.gallery} >
         <Heading heading="Gallery" line={true} />
         <div className={styles.content} >

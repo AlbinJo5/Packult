@@ -17,7 +17,7 @@ export default function CardContent({ data }) {
                 </div>
                 <p>{content}
                     {
-                        heading === "Resourcing" ? <span onClick={() => {
+                        heading === "Resourcing" ? <span  onClick={() => {
                             router.push(link)
                         }} >Read More</span> : null
                     }
@@ -25,7 +25,7 @@ export default function CardContent({ data }) {
 
                 {
                     links?.map((link, index) => (
-                        <Link href={link.link} key={index} >{link.text}</Link>
+                        <Link href={link.link}  key={index} >{link.text}</Link>
                     ))
                 }
             </div>
