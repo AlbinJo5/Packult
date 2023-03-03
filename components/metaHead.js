@@ -5,10 +5,10 @@ export default function MetaHead({ pageMeta }) {
   const router = useRouter()
   const meta = {
     title: 'Packult',
-    description: 'Packult is a web app that helps you organize your packing list for your next trip.',
+    description: 'Group of packaging experts committed to the cause of better, smarter and sustainable packaging',
     type: 'website',
     url: process.env.NEXT_PUBLIC_SERVER_URL,
-    
+
     ...pageMeta
   }
   return (

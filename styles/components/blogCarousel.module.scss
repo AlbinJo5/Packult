@@ -8,6 +8,7 @@
         display: flex;
         gap: 2vw;
         overflow-x: scroll;
+        overflow-y: hidden;
 
         // scrollbar
         &::-webkit-scrollbar {
