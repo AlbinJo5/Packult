@@ -43,12 +43,12 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="madeBy" onClick={() => {
+            <p className={styles.madeBy} onClick={() => {
                 router.push("https://digilligence.in")
-
             }} >
+
                 Designed & Developed by Digilligence
-            </div>
+            </p>
         </div>
     )
 }
