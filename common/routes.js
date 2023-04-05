@@ -11,7 +11,7 @@ export const ROUTES = {
     APP_and_Business: "/application-and-businness-development",
     BUSINESS_REMODELING: "/business-remodeling",
     CARRERS: "/careers",
-    MANAGEMENT_AND_ASSISTANCE: "/management-and-assistance",
+    MANAGEMENT_AND_ASSISTANCE: "/mergers-and-acquisitions",
     RESOURCING: "/resourcing",
     SOURCING_EXCELLENCE: "/sourcing-excellence",
     OPERATIONAL_EXCELLENCE: "/operational-excellence",
