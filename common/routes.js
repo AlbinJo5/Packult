@@ -37,4 +37,9 @@ export const ADMIN_ROUTES = {
     OUR_WORKS: "/admin/our-works",
     OUR_WORKS_EDIT: "/admin/our-works/edit/our-work/",
     NEW_WORK: "/admin/our-works/new-work",
+
+    CONTACTS: "/admin/contacts",
+    CAREERS: "/admin/careers",
+    TESTIMONIALS: "/admin/testimonials",
+    PICTURES: "/admin/pictures",
 }

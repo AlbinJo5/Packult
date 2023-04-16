@@ -25,8 +25,12 @@ function Navbar() {
             <ul>
                 <li><Link className={currentRoute === ADMIN_ROUTES.BLOGS ? styles.selected : ""} href={ADMIN_ROUTES.BLOGS}>Blogs</Link></li>
                 <li><Link className={currentRoute === ADMIN_ROUTES.BLOGS_CREATE ? styles.selected : ""} href={ADMIN_ROUTES.BLOGS_CREATE}>New Blog</Link></li>
-                <li><Link className={currentRoute === ADMIN_ROUTES.OUR_WORKS? styles.selected: "" } href={ADMIN_ROUTES.OUR_WORKS}>Our Works</Link></li>
-                <li><Link className={currentRoute === ADMIN_ROUTES.NEW_WORK? styles.selected: "" } href={ADMIN_ROUTES.NEW_WORK}>New Work</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.OUR_WORKS ? styles.selected : ""} href={ADMIN_ROUTES.OUR_WORKS}>Our Works</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.NEW_WORK ? styles.selected : ""} href={ADMIN_ROUTES.NEW_WORK}>New Work</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.CONTACTS ? styles.selected : ""} href={ADMIN_ROUTES.CONTACTS}>Contacts</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.CAREERS ? styles.selected : ""} href={ADMIN_ROUTES.CAREERS}>Careers</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.TESTIMONIALS ? styles.selected : ""} href={ADMIN_ROUTES.TESTIMONIALS}>Testimonials</Link></li>
+                <li><Link className={currentRoute === ADMIN_ROUTES.PICTURES ? styles.selected : ""} href={ADMIN_ROUTES.PICTURES}>Pictures</Link></li>
 
             </ul>
             <button onClick={handleSignOut}>Sign out</button>

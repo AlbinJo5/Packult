@@ -51,11 +51,11 @@ function index() {
                     {/* <h1>Start doing work that Matters</h1>
                     <p>We&apos;re a 100% remote team spread all across the world and looking for talented people Join Us!</p> */}
                     <div className={styles.data} >
-                        {/* <CarrersCard />
                         <CarrersCard />
                         <CarrersCard />
                         <CarrersCard />
-                        <CarrersCard /> */}
+                        <CarrersCard />
+                        <CarrersCard />
                     </div>
                 </div>
             </div>

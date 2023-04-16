@@ -17,6 +17,7 @@ export default function AdminLayout({ children, pageMeta }) {
         setloading(false)
     }, [router])
     return (
+        
         <div className={styles.admin_layout} >
             <MetaHead pageMeta={pageMeta} />
             {
