@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Contact from "../../components/contact"
 import ContentLayout1 from "../../components/contentLayout1"
 import ContentLayout3 from "../../components/contentLayout3"
@@ -20,6 +21,9 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+          
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

@@ -18,6 +18,8 @@ function index() {
     return (
         <Layout>
             <Head>
+            <link rel="canonical" href="https://packult.com/sustainable-solution"/>
+            <link rel="alternate" href="https://packult.com/sustainable-solution" hreflang="en"/>
             <script 
 type="application/ld+json"
 dangerouslySetInnerHTML={{ __html: JSON.stringify(

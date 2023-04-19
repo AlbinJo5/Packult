@@ -9,6 +9,10 @@ import Particles from "../../components/particles";
 export default function index() {
     return (
         <Layout>
+            <Head>
+            <link rel="canonical" href="https://packult.com/packaging-converters"/>
+            <link rel="alternate" href="https://packult.com/packaging-converters" hreflang="en"/>
+            </Head>
             <div className={styles.lap_particles}>
             <Image src="/assets/images/vectors/4.png" alt="Brand Owners" width={1000} height={1000}
                 style={{ position: "absolute", top: "0", right: "0", zIndex: "1", width: "15vw", height: "max-content" }}

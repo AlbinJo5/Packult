@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Contact from "../../components/contact"
 import ContentLayout1 from "../../components/contentLayout1"
 import ContentLayout3 from "../../components/contentLayout3"
@@ -20,6 +21,12 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+            <link rel="canonical" href="https://packult.com/sourcing-excellence"/>
+            <link rel="alternate" href="https://packult.com/sourcing-excellence" hreflang="en"/>
+            <link rel="canonical" href="https://packult.com/resourcing">
+            <link rel="alternate" href="https://packult.com/resourcing" hreflang="en"/>
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

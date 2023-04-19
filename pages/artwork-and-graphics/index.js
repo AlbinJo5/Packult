@@ -15,6 +15,10 @@ function index() {
 
     return (
         <Layout>
+            <Head>
+            <link rel="canonical" href="https://packult.com/artwork-and-graphics"/>
+            <link rel="alternate" href="https://packult.com/artwork-and-graphics" hreflang="en"/>
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

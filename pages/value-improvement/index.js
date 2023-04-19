@@ -20,6 +20,10 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+            <link rel="canonical" href="https://packult.com/value-improvement"/>
+            <link rel="alternate" href="https://packult.com/value-improvement" hreflang="en"/>
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

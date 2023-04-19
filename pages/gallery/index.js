@@ -29,6 +29,10 @@ function Index() {
 
     return (
         <Layout>
+            <Head>
+            <link rel="canonical" href="https://packult.com/gallery"/>
+            <link rel="alternate" href="https://packult.com/gallery" hreflang="en"/>
+            </Head>
             <div className={styles.ourWork} >
 
                 {/* header */}

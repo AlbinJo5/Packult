@@ -27,6 +27,10 @@ export default function index() {
   }
   return (
     <Layout>
+      <Head>
+      <link rel="canonical" href="https://packult.com/application-and-businness-development"/>
+      <link rel="alternate" href="https://packult.com/application-and-businness-development" hreflang="en"/>
+      </Head>
       <section className={styles.content1} >
         <ContentLayout1 data={layout1} />
       </section>

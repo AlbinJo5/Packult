@@ -12,6 +12,10 @@ export default function Index() {
     const router = useRouter();
     return (
         <Layout pageMeta={{description:"Your trusted partner in the evolution towards world-class packaging solutions"}} >
+            <Head>
+            <link rel="canonical" href="https://packult.com/about"/>
+            <link rel="alternate" href="https://packult.com/about" hreflang="en"/>
+            </Head>
 
             <div className={styles.lap_particles}>
                 <Particles color={"rgba(241, 198, 68, 0.6)"} height="50vw" width="150vw" top="10vw" left="90vw" blur='10vw' />

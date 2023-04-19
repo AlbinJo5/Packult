@@ -5,9 +5,14 @@ import Layout from "../../components/layout"
 import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/carrers.module.scss"
+import Head from "next/head"
 function index() {
     return (
         <Layout pageMeta={{ description: "Join us in our quest for the best that Packaging has to offer" }} >
+            <Head>
+            <link rel="canonical" href="https://packult.com/carrers"/>
+            <link rel="alternate" href="https://packult.com/carrers" hreflang="en"/>
+            </Head>
             <div className={styles.lap_particles}>
                 <Image src="/assets/images/vectors/1.png" alt="Brand Owners" width={1000} height={1000}
                     style={{ position: "absolute", top: "0", right: "0", zIndex: "1", width: "25vw", height: "max-content" }}
