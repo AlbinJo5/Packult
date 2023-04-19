@@ -12,6 +12,7 @@ import BlogCarousel from '../components/blogCarousel'
 import Particles from '../components/particles'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 export default function Home() {
 
@@ -42,6 +43,10 @@ export default function Home() {
 
   return (
     <Layout >
+      <Head>
+        <link rel="canonical" href="https://packult.com/"/>
+        <link rel="alternate" href="https://packult.com/" hreflang="en"/>
+      </Head>
       <div className={styles.lap_particles}>
         <Particles color="#C2D950" height="50vw" width="150vw" top="70vw" left="90vw" blur='10vw' />
         <Particles color="#FFD7EA" height="50vw" width="150vw" top="140vw" left="-135vw" blur='5vw' />

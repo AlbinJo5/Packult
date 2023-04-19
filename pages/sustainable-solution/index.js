@@ -4,6 +4,7 @@ import ContentLayout1 from '../../components/contentLayout1'
 import Layout from '../../components/layout'
 import WorkNumbers from '../../components/workNumbers'
 import styles from "../../styles/sustainable-solution.module.scss"
+import Head from 'next/head'
 
 
 function index() {
@@ -16,6 +17,29 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [{
+          "@type": "ListItem", 
+          "position": 1, 
+          "name": "Home",
+          "item": "https://packult.com/"  
+        },{
+          "@type": "ListItem", 
+          "position": 2, 
+          "name": "Sustainable Solution",
+          "item": "https://packult.com/sustainable-solution"  
+        }]
+      }  
+)
+}}
+/>
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >
