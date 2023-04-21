@@ -70,7 +70,7 @@ export const data = [
     },
     {
         "number": "8.",
-        "heading": "Application & Bussiness Development",
+        "heading": "Application & Buisness Development",
         "content": "We pride ourselves in providing exceptional application and business development support to packaging converters helping them succeed in today’s highly competitive marketplace. We provide support with marketing and sales, co-developing new products and applications, identifying new business opportunities, expanding their customer base, building long-term partnerships with clients and providing after-sales support. With us, our converters can focus on what they do best -producing high-quality packaging.",
         "image": "/assets/images/packaging-converters/box2.png",
         "link": ROUTES.APP_and_Business

@@ -17,7 +17,7 @@ export default function Footer() {
                         <li><Link href={ROUTES.SERVICES}>Services</Link></li>
                         {/* <li><Link href={ROUTES.GALLERY}>Gallery</Link></li> */}
                         <li><Link href={ROUTES.CARRERS}>Careers</Link></li>
-                        <li><Link href={ROUTES.HOME}>Blog</Link></li>
+                        {/* <li><Link href={ROUTES.HOME}>Blog</Link></li> */}
                         <li><Link href={ROUTES.TERMS_AND_CONDITIONS}>Terms & Conditions</Link></li>
                     </ul>
 
