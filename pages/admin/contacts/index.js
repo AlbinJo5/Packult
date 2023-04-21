@@ -1,5 +1,8 @@
 import AdminLayout from "../../../components/admin/adminLayout"
 import styles from "../../../styles/admin/contacts.module.scss"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Table from 'react-bootstrap/Table';
 function Index() {
     return (
         <AdminLayout>
@@ -7,35 +10,35 @@ function Index() {
                 <h2>Contacts</h2>
                 <hr />
                 <div className={styles.all_contacts} >
-                    <table class="table">
+                    <Table striped hover>
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
+                                <td>1</td>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
+                                <td>2</td>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
+                                <td>3</td>
+                                <td colSpan={2}>Larry the Bird</td>
                                 <td>@twitter</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </Table>
 
 
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactViewModal">
