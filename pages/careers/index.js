@@ -10,8 +10,33 @@ function index() {
     return (
         <Layout pageMeta={{ description: "Join us in our quest for the best that Packaging has to offer" }} >
             <Head>
-            <link rel="canonical" href="https://packult.com/carrers"/>
-            <link rel="alternate" href="https://packult.com/carrers" hreflang="en"/>
+            <link rel="canonical" href="https://packult.com/careers"/>
+            <link rel="alternate" href="https://packult.com/careers" hreflang="en"/>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://packult.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Carrers",
+    "item": "https://packult.com/carrers"
+ 
+        }]
+      }
+      
+)
+}}
+/>
+
+
             </Head>
             <div className={styles.lap_particles}>
                 <Image src="/assets/images/vectors/1.png" alt="Brand Owners" width={1000} height={1000}

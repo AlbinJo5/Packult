@@ -6,6 +6,7 @@ import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
 import { data } from "../../data/services"
 import styles from "../../styles/services.module.scss"
+import Script from "next/script"
 
 function index() {
     return (
@@ -15,6 +16,29 @@ function index() {
             <link rel="alternate" href="https://packult.com/services" hreflang="en"/>
             <link rel="canonical" href="https://packult.com/terms-and-conditions"/>
             <link rel="alternate" href="https://packult.com/terms-and-conditions" hreflang="en"/>
+                <Script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(
+                    {
+                        "@context": "https://schema.org/", 
+                "@type": "BreadcrumbList", 
+                "itemListElement": [{
+                    "@type": "ListItem", 
+                    "position": 1, 
+                    "name": "Home",
+                    "item": "https://packult.com/"  
+                },{
+                    "@type": "ListItem", 
+                    "position": 2, 
+                    "name": "Services",
+                    "item": "https://packult.com/services" 
+                
+                        }]
+                    }
+                    
+                )
+                }}
+                />
             </Head>
             <div className={styles.lap_particles}>
                 <Image src="/assets/images/vectors/2.png" alt="Brand Owners" width={1000} height={1000}

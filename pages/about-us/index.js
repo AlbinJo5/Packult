@@ -7,14 +7,39 @@ import WorkNumbers from "../../components/workNumbers";
 import styles from "../../styles/about.module.scss";
 import { ROUTES } from "../../common/routes";
 import { useRouter } from 'next/router'
+import Head from "next/head";
 
 export default function Index() {
     const router = useRouter();
     return (
         <Layout pageMeta={{description:"Your trusted partner in the evolution towards world-class packaging solutions"}} >
             <Head>
-            <link rel="canonical" href="https://packult.com/about"/>
-            <link rel="alternate" href="https://packult.com/about" hreflang="en"/>
+            <link rel="canonical" href="https://packult.com/about-us"/>
+            <link rel="alternate" href="https://packult.com/about-us" hreflang="en"/>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [{
+          "@type": "ListItem", 
+          "position": 1, 
+          "name": "Home",
+          "item": "https://packult.com/"  
+        },{
+          "@type": "ListItem", 
+          "position": 2, 
+          "name": "About Us",
+          "item": "https://packult.com/about" 
+        
+        }]
+      }
+      
+)
+}}
+/>
+
             </Head>
 
             <div className={styles.lap_particles}>

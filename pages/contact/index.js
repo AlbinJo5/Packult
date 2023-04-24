@@ -2,6 +2,7 @@ import Layout from "../../components/layout"
 import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/contact-us.module.scss"
+import Head from "next/head"
 
 function index() {
     return (

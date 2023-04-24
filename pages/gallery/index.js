@@ -6,6 +6,7 @@ import WorkNumbers from '../../components/workNumbers'
 import styles from '../../styles/gallery.module.scss'
 import { useRouter } from 'next/router'
 import { ROUTES } from '../../common/routes'
+import Head from 'next/head'
 
 function Index() {
 
@@ -32,8 +33,29 @@ function Index() {
             <Head>
             <link rel="canonical" href="https://packult.com/gallery"/>
             <link rel="alternate" href="https://packult.com/gallery" hreflang="en"/>
-            </Head>
-            <div className={styles.ourWork} >
+
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [{
+          "@type": "ListItem", 
+          "position": 1, 
+          "name": "Home",
+          "item": "https://packult.com/"  
+        },{
+          "@type": "ListItem", 
+          "position": 2, 
+          "name": "Gallery",
+          "item": "https://packult.com/gallery"  
+        }]
+      }
+)
+}}
+/>
+</Head>        <div className={styles.ourWork} >
 
                 {/* header */}
                 <div className={styles.header}>

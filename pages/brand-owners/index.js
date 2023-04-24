@@ -6,12 +6,36 @@ import WorkNumbers from "../../components/workNumbers";
 import Contact from "../../components/contact";
 import Image from "next/image";
 import Particles from "../../components/particles";
+import Head from "next/head";
 export default function index() {
     return (
         <Layout>
             <Head>
                 <link rel="canonical" href="https://packult.com/brand-owners"/>
                 <link rel="alternate" href="https://packult.com/brand-owners" hreflang="en"/>
+                <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://packult.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Brand Owners",
+    "item": "https://packult.com/brand-owners"  
+  
+        }]
+      }
+      
+)
+}}
+/>
             </Head>
             
             <div className={styles.lap_particles}>

@@ -31,7 +31,30 @@ export default function index() {
             <Head>
             <link rel="canonical" href="https://packult.com/operational-excellence"/>
             <link rel="alternate" href="https://packult.com/operational-excellence" hreflang="en"/>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [{
+          "@type": "ListItem", 
+          "position": 1, 
+          "name": "Home",
+          "item": "https://packult.com/"  
+        },{
+          "@type": "ListItem", 
+          "position": 2, 
+          "name": "Operational Excellence",
+          "item": "https://packult.com/operational-excellence"  
+        }]
+      }
+      
+)
+}}
+/>
             </Head>
+
             <section className={styles.content1} >
                 <ContentLayout1 data={layout1} />
             </section>
