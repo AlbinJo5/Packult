@@ -30,7 +30,7 @@ function Navbar() {
                 <li><Link className={currentRoute === ADMIN_ROUTES.CONTACTS ? styles.selected : ""} href={ADMIN_ROUTES.CONTACTS}>Contacts</Link></li>
                 <li><Link className={currentRoute === ADMIN_ROUTES.CAREERS ? styles.selected : ""} href={ADMIN_ROUTES.CAREERS}>Careers</Link></li>
                 <li><Link className={currentRoute === ADMIN_ROUTES.TESTIMONIALS ? styles.selected : ""} href={ADMIN_ROUTES.TESTIMONIALS}>Testimonials</Link></li>
-                <li><Link className={currentRoute === ADMIN_ROUTES.PICTURES ? styles.selected : ""} href={ADMIN_ROUTES.PICTURES}>Pictures</Link></li>
+                {/* <li><Link className={currentRoute === ADMIN_ROUTES.PICTURES ? styles.selected : ""} href={ADMIN_ROUTES.PICTURES}>Career Images</Link></li> */}
 
             </ul>
             <button onClick={handleSignOut}>Sign out</button>

@@ -41,5 +41,5 @@ export const ADMIN_ROUTES = {
     CONTACTS: "/admin/contacts",
     CAREERS: "/admin/careers",
     TESTIMONIALS: "/admin/testimonials",
-    PICTURES: "/admin/pictures",
+    // PICTURES: "/admin/pictures",
 }

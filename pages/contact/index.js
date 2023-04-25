@@ -2,8 +2,43 @@ import Layout from "../../components/layout"
 import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/contact-us.module.scss"
+import { useRef, useState } from "react"
 
-function index() {
+
+function Index() {
+    const [show, setShow] = useState(false);
+    const [showError, setShowError] = useState(false);
+    const name = useRef();
+    const email = useRef();
+    const number = useRef();
+    const message = useRef();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const resp = await fetch('/api/contact/post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name.current.value,
+                email: email.current.value,
+                number: number.current.value,
+                message: message.current.value
+            })
+        })
+
+        const data = await resp.json();
+        if (data.message === 'success') {
+            setShow(true);
+            setShowError(false);
+        }
+        else {
+            setShowError(true);
+            setShow(false);
+        }
+    }
+
     return (
         <Layout pageMeta={{description:"We are always ready to answer any questions that interests you. Shoot!"}} >
             <div className={styles.lap_particles}>
@@ -21,11 +56,11 @@ function index() {
             <div className={styles.contact_us} >
                 <div className={styles.content}>
                     <div className={styles.left}>
-                        <form >
-                            <input type="text" name="name" placeholder="Your Name*" required={true} />
-                            <input type="email" name="email" placeholder="Email Address*" required={true} />
-                            <input type="number" name="phone" placeholder="Phone Number" />
-                            <textarea name="queries" placeholder="Share your thoughts or Queries"></textarea>
+                        <form onSubmit={handleSubmit} >
+                            <input ref={name} type="text" name="name" placeholder="Your Name*" required={true} />
+                            <input ref={email} type="email" name="email" placeholder="Email Address*" required={true} />
+                            <input ref={number} type="number" name="phone" placeholder="Phone Number" />
+                            <textarea ref={message} name="queries" placeholder="Share your thoughts or Queries"></textarea>
                             <button type="submit">SUBMIT</button>
                         </form>
                     </div>
@@ -41,4 +76,4 @@ function index() {
     )
 }
 
-export default index
+export default Index
