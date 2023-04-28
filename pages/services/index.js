@@ -10,8 +10,10 @@ import Script from "next/script"
 
 function index() {
     return (
-        <Layout pageMeta={{ description: "Comprehensive Packaging services and solutions for Brand Owners & Packaging converters" }} >
+        <Layout pageMeta={{ description: "Comprehensive Packaging services and solutions for Brand Owners & Packaging converters" }}>
             <Head>
+                <title>Custom Packaging Services | Innovative Design & Sustainable Solutions | Packult</title>
+                <meta name="description" content="Packult offers a wide range of custom packaging services to help your business stand out in the market. Our innovative designs and sustainable solutions are tailored to your unique needs."/>
             <link rel="canonical" href="https://packult.com/services"/>
             <link rel="alternate" href="https://packult.com/services" hreflang="en"/>
             <link rel="canonical" href="https://packult.com/terms-and-conditions"/>
@@ -82,7 +84,7 @@ function index() {
                     }
                 </div>
             </div>
-            <WorkNumbers />
+            <WorkNumbers/>
             <Contact />
 
         </Layout>

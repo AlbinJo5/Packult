@@ -11,6 +11,8 @@ export default function index() {
     return (
         <Layout>
             <Head>
+                <title>Packult - 360 Packaging Solutions for Brand Owners</title>
+                <meta name="description" content="Packult provides custom packaging solutions for brand owners looking to stand out in the market. Our innovative designs and sustainable solutions help you create a memorable brand experience."/>
                 <link rel="canonical" href="https://packult.com/brand-owners"/>
                 <link rel="alternate" href="https://packult.com/brand-owners" hreflang="en"/>
                 <script 

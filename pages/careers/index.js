@@ -10,6 +10,8 @@ function index() {
     return (
         <Layout pageMeta={{ description: "Join us in our quest for the best that Packaging has to offer" }} >
             <Head>
+            <title>Careers at Packult | Join Our Team of Packaging Experts</title>
+            <meta name="description" content="Join the team at Packult and be part of a company that is changing the packaging industry. We offer exciting career opportunities for packaging experts who are passionate about innovation and sustainability."/>
             <link rel="canonical" href="https://packult.com/careers"/>
             <link rel="alternate" href="https://packult.com/careers" hreflang="en"/>
             <script 

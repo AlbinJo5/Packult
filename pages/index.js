@@ -40,6 +40,8 @@ export default function Home() {
   return (
     <Layout >
       <Head>
+        <title>Packult | Custom Packaging Solutions | New Packaging designs</title>
+        <meta name='description' content='Packult provides custom packaging solutions for businesses worldwide. Our innovative designs and sustainable solutions help you stand out in the market.'/>
 
         <link rel="canonical" href="https://packult.com/"/>
         <link rel="alternate" href="https://packult.com/" hreflang="en"/>

@@ -14,6 +14,8 @@ export default function Index() {
     return (
         <Layout pageMeta={{description:"Your trusted partner in the evolution towards world-class packaging solutions"}} >
             <Head>
+            <title>Packult - Ideate | create | Deliver  Packaging Services</title>
+            <meta name="description" content="Learn more about Packult and our commitment to creating custom packaging solutions that help businesses succeed. Our innovative designs and sustainable solutions are changing the industry."/>
             <link rel="canonical" href="https://packult.com/about-us"/>
             <link rel="alternate" href="https://packult.com/about-us" hreflang="en"/>
             <script 

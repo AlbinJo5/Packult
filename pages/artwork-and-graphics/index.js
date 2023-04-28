@@ -17,6 +17,8 @@ function index() {
     return (
         <Layout>
             <Head>
+              <title>Packaging Artwork & Graphics | Packaging Design | Packult</title>
+              <meta name="description" content="Packult's packaging artwork and graphics services create eye-catching designs for your packaging. Our team of designers helps you convey your brand message and attract customers."/>
             <link rel="canonical" href="https://packult.com/artwork-and-graphics"/>
             <link rel="alternate" href="https://packult.com/artwork-and-graphics" hreflang="en"/>
               "@context": "https://schema.org/", 

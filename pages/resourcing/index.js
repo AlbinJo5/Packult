@@ -22,6 +22,8 @@ function index() {
     return (
         <Layout>
             <Head>
+                <title>Packaging Resourcing | Global Packaging Services | Packult</title>
+                <meta name="description" content="Packult's packaging resourcing services provide global packaging solutions for businesses of all sizes. Our team of experts helps you source the right materials and manage your supply chain."/>
             <script 
 type="application/ld+json"
 dangerouslySetInnerHTML={{ __html: JSON.stringify(

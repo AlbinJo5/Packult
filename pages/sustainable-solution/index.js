@@ -18,6 +18,8 @@ function index() {
     return (
         <Layout>
             <Head>
+            <title>Packult - Sustainable and Eco-Friendly Packaging Solutions</title>
+            <meta name="description" content="Packult offers sustainable packaging solutions to reduce your business's environmental impact. Our eco-friendly packaging options help you meet your sustainability goals."/>
             <link rel="canonical" href="https://packult.com/sustainable-solution"/>
             <link rel="alternate" href="https://packult.com/sustainable-solution" hreflang="en"/>
             <script 

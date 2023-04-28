@@ -31,6 +31,8 @@ function Index() {
     return (
         <Layout>
             <Head>
+            <title>Packaging Design ideas | Creative Packaging Solutions | Packult</title>
+            <meta name='description' content="Packult's packaging design gallery showcases our creative solutions for businesses of all industries. Browse our portfolio for inspiration and see how we can help you stand out."/>
             <link rel="canonical" href="https://packult.com/gallery"/>
             <link rel="alternate" href="https://packult.com/gallery" hreflang="en"/>
 

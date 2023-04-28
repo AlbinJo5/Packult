@@ -58,6 +58,8 @@ function index() {
     return (
         <Layout>
             <Head>
+            <title>Packult - Concept, smarter and sustainable packaging Solutions</title>
+            <meta name="description" content="Packult's terms and conditions outline our services and policies. Please read them carefully before using our website or engaging with our team."/>
             <script 
 type="application/ld+json"
 dangerouslySetInnerHTML={{ __html: JSON.stringify(

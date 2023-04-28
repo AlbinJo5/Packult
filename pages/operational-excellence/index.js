@@ -29,6 +29,8 @@ export default function index() {
     return (
         <Layout>
             <Head>
+                <title>Operational Excellence | Process Excellence | Packult</title>
+                <meta name="description" content="Packult's operational excellence ensures that your packaging manufacturing process runs smoothly. Our focus on quality and efficiency helps you deliver products on time and within budget."/>
             <link rel="canonical" href="https://packult.com/operational-excellence"/>
             <link rel="alternate" href="https://packult.com/operational-excellence" hreflang="en"/>
             <script 

@@ -11,6 +11,8 @@ export default function index() {
     return (
         <Layout>
             <Head>
+                <title>Packaging Converters | Custom Packaging Solutions | Packult</title>
+                <meta name="description" content="Packult's packaging converters specialize in creating custom packaging solutions for your business. Our innovative designs and sustainable materials help you stand out in the market."/>
             <link rel="canonical" href="https://packult.com/packaging-converters"/>
             <link rel="alternate" href="https://packult.com/packaging-converters" hreflang="en"/>
             <script 
