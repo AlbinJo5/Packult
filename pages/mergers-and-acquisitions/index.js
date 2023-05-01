@@ -23,10 +23,10 @@ function index() {
     return (
         <Layout>
             <Head>
-            <link rel="canonical" href="https://packult.com/management-and-assistance"/>
-            <link rel="alternate" href="https://packult.com/management-and-assistance" hreflang="en"/>
+                <link rel="canonical" href="https://packult.com/management-and-assistance" />
+                <link rel="alternate" href="https://packult.com/management-and-assistance" hreflang="en" />
                 <title>Packaging Mergers & Acquisitions | Packult</title>
-                <meta name="description" content="Packult's packaging Mergers and Acquisitions services provide expert guidance for your packaging process. Our team of professionals helps you streamline operations and achieve your goals."/>
+                <meta name="description" content="Packult's packaging Mergers and Acquisitions services provide expert guidance for your packaging process. Our team of professionals helps you streamline operations and achieve your goals." />
             </Head>
             <div style={{
                 minHeight: "85vh",

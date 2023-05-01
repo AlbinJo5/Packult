@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 
 function MyApp({ Component, pageProps }) {
-  let GTM_ID = proccess.env.NEXT_PUBLIC_GTM_ID;
+  let GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
   useEffect(() => {
     AOS.init();
     const cursor = document.querySelector("#cursor");
@@ -20,14 +20,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-       <Head>
-          <Script
-          async
-          src={'http://www.googletagmanager.com/gtag/js?id=${GTM_ID}'}
-          />
-          <Script
-            dangerouslySetInnerHTML={{ 
-              _html: `
+      <Script
+        async
+        src={'http://www.googletagmanager.com/gtag/js?id=${GTM_ID}'}
+      />
+      <Script
+        id="GTM_TAG"
+        dangerouslySetInnerHTML={{
+          _html: `
                window.dataLayer = window.dataLayer || []; 
                function gtag(){dataLayer.push(arguments);} 
                gtag('js', new Date()); 
@@ -35,28 +35,30 @@ function MyApp({ Component, pageProps }) {
                { page_path: window.location.pathname,
                });
                `,
-              }}
-              /> 
+        }}
+      />
 
-<Script 
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify(
-    {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "Packult.com",
-      "url": "https://packult.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://packult.com/#{search_term_string}",
-        "query-input": "required name=search_term_string"
-    
-      }
-      }  
-)
-}}
-/>
-       </Head>
+
+      <Script
+        id="APP"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "WebSite",
+              "name": "Packult.com",
+              "url": "https://packult.com/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://packult.com/#{search_term_string}",
+                "query-input": "required name=search_term_string"
+
+              }
+            }
+          )
+        }}
+      />
       <div id="cursor" >
         <span id="cursorSpan"></span>
       </div>

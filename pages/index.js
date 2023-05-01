@@ -21,7 +21,7 @@ export default function Home() {
 
   // get scrren size
   const [mobile, setMobile] = useState(false)
-    useEffect(() => {
+  useEffect(() => {
     //   fetch blog data using api
 
     setMobile(window.innerWidth < 768 ? true : false)
@@ -41,34 +41,35 @@ export default function Home() {
     <Layout >
       <Head>
         <title>Packult | Custom Packaging Solutions | New Packaging designs</title>
-        <meta name='description' content='Packult provides custom packaging solutions for businesses worldwide. Our innovative designs and sustainable solutions help you stand out in the market.'/>
+        <meta name='description' content='Packult provides custom packaging solutions for businesses worldwide. Our innovative designs and sustainable solutions help you stand out in the market.' />
 
-        <link rel="canonical" href="https://packult.com/"/>
-        <link rel="alternate" href="https://packult.com/" hreflang="en"/>
-        <script 
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(
+        <link rel="canonical" href="https://packult.com/" />
+        <link rel="alternate" href="https://packult.com/" hreflang="en" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
               {
-       
-                  "@context": "https://schema.org/", 
-                  "@type": "BreadcrumbList", 
-                  "itemListElement": [{
-                    "@type": "ListItem", 
-                    "position": 1, 
-                    "name": "Home",
-                    "item": "https://packult.com/"  
-                    },{
-                        "@type": "ListItem", 
-                        "position": 2, 
-                        "name": "Value Improvement",
-                        "item": "https://packult.com/value-improvement"  
 
-                    }]
-                    }
-      
+                "@context": "https://schema.org/",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://packult.com/"
+                }, {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Value Improvement",
+                  "item": "https://packult.com/value-improvement"
+
+                }]
+              }
+
             )
-}}
-/>
+          }}
+        />
       </Head>
       <div className={styles.lap_particles}>
         <Particles color="#C2D950" height="50vw" width="150vw" top="70vw" left="90vw" blur='10vw' />

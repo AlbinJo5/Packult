@@ -23,7 +23,7 @@ function index() {
         <Layout>
             <Head>
                 <title>Sourcing Excellence | Packaging Materials | Packult</title>
-                <meta name="description" content="Packult's sourcing excellence ensures that your packaging materials are of the highest quality. Our global network of suppliers and strict quality control processes guarantee consistent results."/>
+                <meta name="description" content="Packult's sourcing excellence ensures that your packaging materials are of the highest quality. Our global network of suppliers and strict quality control processes guarantee consistent results." />
             </Head>
             <div style={{
                 minHeight: "85vh",
@@ -42,3 +42,5 @@ function index() {
         </Layout>
     )
 }
+
+export default index

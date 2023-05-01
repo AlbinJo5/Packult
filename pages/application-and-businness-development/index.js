@@ -23,7 +23,7 @@ function index() {
         <Layout>
             <Head>
                 <title>Packult - Packaging innovation & Business Development</title>
-                <meta name="description" content="Packult's packaging application and business development services help you identify new opportunities for growth. Our experts provide strategic guidance and innovative solutions to help you succeed."/>
+                <meta name="description" content="Packult's packaging application and business development services help you identify new opportunities for growth. Our experts provide strategic guidance and innovative solutions to help you succeed." />
             </Head>
             <section className={styles.content1} >
                 <ContentLayout1 data={layout1} />

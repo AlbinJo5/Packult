@@ -4,6 +4,7 @@ import ContentLayout1 from "../../components/contentLayout1";
 import ContentLayout2 from "../../components/contentLayout2";
 import styles from "../../styles/packagingSolution.module.scss";
 import Layout from "../../components/layout";
+import Head from "next/head";
 
 export default function index() {
   const layout1 = {
@@ -28,31 +29,32 @@ export default function index() {
   return (
     <Layout>
       <Head>
-      <link rel="canonical" href="https://packult.com/application-and-businness-development"/>
-      <link rel="alternate" href="https://packult.com/application-and-businness-development" hreflang="en"/>
-      <script 
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify(
-    {
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-        "@type": "ListItem", 
-        "position": 1, 
-        "name": "Home",
-        "item": "https://packult.com/"  
-      },{
-        "@type": "ListItem", 
-        "position": 2, 
-        "name": "Application and Business Development",
-        "item": "https://packult.com/application-and-businness-development"
-    
-        }]
-      }
-      
-)
-}}
-/>
+        <link rel="canonical" href="https://packult.com/application-and-businness-development" />
+        <link rel="alternate" href="https://packult.com/application-and-businness-development" hreflang="en" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org/",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://packult.com/"
+                }, {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Application and Business Development",
+                  "item": "https://packult.com/application-and-businness-development"
+
+                }]
+              }
+
+            )
+          }}
+        />
       </Head>
       <section className={styles.content1} >
         <ContentLayout1 data={layout1} />

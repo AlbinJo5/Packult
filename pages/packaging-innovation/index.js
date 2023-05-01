@@ -30,29 +30,30 @@ export default function index() {
     <Layout>
       <Head>
         <title>Packult | Custom Packaging Solutions | New Packaging designs</title>
-        <meta name="description" content="Packult provides custom packaging solutions for businesses worldwide. Our innovative designs and sustainable solutions help you stand out in the market."/>
-      <link rel="canonical" href="https://packult.com/packaging-innovation"/>
-<link rel="alternate" href="https://packult.com/packaging-innovation" hreflang="en"/>
+        <meta name="description" content="Packult provides custom packaging solutions for businesses worldwide. Our innovative designs and sustainable solutions help you stand out in the market." />
+        <link rel="canonical" href="https://packult.com/packaging-innovation" />
+        <link rel="alternate" href="https://packult.com/packaging-innovation" hreflang="en" />
 
-<script 
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify({
-  "@context": "https://schema.org/", 
-  "@type": "BreadcrumbList", 
-  "itemListElement": [{
-    "@type": "ListItem", 
-    "position": 1, 
-    "name": "Home",
-    "item": "https://packult.com/"  
-  },{
-    "@type": "ListItem", 
-    "position": 2, 
-    "name": "Packaging Innovations",
-    "item": "https://packult.com/packaging-innovation"  
-  }]
-})
-}}
-/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org/",
+              "@type": "BreadcrumbList",
+              "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://packult.com/"
+              }, {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Packaging Innovations",
+                "item": "https://packult.com/packaging-innovation"
+              }]
+            })
+          }}
+        />
 
       </Head>
       <div style={{

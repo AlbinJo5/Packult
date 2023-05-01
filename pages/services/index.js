@@ -7,6 +7,7 @@ import WorkNumbers from "../../components/workNumbers"
 import { data } from "../../data/services"
 import styles from "../../styles/services.module.scss"
 import Script from "next/script"
+import Head from "next/head"
 
 function index() {
     return (
@@ -18,7 +19,10 @@ function index() {
             <link rel="alternate" href="https://packult.com/services" hreflang="en"/>
             <link rel="canonical" href="https://packult.com/terms-and-conditions"/>
             <link rel="alternate" href="https://packult.com/terms-and-conditions" hreflang="en"/>
-                <Script 
+                
+            </Head>
+            <Script 
+            id="SERVICE"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(
                     {
@@ -41,7 +45,6 @@ function index() {
                 )
                 }}
                 />
-            </Head>
             <div className={styles.lap_particles}>
                 <Image src="/assets/images/vectors/2.png" alt="Brand Owners" width={1000} height={1000}
                     style={{ position: "absolute", top: "0", right: "0", zIndex: "1", width: "15vw", height: "max-content" }}

@@ -6,10 +6,10 @@ import Head from "next/head"
 
 function index() {
     return (
-        <Layout pageMeta={{description:"We are always ready to answer any questions that interests you. Shoot!"}} >
+        <Layout pageMeta={{ description: "We are always ready to answer any questions that interests you. Shoot!" }} >
             <Head>
-            <link rel="canonical" href="https://packult.com/contact-us"/>
-            <link rel="alternate" href="https://packult.com/contact-us" hreflang="en"/>
+                <link rel="canonical" href="https://packult.com/contact-us" />
+                <link rel="alternate" href="https://packult.com/contact-us" hreflang="en" />
             </Head>
 
             <div className={styles.lap_particles}>

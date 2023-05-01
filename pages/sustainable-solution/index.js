@@ -18,31 +18,32 @@ function index() {
     return (
         <Layout>
             <Head>
-            <title>Packult - Sustainable and Eco-Friendly Packaging Solutions</title>
-            <meta name="description" content="Packult offers sustainable packaging solutions to reduce your business's environmental impact. Our eco-friendly packaging options help you meet your sustainability goals."/>
-            <link rel="canonical" href="https://packult.com/sustainable-solution"/>
-            <link rel="alternate" href="https://packult.com/sustainable-solution" hreflang="en"/>
-            <script 
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify(
-    {
-        "@context": "https://schema.org/", 
-        "@type": "BreadcrumbList", 
-        "itemListElement": [{
-          "@type": "ListItem", 
-          "position": 1, 
-          "name": "Home",
-          "item": "https://packult.com/"  
-        },{
-          "@type": "ListItem", 
-          "position": 2, 
-          "name": "Sustainable Solution",
-          "item": "https://packult.com/sustainable-solution"  
-        }]
-      }  
-)
-}}
-/>
+                <title>Packult - Sustainable and Eco-Friendly Packaging Solutions</title>
+                <meta name="description" content="Packult offers sustainable packaging solutions to reduce your business's environmental impact. Our eco-friendly packaging options help you meet your sustainability goals." />
+                <link rel="canonical" href="https://packult.com/sustainable-solution" />
+                <link rel="alternate" href="https://packult.com/sustainable-solution" hreflang="en" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(
+                            {
+                                "@context": "https://schema.org/",
+                                "@type": "BreadcrumbList",
+                                "itemListElement": [{
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://packult.com/"
+                                }, {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Sustainable Solution",
+                                    "item": "https://packult.com/sustainable-solution"
+                                }]
+                            }
+                        )
+                    }}
+                />
             </Head>
             <div style={{
                 minHeight: "85vh",

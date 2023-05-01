@@ -31,33 +31,34 @@ function Index() {
     return (
         <Layout>
             <Head>
-            <title>Packaging Design ideas | Creative Packaging Solutions | Packult</title>
-            <meta name='description' content="Packult's packaging design gallery showcases our creative solutions for businesses of all industries. Browse our portfolio for inspiration and see how we can help you stand out."/>
-            <link rel="canonical" href="https://packult.com/gallery"/>
-            <link rel="alternate" href="https://packult.com/gallery" hreflang="en"/>
+                <title>Packaging Design ideas | Creative Packaging Solutions | Packult</title>
+                <meta name='description' content="Packult's packaging design gallery showcases our creative solutions for businesses of all industries. Browse our portfolio for inspiration and see how we can help you stand out." />
+                <link rel="canonical" href="https://packult.com/gallery" />
+                <link rel="alternate" href="https://packult.com/gallery" hreflang="en" />
 
-            <script 
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify(
-    {
-        "@context": "https://schema.org/", 
-        "@type": "BreadcrumbList", 
-        "itemListElement": [{
-          "@type": "ListItem", 
-          "position": 1, 
-          "name": "Home",
-          "item": "https://packult.com/"  
-        },{
-          "@type": "ListItem", 
-          "position": 2, 
-          "name": "Gallery",
-          "item": "https://packult.com/gallery"  
-        }]
-      }
-)
-}}
-/>
-</Head>        <div className={styles.ourWork} >
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(
+                            {
+                                "@context": "https://schema.org/",
+                                "@type": "BreadcrumbList",
+                                "itemListElement": [{
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://packult.com/"
+                                }, {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Gallery",
+                                    "item": "https://packult.com/gallery"
+                                }]
+                            }
+                        )
+                    }}
+                />
+            </Head>        <div className={styles.ourWork} >
 
                 {/* header */}
                 <div className={styles.header}>
