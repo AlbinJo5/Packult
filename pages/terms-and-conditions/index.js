@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Layout from "../../components/layout"
 import styles from "../../styles/terms.module.scss"
 
@@ -56,6 +57,33 @@ function index() {
 
     return (
         <Layout>
+            <Head>
+            <title>Packult - Concept, smarter and sustainable packaging Solutions</title>
+            <meta name="description" content="Packult's terms and conditions outline our services and policies. Please read them carefully before using our website or engaging with our team."/>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://packult.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Privacy Policy",
+    "item": "https://packult.com/terms-and-conditions"  
+  
+        }]
+      }
+      
+)
+}}
+/>
+            </Head>
             <div className={styles.terms} >
                 <h2>Privacy Policy</h2>
 

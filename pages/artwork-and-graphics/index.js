@@ -4,6 +4,7 @@ import ContentLayout3 from "../../components/contentLayout3"
 import Layout from "../../components/layout"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/valueImprovement.module.scss"
+import Head from "next/head"
 
 function index() {
     const layout1 = {
@@ -15,6 +16,68 @@ function index() {
 
     return (
         <Layout>
+            <Head>
+              <title>Packaging Artwork & Graphics | Packaging Design | Packult</title>
+              <meta name="description" content="Packult's packaging artwork and graphics services create eye-catching designs for your packaging. Our team of designers helps you convey your brand message and attract customers."/>
+            <link rel="canonical" href="https://packult.com/artwork-and-graphics"/>
+            <link rel="alternate" href="https://packult.com/artwork-and-graphics" hreflang="en"/>
+              "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://packult.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Artwork & Graphics Management",
+    "item": "https://packult.com/artwork-and-graphics"  
+    <script 
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(
+        {
+            "@context": "https://schema.org/", 
+            "@type": "BreadcrumbList", 
+            "itemListElement": [{
+              "@type": "ListItem", 
+              "position": 1, 
+              "name": "Home",
+              "item": "https://packult.com/"  
+            },{
+              "@type": "ListItem", 
+              "position": 2, 
+              "name": "Operational Excellence",
+              "item": "https://packult.com/operational-excellence"  
+            }]
+          }
+          
+    )
+    }}
+    />            <script 
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(
+        { 
+            "@context": "https://schema.org/", 
+            "@type": "BreadcrumbList", 
+            "itemListElement": [{
+              "@type": "ListItem", 
+              "position": 1, 
+              "name": "Home",
+              "item": "https://packult.com/"  
+            },{
+              "@type": "ListItem", 
+              "position": 2, 
+              "name": "Artwork & Graphics Management",
+              "item": "https://packult.com/artwork-and-graphics"  
+          
+            }]
+          }
+          
+    )
+    }}
+    />
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

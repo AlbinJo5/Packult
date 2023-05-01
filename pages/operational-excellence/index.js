@@ -4,6 +4,7 @@ import ContentLayout1 from "../../components/contentLayout1";
 import ContentLayout2 from "../../components/contentLayout2";
 import styles from "../../styles/packagingSolution.module.scss";
 import Layout from "../../components/layout";
+import Head from "next/head";
 
 export default function index() {
     const layout1 = {
@@ -27,6 +28,35 @@ export default function index() {
     }
     return (
         <Layout>
+            <Head>
+                <title>Operational Excellence | Process Excellence | Packult</title>
+                <meta name="description" content="Packult's operational excellence ensures that your packaging manufacturing process runs smoothly. Our focus on quality and efficiency helps you deliver products on time and within budget."/>
+            <link rel="canonical" href="https://packult.com/operational-excellence"/>
+            <link rel="alternate" href="https://packult.com/operational-excellence" hreflang="en"/>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+        "@type": "BreadcrumbList", 
+        "itemListElement": [{
+          "@type": "ListItem", 
+          "position": 1, 
+          "name": "Home",
+          "item": "https://packult.com/"  
+        },{
+          "@type": "ListItem", 
+          "position": 2, 
+          "name": "Operational Excellence",
+          "item": "https://packult.com/operational-excellence"  
+        }]
+      }
+      
+)
+}}
+/>
+            </Head>
+
             <section className={styles.content1} >
                 <ContentLayout1 data={layout1} />
             </section>

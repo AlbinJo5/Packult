@@ -6,9 +6,39 @@ import WorkNumbers from "../../components/workNumbers";
 import Contact from "../../components/contact";
 import Image from "next/image";
 import Particles from "../../components/particles";
+import Head from "next/head";
 export default function index() {
     return (
         <Layout>
+            <Head>
+                <title>Packult - 360 Packaging Solutions for Brand Owners</title>
+                <meta name="description" content="Packult provides custom packaging solutions for brand owners looking to stand out in the market. Our innovative designs and sustainable solutions help you create a memorable brand experience."/>
+                <link rel="canonical" href="https://packult.com/brand-owners"/>
+                <link rel="alternate" href="https://packult.com/brand-owners" hreflang="en"/>
+                <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://packult.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Brand Owners",
+    "item": "https://packult.com/brand-owners"  
+  
+        }]
+      }
+      
+)
+}}
+/>
+            </Head>
             
             <div className={styles.lap_particles}>
             <Image src="/assets/images/vectors/3.png" alt="Brand Owners" width={1000} height={1000}

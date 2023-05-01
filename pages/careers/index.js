@@ -5,9 +5,41 @@ import Layout from "../../components/layout"
 import Particles from "../../components/particles"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/carrers.module.scss"
+import Head from "next/head"
 function index() {
     return (
         <Layout pageMeta={{ description: "Join us in our quest for the best that Packaging has to offer" }} >
+            <Head>
+            <title>Careers at Packult | Join Our Team of Packaging Experts</title>
+            <meta name="description" content="Join the team at Packult and be part of a company that is changing the packaging industry. We offer exciting career opportunities for packaging experts who are passionate about innovation and sustainability."/>
+            <link rel="canonical" href="https://packult.com/careers"/>
+            <link rel="alternate" href="https://packult.com/careers" hreflang="en"/>
+            <script 
+type="application/ld+json"
+dangerouslySetInnerHTML={{ __html: JSON.stringify(
+    {
+        "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://packult.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Carrers",
+    "item": "https://packult.com/carrers"
+ 
+        }]
+      }
+      
+)
+}}
+/>
+
+
+            </Head>
             <div className={styles.lap_particles}>
                 <Image src="/assets/images/vectors/1.png" alt="Brand Owners" width={1000} height={1000}
                     style={{ position: "absolute", top: "0", right: "0", zIndex: "1", width: "25vw", height: "max-content" }}
