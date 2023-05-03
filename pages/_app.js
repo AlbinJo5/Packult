@@ -1,18 +1,14 @@
-import '../styles/global.scss'
+import "../styles/global.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Head from 'next/head';
-import Script from 'next/script';
-import { useEffect } from 'react';
-import {
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-
+import Head from "next/head";
+import Script from "next/script";
+import { useEffect } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+export const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
-  const queryClient = new QueryClient()
   useEffect(() => {
     AOS.init();
     const cursor = document.querySelector("#cursor");
@@ -24,7 +20,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <div id="cursor" >
+      <div id="cursor">
         <span id="cursorSpan"></span>
       </div>
       <QueryClientProvider client={queryClient}>
@@ -32,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

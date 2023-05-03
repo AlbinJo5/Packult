@@ -1,189 +1,414 @@
+import { useEffect, useState } from "react";
+import AdminLayout from "../../../components/admin/adminLayout";
+import styles from "../../../styles/admin/testimonials.module.scss";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
 import Image from "next/image";
-import AdminLayout from "../../../components/admin/adminLayout"
-import styles from "../../../styles/admin/contacts.module.scss"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Table from 'react-bootstrap/Table';
-import { useState } from "react";
-import { deleteImage, uploadImage } from "../../../utils/firebase_image_upload";
+import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  getAllData,
+  getDataById,
+  uploadData,
+} from "../../../utils/firebase_data_handler";
+import { useQuery } from "@tanstack/react-query";
+import { AiFillDelete } from "react-icons/ai";
+import { uploadImage } from "../../../utils/firebase_image_upload";
+import { queryClient } from "../../_app";
+import { FiEdit2 } from "react-icons/fi";
+import { HiEye } from "react-icons/hi";
+import { Accordion } from "react-bootstrap";
 
-function MyVerticallyCenteredModal(props) {
-    return (
-        <Modal
-            {...props}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    Modal heading
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <h4>Centered Modal</h4>
-                <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.
-                </p>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
-        </Modal>
-    );
+function Model(props) {
+  const { id, show, type, name } = props;
+  const [loading, setLoading] = useState(false);
+  console.log(id);
+
+  // useEffect(() => {
+  //   if (type === "edit") {
+  //     setLoading(true);
+  //   }
+  // }, [type]);
+
+  const DetailsData = useQuery(
+    [`${name}/${id}`],
+    () => {
+      return getDataById(`${name}/${id}`);
+    },
+    {
+      staleTime: 10000 * 60,
+      enabled: !!id,
+    }
+  );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const data = {
+      designation: e.target[0].value,
+      workHours: e.target[1].value,
+      workType: e.target[2].value,
+    };
+    if (type === "edit")
+      updateDataById(data, `${name}/${id}`).then((res) => {
+        if (res.message === "success") {
+          queryClient.invalidateQueries(`${name}`);
+          alert("Edited"), setLoading(false), props.onHide();
+        } else {
+          alert("Error"), setLoading(false), props.onHide();
+        }
+      });
+    else
+      uploadData(data, `${name}`).then(
+        () => alert("Added"),
+        setLoading(false),
+        props.onHide()
+      );
+  };
+
+  const handleDelete = () => {
+    setLoading(true);
+    deleteDataById(`${name}/${id}`).then((res) => {
+      if (res.message === "success") {
+        alert("Deleted"), setLoading(false), props.onHide();
+      } else {
+        alert("Error"), setLoading(false), props.onHide();
+      }
+    });
+  };
+
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          {type.charAt(0).toUpperCase() + type.slice(1)}{" "}
+          {name.charAt(0).toUpperCase() + name.slice(1)}
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {type != "delete" ? (
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicInput">
+              <Form.Label>Designation</Form.Label>
+              <Form.Control
+                type="text"
+                defaultValue={DetailsData ? DetailsData.data?.data.name : ""}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicInput">
+              <Form.Label>Work Hours</Form.Label>
+              {["radio"].map((type) => (
+                <div key={`inline-${type}`} className="mb-3">
+                  <Form.Check
+                    inline
+                    label="Part-Time"
+                    name="workHours"
+                    value="Part-Time"
+                    type={type}
+                    id={`inline-${type}-1`}
+                  />
+                  <Form.Check
+                    inline
+                    label="Full-Time"
+                    name="workHours"
+                    value="Full-Time"
+                    type={type}
+                    id={`inline-${type}-2`}
+                  />
+                </div>
+              ))}
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicInput">
+              <Form.Label>Work Type</Form.Label>
+              {["radio"].map((type) => (
+                <div key={`inline-${type}`} className="mb-3">
+                  <Form.Check
+                    inline
+                    label="On-Site"
+                    name="workType"
+                    value="On-Site"
+                    type={type}
+                    id={`inline-${type}-1`}
+                  />
+                  <Form.Check
+                    inline
+                    label="Hybrid"
+                    name="workType"
+                    type={type}
+                    value="Hybrid"
+                    id={`inline-${type}-2`}
+                  />
+                  <Form.Check
+                    inline
+                    label="WFH"
+                    name="workType"
+                    value="WFH"
+                    type={type}
+                    id={`inline-${type}-3`}
+                  />
+                </div>
+              ))}
+            </Form.Group>
+            <Button variant="success" type="submit">
+              {loading ? "Uploading..." : "Upload"}
+            </Button>
+          </Form>
+        ) : (
+          <p>Do you want Delete this</p>
+        )}
+      </Modal.Body>
+      <Modal.Footer>
+        {type === "delete" ? (
+          <Button variant="danger" type="submit" onClick={handleDelete}>
+            Delete
+          </Button>
+        ) : null}
+      </Modal.Footer>
+    </Modal>
+  );
 }
 function Index() {
-    const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+  const [type, setType] = useState("add");
+  const [id, setID] = useState();
+  const [loading, setLoading] = useState(false);
 
-    const [image, setImage] = useState(null);
-    const [title, setTitle] = useState(null);
+  const TableData = useQuery(
+    ["careers"],
+    () => {
+      return getAllData("careers");
+    },
+    {
+      staleTime: 10000 * 60,
+    }
+  );
 
-    const handleApi = (title, imageUrl) => {
+  const ImageData = useQuery(
+    ["careers_images"],
+    () => {
+      return getAllData("careers_images");
+    },
+    {
+      staleTime: 10000 * 60,
+    }
+  );
+  const handleSubmitImage = (e) => {
+    e.preventDefault();
+    const image = e.target[0].files[0];
+    const caption = e.target[1].value;
+
+    const resp = uploadImage(image, `Rooms`);
+    resp.then((res) => {
+      if (res.message === "success") {
         const data = {
-            title: title,
-            imageUrl: imageUrl
-        }
+          caption: caption,
+          image: res.data,
+        };
+        uploadData(data, "careers_images").then((res) => {
+          if (res.message === "success") {
+            alert("Image Uploaded");
+            queryClient.invalidateQueries("careers_images");
+          }
+        });
+      } else {
+        alert("Image Upload Failed");
+      }
+    });
+  };
+  const [previewUrl, setPreviewUrl] = useState(null);
 
-        fetch("/api/careers/image_post", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.message === "success") {
-                    alert("Uploaded successfully");
-                }
-                else {
-                    deleteImage(imageUrl);
-                    alert("Upload failed, try again");
-                }
-            })
-    }
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setPreviewUrl(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+  return (
+    <AdminLayout>
+      <div className={styles.testimonials}>
+        <br />
+        <div className={styles.head}>
+          <h2>Careers Picture</h2>
+        </div>
+        <hr />
+        <form
+          className="d-flex "
+          onSubmit={handleSubmitImage}
+          style={{
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            {previewUrl ? (
+              <Image
+                src={previewUrl}
+                width={100}
+                height={100}
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  marginBottom: "10px",
+                }}
+                alt="Preview"
+              />
+            ) : (
+              <label
+                for="fileUpload"
+                style={{
+                  background: "#C2D950",
+                  color: "white",
+                  padding: "15px 30px",
+                  borderRadius: "10px",
+                  cursor: "pointer",
+                }}
+              >
+                Click to Upload Image
+              </label>
+            )}
+          </div>
+          {/* {!previewUrl ? ( */}
+          <>
+            <input
+              type="file"
+              id="fileUpload"
+              style={{ display: "none" }}
+              onChange={handleImageChange}
+            />
+            <input
+              type="text"
+              placeholder="Caption"
+              id="caption"
+              style={{
+                height: "30px",
+                borderRadius: "5px",
+                padding: "0 10px",
+              }}
+            />{" "}
+            <Button variant="success" type="submit">
+              Upload
+            </Button>
+          </>
+        </form>
 
+        {/* input with image preview */}
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const resp = uploadImage(image, "careers/" + image.name);
-        resp.then((data) => {
-            if (data.message === "success") {
-                handleApi(title, data.data);
-            }
-            else {
-                alert("Image upload failed, try again");
-            }
-        })
-    }
-    return (
-        <AdminLayout>
-            <div className={styles.contacts}>
-                <h2>Careers</h2>
-                <hr />
-
-                <form onSubmit={handleSubmit} >
-                    <input type="file" onChange={(e) => {
-                        setImage(e.target.files[0]);
-                    }} />
-                    <input type="text" onChange={(e) => {
-                        setTitle(e.target.value);
-                    }} placeholder="Title" />
-                    <button type="submit">Upload</button>
-                </form>
-
-
-                <div className={styles.all_contacts} >
-                    <Table striped hover>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Image</th>
-                                <th>Title</th>
-                                <th>Options</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <Image src="/assets/logos/logo.svg" alt="image" style={{
-                                        borderRadius: "50%",
-                                        height: "50px",
-                                        width: "50px"
-
-                                    }} height={1000} width={1000} />
-                                </td>
-                                <td>Otto</td>
-                                <td>
-                                    <MyVerticallyCenteredModal
-                                        show={modalShow}
-                                        onHide={() => setModalShow(false)}
-                                    />
-                                    <Button variant="primary" onClick={() => setModalShow(true)}>
-                                        Launch vertically centered modal
-                                    </Button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td colSpan={2}>Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </Table>
-
-
-                    {/* view */}
-                    <div class="modal fade " id="careersViewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="careersViewModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="careersViewModalLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* delete */}
-                    <div class="modal fade " id="careersDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="careersDeleteModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="careersDeleteModalLabel">Modal Delete</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div className={"d-flex " + styles.all_testimonials}>
+          {/* {ImageData.data?.data.map((item, index) => {
+            return (
+              <div key={index} style={{ width: "200px", margin: "10px" }}>
+                <Image
+                  width={200}
+                  height={200}
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "10px",
+                  }}
+                  alt="Picture of the author"
+                  src={item.image}
+                />
+                <div
+                  className="d-flex     "
+                  style={{ width: "100%", justifyContent: "space-between" }}
+                >
+                  <h5>{item.caption}</h5>
+                  <AiFillDelete size={24} fill="red" />
                 </div>
-            </div>
-        </AdminLayout>
-    )
+              </div>
+            );
+          })} */}
+        </div>
+        <br />
+        <div className={styles.head}>
+          <h2>Careers</h2>
+          <Button
+            variant="success"
+            onClick={() => {
+              setModalShow(true);
+              setType("add");
+              setID(null);
+            }}
+          >
+            Add
+          </Button>
+        </div>
+        <hr />
+        <div className={styles.all_testimonials}>
+          <Accordion defaultActiveKey="0">
+            {TableData.data?.data.map((items, index) => {
+              return (
+                <Accordion.Item key={index} eventKey={index}>
+                  <Accordion.Header>
+                    {items.designation} | {items.workType} | {items.workHours}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Phone</th>
+                          <th>Email</th>
+                          <th>Doc</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        {items.data?.data.map((item, index) => {
+                          return (
+                            <tr key={index}>
+                              <td>{index + 1}</td>
+                              <td>{item.name}</td>
+
+                              <td>{item.phone}</td>
+                              <td>{item.email}</td>
+                              <td>
+                                <a href={item.doc} download>
+                                  Download
+                                </a>
+                              </td>
+                              <td
+                                style={{
+                                  display: "flex",
+                                  justifyContent: "space-between",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <HiEye size={20} />
+                                <AiFillDelete size={20} />
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                    <hr />
+                    <AiFillDelete fill="red" />
+                  </Accordion.Body>
+                </Accordion.Item>
+              );
+            })}
+          </Accordion>
+        </div>
+      </div>
+      <Model
+        show={modalShow}
+        type={type}
+        id={id}
+        name={"careers"}
+        onHide={() => setModalShow(false)}
+      />
+    </AdminLayout>
+  );
 }
 
-export default Index
+export default Index;
