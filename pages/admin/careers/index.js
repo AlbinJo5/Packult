@@ -7,8 +7,10 @@ import Form from "react-bootstrap/Form";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
+  deleteDataById,
   getAllData,
   getDataById,
+  updateDataById,
   uploadData,
 } from "../../../utils/firebase_data_handler";
 import { useQuery } from "@tanstack/react-query";
@@ -18,6 +20,8 @@ import { queryClient } from "../../_app";
 import { FiEdit2 } from "react-icons/fi";
 import { HiEye } from "react-icons/hi";
 import { Accordion } from "react-bootstrap";
+import { db } from "../../../utils/firebase";
+import { doc, setDoc } from "firebase/firestore";
 
 function Model(props) {
   const { id, show, type, name } = props;
@@ -41,29 +45,26 @@ function Model(props) {
     }
   );
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     const data = {
       designation: e.target[0].value,
       workHours: e.target[1].value,
-      workType: e.target[2].value,
+      exp: e.target[2].value,
+      location: e.target[3].value,
     };
-    if (type === "edit")
-      updateDataById(data, `${name}/${id}`).then((res) => {
-        if (res.message === "success") {
-          queryClient.invalidateQueries(`${name}`);
-          alert("Edited"), setLoading(false), props.onHide();
-        } else {
-          alert("Error"), setLoading(false), props.onHide();
-        }
-      });
-    else
-      uploadData(data, `${name}`).then(
-        () => alert("Added"),
-        setLoading(false),
-        props.onHide()
-      );
+    try {
+      await setDoc(doc(db, "careers", id, "applicants"), data, { merge: true });
+      queryClient.invalidateQueries(`${id}`);
+      alert("Edited");
+      setLoading(false);
+      props.onHide();
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+      setLoading(false);
+      props.onHide();
+    }
   };
 
   const handleDelete = () => {
@@ -76,7 +77,6 @@ function Model(props) {
       }
     });
   };
-
   return (
     <Modal
       {...props}
@@ -97,7 +97,9 @@ function Model(props) {
               <Form.Label>Designation</Form.Label>
               <Form.Control
                 type="text"
-                defaultValue={DetailsData ? DetailsData.data?.data.name : ""}
+                defaultValue={
+                  DetailsData ? DetailsData.data?.data.designation : ""
+                }
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicInput">
@@ -124,35 +126,21 @@ function Model(props) {
               ))}
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicInput">
-              <Form.Label>Work Type</Form.Label>
-              {["radio"].map((type) => (
-                <div key={`inline-${type}`} className="mb-3">
-                  <Form.Check
-                    inline
-                    label="On-Site"
-                    name="workType"
-                    value="On-Site"
-                    type={type}
-                    id={`inline-${type}-1`}
-                  />
-                  <Form.Check
-                    inline
-                    label="Hybrid"
-                    name="workType"
-                    type={type}
-                    value="Hybrid"
-                    id={`inline-${type}-2`}
-                  />
-                  <Form.Check
-                    inline
-                    label="WFH"
-                    name="workType"
-                    value="WFH"
-                    type={type}
-                    id={`inline-${type}-3`}
-                  />
-                </div>
-              ))}
+              <Form.Label>Years of Experience</Form.Label>
+              <Form.Control
+                type="text"
+                style={{ width: "10%" }}
+                defaultValue={DetailsData ? DetailsData.data?.data.exp : ""}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicInput">
+              <Form.Label>Location</Form.Label>
+              <Form.Control
+                type="text"
+                defaultValue={
+                  DetailsData ? DetailsData.data?.data.location : ""
+                }
+              />
             </Form.Group>
             <Button variant="success" type="submit">
               {loading ? "Uploading..." : "Upload"}
@@ -176,6 +164,7 @@ function Index() {
   const [modalShow, setModalShow] = useState(false);
   const [type, setType] = useState("add");
   const [id, setID] = useState();
+
   const [loading, setLoading] = useState(false);
 
   const TableData = useQuery(
@@ -187,7 +176,6 @@ function Index() {
       staleTime: 10000 * 60,
     }
   );
-
   const ImageData = useQuery(
     ["careers_images"],
     () => {
@@ -197,12 +185,13 @@ function Index() {
       staleTime: 10000 * 60,
     }
   );
+
   const handleSubmitImage = (e) => {
     e.preventDefault();
     const image = e.target[0].files[0];
     const caption = e.target[1].value;
 
-    const resp = uploadImage(image, `Rooms`);
+    const resp = uploadImage(image, `Careers`);
     resp.then((res) => {
       if (res.message === "success") {
         const data = {
@@ -276,6 +265,7 @@ function Index() {
             )}
           </div>
           {/* {!previewUrl ? ( */}
+
           <>
             <input
               type="file"
@@ -302,7 +292,7 @@ function Index() {
         {/* input with image preview */}
 
         <div className={"d-flex " + styles.all_testimonials}>
-          {/* {ImageData.data?.data.map((item, index) => {
+          {ImageData.data?.data.map((item, index) => {
             return (
               <div key={index} style={{ width: "200px", margin: "10px" }}>
                 <Image
@@ -316,17 +306,34 @@ function Index() {
                   alt="Picture of the author"
                   src={item.image}
                 />
+
                 <div
                   className="d-flex     "
                   style={{ width: "100%", justifyContent: "space-between" }}
                 >
                   <h5>{item.caption}</h5>
-                  <AiFillDelete size={24} fill="red" />
+
+                  <AiFillDelete
+                    size={24}
+                    fill="red"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      deleteDataById(`careers_images/${item.id}`).then(
+                        (res) => {
+                          if (res.message === "success") {
+                            alert("Deleted");
+                            queryClient.invalidateQueries("careers_images");
+                          }
+                        }
+                      );
+                    }}
+                  />
                 </div>
               </div>
             );
-          })} */}
+          })}
         </div>
+
         <br />
         <div className={styles.head}>
           <h2>Careers</h2>
@@ -348,7 +355,8 @@ function Index() {
               return (
                 <Accordion.Item key={index} eventKey={index}>
                   <Accordion.Header>
-                    {items.designation} | {items.workType} | {items.workHours}
+                    {items.designation} | {items.workHours} | {items.exp} |{" "}
+                    {items.location}
                   </Accordion.Header>
                   <Accordion.Body>
                     <table>
@@ -356,19 +364,19 @@ function Index() {
                         <tr>
                           <th>ID</th>
                           <th>Name</th>
+                          <th>Date</th>
                           <th>Phone</th>
                           <th>Email</th>
                           <th>Doc</th>
                         </tr>
                       </thead>
-
                       <tbody>
                         {items.data?.data.map((item, index) => {
                           return (
                             <tr key={index}>
                               <td>{index + 1}</td>
                               <td>{item.name}</td>
-
+                              <td>{item.date}</td>
                               <td>{item.phone}</td>
                               <td>{item.email}</td>
                               <td>

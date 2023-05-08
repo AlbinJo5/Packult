@@ -106,37 +106,9 @@ function Model(props) {
             <h3>{DetailsData.data?.data.message}</h3>
             <br />
           </section>
-        ) : type != "delete" ? (
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicInput">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={DetailsData ? DetailsData.data?.data.name : ""}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicInput">
-              <Form.Label>Title</Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={DetailsData ? DetailsData.data?.data.title : ""}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicInput">
-              <Form.Label>Content</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                defaultValue={DetailsData ? DetailsData.data?.data.content : ""}
-              />
-            </Form.Group>
-            <Button variant="success" type="submit">
-              {loading ? "Uploading..." : "Upload"}
-            </Button>
-          </Form>
-        ) : (
+        ) : type === "delete" ? (
           <p>Do you want Delete this</p>
-        )}
+        ) : null}
       </Modal.Body>
       <Modal.Footer>
         {type === "delete" ? (
@@ -177,6 +149,7 @@ function Index() {
               <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Date</th>
                 <th>Message</th>
                 <th>Number</th>
                 <th>Options</th>
@@ -189,6 +162,7 @@ function Index() {
                   <tr key={index}>
                     <td>{item.id}</td>
                     <td>{item.name}</td>
+                    <td>{item.date}</td>
                     <td>{item.message}</td>
                     <td>{item.number}</td>
 

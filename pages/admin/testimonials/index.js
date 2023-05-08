@@ -18,6 +18,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FiEdit2 } from "react-icons/fi";
 import { HiEye } from "react-icons/hi";
 import { AiFillDelete } from "react-icons/ai";
+import { uploadImage } from "../../../utils/firebase_image_upload";
 
 function Model(props) {
   const { id, show, type, name } = props;
@@ -46,7 +47,7 @@ function Model(props) {
     setLoading(true);
     const data = {
       name: e.target[0].value,
-      title: e.target[1].value,
+      designation: e.target[1].value,
       content: e.target[2].value,
     };
     if (type === "edit")
@@ -96,7 +97,7 @@ function Model(props) {
             <h6>Name</h6>
             <h3>{DetailsData.data?.data.name}</h3>
             <br />
-            <h6>Title</h6>
+            <h6>Designation</h6>
             <h3>{DetailsData.data?.data.title}</h3>
             <br />
             <h6>Content</h6>
@@ -113,7 +114,7 @@ function Model(props) {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicInput">
-              <Form.Label>Title</Form.Label>
+              <Form.Label>Designation</Form.Label>
               <Form.Control
                 type="text"
                 defaultValue={DetailsData ? DetailsData.data?.data.title : ""}
@@ -160,9 +161,161 @@ function Index() {
     }
   );
 
+  const ImageData = useQuery(
+    ["work_with_images"],
+    () => {
+      return getAllData("work_with_images");
+    },
+    {
+      staleTime: 10000 * 60,
+    }
+  );
+  const handleSubmitImage = (e) => {
+    e.preventDefault();
+    const image = e.target[0].files[0];
+    const caption = e.target[1].value;
+
+    const resp = uploadImage(image, `WorkWith`);
+    resp.then((res) => {
+      if (res.message === "success") {
+        const data = {
+          caption: caption,
+          image: res.data,
+        };
+        uploadData(data, "work_with_images").then((res) => {
+          if (res.message === "success") {
+            alert("Image Uploaded");
+            queryClient.invalidateQueries("work_with_images");
+          }
+        });
+      } else {
+        alert("Image Upload Failed");
+      }
+    });
+  };
+  const [previewUrl, setPreviewUrl] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      setPreviewUrl(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
   return (
     <AdminLayout>
       <div className={styles.testimonials}>
+        <br />
+        <div className={styles.head}>
+          <h2>Work With Picture</h2>
+        </div>
+        <hr />
+        <form
+          className="d-flex "
+          onSubmit={handleSubmitImage}
+          style={{
+            width: "100%",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            {previewUrl ? (
+              <Image
+                src={previewUrl}
+                width={100}
+                height={100}
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  marginBottom: "10px",
+                }}
+                alt="Preview"
+              />
+            ) : (
+              <label
+                for="fileUpload"
+                style={{
+                  background: "#C2D950",
+                  color: "white",
+                  padding: "15px 30px",
+                  borderRadius: "10px",
+                  cursor: "pointer",
+                }}
+              >
+                Click to Upload Image
+              </label>
+            )}
+          </div>
+          {/* {!previewUrl ? ( */}
+          <>
+            <input
+              type="file"
+              id="fileUpload"
+              style={{ display: "none" }}
+              onChange={handleImageChange}
+            />
+            <input
+              type="text"
+              placeholder="Caption"
+              id="caption"
+              style={{
+                height: "30px",
+                borderRadius: "5px",
+                padding: "0 10px",
+              }}
+            />{" "}
+            <Button variant="success" type="submit">
+              Upload
+            </Button>
+          </>
+        </form>
+        <br />
+        <br />
+
+        {/* input with image preview */}
+
+        <div className={"d-flex " + styles.all_testimonials}></div>
+        {ImageData.data?.data.map((item, index) => {
+          return (
+            <div key={index} style={{ width: "200px", margin: "10px" }}>
+              <Image
+                width={200}
+                height={200}
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "10px",
+                  marginBottom: "10px",
+                }}
+                alt="Picture of the author"
+                src={item.image}
+              />
+              <div
+                className="d-flex     "
+                style={{ width: "100%", justifyContent: "space-between" }}
+              >
+                <h5>{item.caption}</h5>
+                <AiFillDelete
+                  size={24}
+                  fill="red"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    deleteDataById(`work_with_images/${item.id}`).then(
+                      (res) => {
+                        if (res.message === "success") {
+                          alert("Deleted");
+                          queryClient.invalidateQueries("work_with_images");
+                        }
+                      }
+                    );
+                  }}
+                />
+              </div>
+            </div>
+          );
+        })}
         <div className={styles.head}>
           <h2>Testimonials</h2>
           <Button
@@ -184,11 +337,10 @@ function Index() {
                 <th>ID</th>
                 <th>Name</th>
                 <th>Content</th>
-                <th>Title</th>
+                <th>Designation</th>
                 <th>Options</th>
               </tr>
             </thead>
-
             <tbody>
               {testimonialData.data?.data.map((item, index) => {
                 return (
@@ -202,7 +354,7 @@ function Index() {
                         ? item.content.substring(0, 50) + "..."
                         : item.content}
                     </td>
-                    <td>{item.title}</td>
+                    <td>{item.designation}</td>
                     <td
                       style={{
                         display: "flex",

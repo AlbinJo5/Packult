@@ -10,12 +10,16 @@ import { ADMIN_ROUTES } from "../../common/routes";
 import Image from "next/image";
 
 function Index() {
+
+    
     const email = useRef();
     const password = useRef();
     const auth = getAuth(app);
     const [toast, settoast] = useState(false)
     const [toastMessage, settoastMessage] = useState("")
     const router = useRouter();
+
+    
     const handleSubmit = (e) => {
         e.preventDefault();
 

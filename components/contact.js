@@ -1,38 +1,40 @@
 import { useRef, useState } from "react";
 import styles from "../styles/components/contact.module.scss";
 import Image from "next/image";
+import { uploadData } from "../utils/firebase_data_handler";
 
 export default function Contact() {
-  const [show, setShow] = useState(false);
-  const [showError, setShowError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitText, setSubmitText] = useState("Submit");
   const name = useRef();
   const email = useRef();
   const number = useRef();
   const message = useRef();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const resp = await fetch("/api/contact/post", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name.current.value,
-        email: email.current.value,
-        number: number.current.value,
-        message: message.current.value,
-      }),
-    });
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1; // months start at 0, so add 1 to get the current month
+  const day = now.getDate();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const currentDateTime = `${year}-${month}-${day} ${hours}:${minutes}`;
 
-    const data = await resp.json();
-    if (data.message === "success") {
-      setShow(true);
-      setShowError(false);
-    } else {
-      setShowError(true);
-      setShow(false);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSubmitText("Submitting...");
+    const data = {
+      name: name,
+      email: email,
+      number: number,
+      message: message,
+      date: currentDateTime,
+    };
+    uploadData(data, `contacts`).then(
+      () => setSubmitText("Submitted"),
+      setLoading(false)
+      // props.onHide()
+    );
   };
 
   return (
@@ -54,9 +56,15 @@ export default function Contact() {
               placeholder="Email address*"
               required={true}
             />
-            <input type="number" ref={number} placeholder="Phone number*" />
+            <input
+              type="number"
+              ref={number}
+              placeholder="Phone number (optional)"
+            />
             <textarea ref={message} placeholder="Your message*" />
-            <button type="submit">Submit</button>
+            <button type="submit" required={true}>
+              {submitText}
+            </button>
           </form>
         </div>
         <Image
