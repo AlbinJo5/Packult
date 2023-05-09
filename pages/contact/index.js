@@ -5,9 +5,12 @@ import WorkNumbers from "../../components/workNumbers";
 import styles from "../../styles/contact-us.module.scss";
 import { useRef, useState } from "react";
 import { uploadData } from "../../utils/firebase_data_handler";
+import emailjs from "@emailjs/browser";
 
 function Index() {
   const [loading, setLoading] = useState(false);
+  const form = useRef();
+  const [submitText, setSubmitText] = useState("Submit");
 
   //   const [show, setShow] = useState(false);
   //   const [showError, setShowError] = useState(false);
@@ -27,7 +30,7 @@ function Index() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    alert("Submitted");
+    setSubmitText("Submitting...");
     const data = {
       name: name,
       email: email,
@@ -35,7 +38,28 @@ function Index() {
       message: message,
       date: currentDateTime,
     };
-    uploadData(data, `contacts`).then(() => alert("Added"), setLoading(false));
+
+    emailjs
+      .sendForm(
+        "service_8ox3db9",
+        "template_n29jlvg",
+        form.current,
+        "8uEIFo9S-l8MZSGT8"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if (result.text === "OK") {
+            setSubmitText("Submitted");
+          }
+        },
+        (error) => {
+          console.log(error.text);
+          setSubmitText("Error");
+        }
+      );
+
+    uploadData(data, `contacts`).then(() => " ", setLoading(false));
   };
 
   return (
@@ -102,7 +126,7 @@ function Index() {
       <div className={styles.contact_us}>
         <div className={styles.content}>
           <div className={styles.left}>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <input
                 ref={name}
                 type="text"
@@ -130,7 +154,7 @@ function Index() {
                 required={true}
               />
               <button onClick={handleSubmit} type="submit">
-                SUBMIT
+                {submitText}
               </button>
             </form>
           </div>
