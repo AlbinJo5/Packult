@@ -144,7 +144,7 @@ export default function Index() {
               Our team has strong end to end capabilities across Creatives,
               Artworks & Graphics, Packaging Development, Value improvement,
               Sourcing Excellence & Operational excellence, which makes it
-              easier for us to address our clients’ diverse demands. Starting
+              easier for us to address our clients diverse demands. Starting
               from ideation, product research, development, design, feasibility,
               supply chain management and execution, our team assist our clients
               at every step.

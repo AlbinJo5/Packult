@@ -8,7 +8,6 @@ export default function MetaHead({ pageMeta }) {
     description: 'Group of packaging experts committed to the cause of better, smarter and sustainable packaging',
     type: 'website',
     url: process.env.NEXT_PUBLIC_SERVER_URL,
-
     ...pageMeta
   }
   return (
