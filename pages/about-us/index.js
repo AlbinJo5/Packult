@@ -18,7 +18,7 @@ export default function Index() {
                 <meta name="description" content="Learn more about Packult and our commitment to creating custom packaging solutions that help businesses succeed. Our innovative designs and sustainable solutions are changing the industry." />
                 <link rel="canonical" href="https://packult.com/about-us" />
                 <link rel="alternate" href="https://packult.com/about-us" hreflang="en" />
-                <script
+                {/* <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify(
@@ -41,7 +41,7 @@ export default function Index() {
 
                         )
                     }}
-                />
+                /> */}
 
             </Head>
             <div className={styles.lap_particles}>
