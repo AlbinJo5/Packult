@@ -40,54 +40,51 @@ export const data = [
     link: ROUTES.SUSTAINABLE_SOLUTION,
   },
 
-  {
-    number: "5.",
-    heading: "Sourcing Excellence",
-    content:
-      "Thanks to our deep understanding of the converting industry, we are able to identify and develop the vendors with the right competency and capability for all your Packaging requirements. We have excellent in-house resources to audit your current or potential vendors for their capabilities in terms of infrastructure, human capital, adherence to compliances, gap analysis and follow-up audits for closure of non-conformities. Our value chain understanding of Packaging materials helps our clients understand the conversion costs in greater detail and allows them to create sourcing scenarios through ‘What if’ module built in our proprietary “Should cost” models.",
-    image: "/assets/images/brand-owners/box (4).png",
-    link: ROUTES.SOURCING_EXCELLENCE,
-  },
-  {
-    number: "6.",
-    heading: "Resourcing",
-    content:
-      "We pride ourselves in meeting our customers’ needs for quality manpower at every level with best quality resources pre-screened by our subject experts. We understand that it is not always feasible to increase headcount for temporary needs due to a sudden increase in bandwidth requirement (innovations & renovations, specification harmonisation, cost savings projects, trials, NPD and roll out etc.), hence we support Brand owners with quality manpower with the right fit for temporary requirement starting 6 months onwards. Whether the requirement is offsite or onsite or hybrid, we can offer tailor-made solutions. ",
-    image: "/assets/images/brand-owners/box (5).png",
-    link: ROUTES.RESOURCING,
-  },
-  {
-    number: "7.",
-    heading: "Operational Excellence",
-    content:
-      "Packult has a dedicated and experienced Operational Excellence team which provides Process Excellence & Converting Excellence services to Film producers and converters. Our Process Excellence offerings include specialty inline / offline coatings, Material & Process optimization, SOPs for Screen changing and Die & Coating Head cleaning, Trim waste reduction and more.  Our Converting Excellence services include Machine retrofit, upgradation & refurbishment for productivity enhancement and wastage reduction. We also offer services for decommissioning of machines from one location and recommissioning at another.",
-    image: "/assets/images/packaging-converters/box1.png",
-    links: [
-      {
-        text: "Process Excellence",
-        link: ROUTES.OPERATIONAL_EXCELLENCE,
-      },
-      {
-        text: "Converting Excellence",
-        link: ROUTES.OPERATIONAL_EXCELLENCE,
-      },
-    ],
-    link: ROUTES.OPERATIONAL_EXCELLENCE,
-  },
-  {
-    number: "8.",
-    heading: "Application & Business Development",
-    content:
-      "We pride ourselves in providing exceptional application and business development support to packaging converters helping them succeed in today’s highly competitive marketplace. We provide support with marketing and sales, co-developing new products and applications, identifying new business opportunities, expanding their customer base, building long-term partnerships with clients and providing after-sales support. With us, our converters can focus on what they do best -producing high-quality packaging.",
-    image: "/assets/images/packaging-converters/box2.png",
-    link: ROUTES.APP_and_Business,
-  },
-  {
-    number: "9.",
-    heading: "Mergers & Acquisitions",
-    content:
-      "We provide M&A support to Converters for adding strategic capabilities and reach through Target screening, Financial Due Diligence and integration of culture & business processes.",
-    image: "/assets/images/packaging-converters/box5.png",
-    link: ROUTES.MANAGEMENT_AND_ASSISTANCE,
-  },
-];
+    {
+        "number": "5.",
+        "heading": "Sourcing Excellence",
+        "content": "Thanks to our deep understanding of the converting industry, we are able to identify and develop the vendors with the right competency and capability for all your Packaging requirements. We have excellent in-house resources to audit your current or potential vendors for their capabilities in terms of infrastructure, human capital, adherence to compliances, gap analysis and follow-up audits for closure of non-conformities. Our value chain understanding of Packaging materials helps our clients understand the conversion costs in greater detail and allows them to create sourcing scenarios through ‘What if’ module built in our proprietary “Should cost” models.",
+        "image": "/assets/images/brand-owners/box (4).png",
+        "link": ROUTES.SOURCING_EXCELLENCE
+    },
+    {
+        "number": "6.",
+        "heading": "Resourcing",
+        "content": "We pride ourselves in meeting our customers’ needs for quality manpower at every level with best quality resources pre-screened by our subject experts. We understand that it is not always feasible to increase headcount for temporary needs due to a sudden increase in bandwidth requirement (innovations & renovations, specification harmonisation, cost savings projects, trials, NPD and roll out etc.), hence we support Brand owners with quality manpower with the right fit for temporary requirement starting 6 months onwards. Whether the requirement is offsite or onsite or hybrid, we can offer tailor-made solutions. ",
+        "image": "/assets/images/brand-owners/box (5).png",
+        "link": ROUTES.RESOURCING
+    },
+    {
+        "number": "7.",
+        "heading": "Operational Excellence",
+        "content": "Packult has a dedicated and experienced Operational Excellence team which provides Process Excellence & Converting Excellence services to Film producers and converters. Our Process Excellence offerings include specialty inline / offline coatings, Material & Process optimization, SOPs for Screen changing and Die & Coating Head cleaning, Trim waste reduction and more.  Our Converting Excellence services include Machine retrofit, upgradation & refurbishment for productivity enhancement and wastage reduction. We also offer services for decommissioning of machines from one location and recommissioning at another.",
+        "image": "/assets/images/packaging-converters/box1.png",
+        "links": [
+            {
+                "text": "Process Excellence",
+                "link": ROUTES.OPERATIONAL_EXCELLENCE
+            },
+            {
+                "text": "Converting Excellence",
+                "link": ROUTES.OPERATIONAL_EXCELLENCE
+            },
+
+        ],
+        "link": ROUTES.OPERATIONAL_EXCELLENCE
+    },
+    {
+        "number": "8.",
+        "heading": "Application & Business Development",
+        "content": "We pride ourselves in providing exceptional application and business development support to packaging converters helping them succeed in today’s highly competitive marketplace. We provide support with marketing and sales, co-developing new products and applications, identifying new business opportunities, expanding their customer base, building long-term partnerships with clients and providing after-sales support. With us, our converters can focus on what they do best -producing high-quality packaging.",
+        "image": "/assets/images/packaging-converters/box2.png",
+        "link": ROUTES.APP_and_Business
+
+    },
+    {
+        "number": "9.",
+        "heading": "Mergers & Acquisitions",
+        "content": "We provide M&A support to Converters for adding strategic capabilities and reach through Target screening, Financial Due Diligence and integration of culture & business processes.",
+        "image": "/assets/images/packaging-converters/box5.png",
+        "link": ROUTES.MANAGEMENT_AND_ASSISTANCE
+    },
+]

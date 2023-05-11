@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import WorkNumbers from "../../components/workNumbers"
 import styles from "../../styles/management-and-assistance.module.scss"
 import ContentLayout1 from "../../components/contentLayout1"
+import Head from "next/head"
 
 function index() {
     const layout1 = {
@@ -21,6 +22,12 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+                <link rel="canonical" href="https://packult.com/management-and-assistance" />
+                <link rel="alternate" href="https://packult.com/management-and-assistance" hreflang="en" />
+                <title>Packaging Mergers & Acquisitions | Packult</title>
+                <meta name="description" content="Packult's packaging Mergers and Acquisitions services provide expert guidance for your packaging process. Our team of professionals helps you streamline operations and achieve your goals." />
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

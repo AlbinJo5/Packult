@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Contact from "../../components/contact"
 import ContentLayout1 from "../../components/contentLayout1"
 import ContentLayout3 from "../../components/contentLayout3"
@@ -20,6 +21,10 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+                <title>Packult - Packaging innovation & Business Development</title>
+                <meta name="description" content="Packult's packaging application and business development services help you identify new opportunities for growth. Our experts provide strategic guidance and innovative solutions to help you succeed." />
+            </Head>
             <section className={styles.content1} >
                 <ContentLayout1 data={layout1} />
             </section>

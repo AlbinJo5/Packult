@@ -1,3 +1,6 @@
+
+
+import Head from "next/head"
 import Contact from "../../components/contact"
 import ContentLayout1 from "../../components/contentLayout1"
 import ContentLayout3 from "../../components/contentLayout3"
@@ -20,6 +23,10 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+                <title>Value Improvement | Packaging Optimization | Packult</title>
+                <meta name="description" content="Packult's value improvement services optimize your packaging process to increase efficiency and reduce costs. Our experts help you identify areas for improvement and implement effective solutions."/>
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

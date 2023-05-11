@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Contact from "../../components/contact"
 import ContentLayout1 from "../../components/contentLayout1"
 import ContentLayout3 from "../../components/contentLayout3"
@@ -20,6 +21,34 @@ function index() {
     }
     return (
         <Layout>
+            <Head>
+                <title>Packaging Resourcing | Global Packaging Services | Packult</title>
+                <meta name="description" content="Packult's packaging resourcing services provide global packaging solutions for businesses of all sizes. Our team of experts helps you source the right materials and manage your supply chain." />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(
+                            {
+                                "@context": "https://schema.org/",
+                                "@type": "BreadcrumbList",
+                                "itemListElement": [{
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://packult.com/"
+                                }, {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Resourcing",
+                                    "item": "https://packult.com/resourcing"
+
+                                }]
+                            }
+
+                        )
+                    }}
+                />
+            </Head>
             <div style={{
                 minHeight: "85vh",
             }} >

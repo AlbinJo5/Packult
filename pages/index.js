@@ -14,13 +14,14 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { getAllData } from "../utils/firebase_data_handler";
 import { useQuery } from "@tanstack/react-query";
+import Head from 'next/head'
 
 export default function Home() {
   const [data, setdata] = useState([]);
   const router = useRouter();
 
   // get scrren size
-  const [mobile, setMobile] = useState(false);
+  const [mobile, setMobile] = useState(false)
   const TestimonialData = useQuery(
     ["testimonials"],
     () => {
@@ -58,6 +59,38 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>Packult | Custom Packaging Solutions | New Packaging designs</title>
+        <meta name='description' content='Packult provides custom packaging solutions for businesses worldwide. Our innovative designs and sustainable solutions help you stand out in the market.' />
+
+        <link rel="canonical" href="https://packult.com/" />
+        <link rel="alternate" href="https://packult.com/" hreflang="en" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+
+                "@context": "https://schema.org/",
+                "@type": "BreadcrumbList",
+                "itemListElement": [{
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://packult.com/"
+                }, {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Value Improvement",
+                  "item": "https://packult.com/value-improvement"
+
+                }]
+              }
+
+            )
+          }}
+        />
+      </Head>
       <div className={styles.lap_particles}>
         <Particles
           color="#C2D950"
