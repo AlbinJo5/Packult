@@ -28,7 +28,7 @@ export default function Footer() {
               <Link href={ROUTES.CARRERS}>Careers</Link>
             </li>
             <li>
-              <Link href="#blog">Blog</Link>
+              <Link href="/#blog">Blog</Link>
             </li>
             <li>
               <Link href={ROUTES.TERMS_AND_CONDITIONS}>Terms & Conditions</Link>
