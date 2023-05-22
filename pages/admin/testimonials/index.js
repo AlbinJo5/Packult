@@ -277,45 +277,49 @@ function Index() {
 
         {/* input with image preview */}
 
-        <div className={"d-flex " + styles.all_testimonials}></div>
-        {ImageData.data?.data.map((item, index) => {
-          return (
-            <div key={index} style={{ width: "200px", margin: "10px" }}>
-              <Image
-                width={200}
-                height={200}
-                style={{
-                  objectFit: "cover",
-                  borderRadius: "10px",
-                  marginBottom: "10px",
-                }}
-                alt="Picture of the author"
-                src={item.image}
-              />
-              <div
-                className="d-flex     "
-                style={{ width: "100%", justifyContent: "space-between" }}
-              >
-                <h5>{item.caption}</h5>
-                <AiFillDelete
-                  size={24}
-                  fill="red"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => {
-                    deleteDataById(`work_with_images/${item.id}`).then(
-                      (res) => {
-                        if (res.message === "success") {
-                          alert("Deleted");
-                          queryClient.invalidateQueries("work_with_images");
-                        }
-                      }
-                    );
+        <div
+          className={"d-flex " + styles.all_testimonials}
+          style={{ width: "75vw", overflow: "auto", margin: "2vw 0" }}
+        >
+          {ImageData.data?.data.map((item, index) => {
+            return (
+              <div key={index} style={{ width: "200px", margin: "10px" }}>
+                <Image
+                  width={200}
+                  height={200}
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "10px",
                   }}
+                  alt="Picture of the author"
+                  src={item.image}
                 />
+                <div
+                  className="d-flex     "
+                  style={{ width: "100%", justifyContent: "space-between" }}
+                >
+                  <h5>{item.caption}</h5>
+                  <AiFillDelete
+                    size={24}
+                    fill="red"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      deleteDataById(`work_with_images/${item.id}`).then(
+                        (res) => {
+                          if (res.message === "success") {
+                            alert("Deleted");
+                            queryClient.invalidateQueries("work_with_images");
+                          }
+                        }
+                      );
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
         <div className={styles.head}>
           <h2>Testimonials</h2>
           <Button

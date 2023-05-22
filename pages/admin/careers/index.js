@@ -291,7 +291,10 @@ function Index() {
 
         {/* input with image preview */}
 
-        <div className={"d-flex " + styles.all_testimonials}>
+        <div
+          className={"d-flex " + styles.all_testimonials}
+          style={{ width: "75vw", overflow: "auto", margin: "2vw 0" }}
+        >
           {ImageData.data?.data.map((item, index) => {
             return (
               <div key={index} style={{ width: "200px", margin: "10px" }}>

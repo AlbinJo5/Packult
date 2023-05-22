@@ -63,7 +63,7 @@ function Index() {
     uploadData(data, `contacts`).then(() => " ", setLoading(false));
   };
 
-  function index() {
+  function Index() {
     return (
       <Layout
         pageMeta={{
@@ -128,7 +128,7 @@ function Index() {
         <div className={styles.contact_us}>
           <div className={styles.content}>
             <div className={styles.left}>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="name"
